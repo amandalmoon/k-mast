@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-10-16T14:00:17.954455+00:00",
+  "scope": "ONE_SYMBOL_SEVEN_CALENDAR_DAYS",
+  "status": "READ_CHECK_OK_DATA_HOLD",
+  "data_status": "DATA_BLOCKED",
+  "economic_status": "ECONOMIC_EDGE_UNVERIFIED",
+  "live_status": "LIVE_NOT_APPROVED",
+  "real_rows": 4,
+  "requested_start": "2026-10-09",
+  "requested_end": "2026-10-15",
+  "observed_start": "2026-10-12",
+  "observed_end": "2026-10-15",
+  "dataset_id": "284326410ef78d7b1ed193eca60426b6f15a2b0765f45b22636dc3d09300e601",
+  "quality_flags": [
+    "SESSION_UNVERIFIED"
+  ],
+  "blockers": [
+    "PIT_RELEASE_EVIDENCE",
+    "PIT_UNIVERSE_AND_DELISTINGS",
+    "CORPORATE_ACTIONS",
+    "BENCHMARK_HISTORY",
+    "CALENDAR_AND_COVERAGE",
+    "REAL_COSTS",
+    "DATA_USAGE_RIGHTS"
+  ],
+  "authentication_attempts": 1,
+  "market_query_attempts": 1,
+  "order_calls": 0,
+  "cancel_calls": 0,
+  "account_queries": 0,
+  "last_http_status": 200,
+  "network_requests_used": 2
+}

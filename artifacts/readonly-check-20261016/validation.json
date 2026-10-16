@@ -1,0 +1,13 @@
+{
+  "command": [
+    "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "tests/test_kis_env.py",
+    "-q"
+  ],
+  "exit_code": 0,
+  "credential_leakage_scan": "PASS",
+  "market_data_location": "GIT_IGNORED_LOCAL_ONLY",
+  "network_check_exit_code": 0
+}
