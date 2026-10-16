@@ -1,0 +1,61 @@
+[
+  {
+    "identity": "KIS_CUSTOMER_TERMS",
+    "official_url": "https://apiportal.koreainvestment.com/api/terms/public?termsType=MARKET",
+    "checked_at": "2026-10-16T17:02:12.522343+00:00",
+    "response_sha256": "f3e85562aff5f1aedfaa9e23dcbc3518b09a2bca58c89f049b75a2a5b4421d94",
+    "body_obtained": true,
+    "title": "\uace0\uac1d \uc774\uc6a9\uc57d\uad00",
+    "version": 28,
+    "published_at": "2021-12-04T14:55:28+09:00",
+    "modified_at": "2024-04-11T16:10:59+09:00",
+    "content_sha256": "875e0409ee219c4be4a2d56ce242d5ff4db4080114aa24ad465ee6c29b6fe86d"
+  },
+  {
+    "identity": "KIS_DATA_POLICY_20261006",
+    "official_url": "https://apiportal.koreainvestment.com/api/forums/10000000-0000-0011-0000-000000000002/posts/1f422ddb-7a9c-4279-9ecb-21eb750a4b7a",
+    "checked_at": "2026-10-16T17:02:12.682329+00:00",
+    "response_sha256": "d7a4a98067b1e4c42b5ce1ac97ac0f2209b045eb8b7f770f58628d8b74317420",
+    "body_obtained": true,
+    "title": "Open API \ub370\uc774\ud130 \uc774\uc6a9 \ubc94\uc704 \ubc0f \uc0ac\uc6a9 \uc815\ucc45 \uc548\ub0b4",
+    "version": null,
+    "published_at": "2026-10-06T06:10:55.000+0000",
+    "modified_at": null,
+    "content_sha256": "e02cb60a9c668e533844bcf988aedf7ecc6346ebd0e8fa5f121bf1e38153bbeb"
+  },
+  {
+    "identity": "KRX_TERMS",
+    "official_url": "https://openapi.krx.co.kr/contents/OPP/INFO/OPPINFO002.jsp",
+    "checked_at": "2026-10-16T17:02:12.738411+00:00",
+    "response_sha256": "f1dd54bba0048be7224fb7514e41465842493fefd7afa4f450bd08f0f9d2d94e",
+    "body_obtained": true
+  },
+  {
+    "identity": "KRX_PURCHASE",
+    "official_url": "https://openapi.krx.co.kr/contents/OPP/DATA/OPPDATA001.jsp",
+    "checked_at": "2026-10-16T17:02:12.825961+00:00",
+    "response_sha256": "bf625a0e47ef299a2c094e362d5e4e38941fa902c99ea2ff7e2f63560e06ed62",
+    "body_obtained": true
+  },
+  {
+    "identity": "FNGUIDE_PRICE",
+    "official_url": "https://help-dataguide.fnguide.com/ko/articles/%EC%9D%B4%EC%9A%A9-%EB%B0%8F-%EC%9A%94%EA%B8%88-%EC%95%88%EB%82%B4-48b18a4b",
+    "checked_at": "2026-10-16T17:02:13.150155+00:00",
+    "response_sha256": "efdef1ca24963d49ba2b5c02aad3c293d9a4fdf4657fd9af2d3dd806b7af9918",
+    "body_obtained": true
+  },
+  {
+    "identity": "FNGUIDE_COVERAGE",
+    "official_url": "https://help-dataguide.fnguide.com/ko/articles/%EC%A0%9C%EA%B3%B5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%95%88%EB%82%B4-5c5347da",
+    "checked_at": "2026-10-16T17:02:13.317647+00:00",
+    "response_sha256": "47c15ad5e54f342e1a92ebe6a5dbca9324a859a389c0d39b3dcea77cb66f58af",
+    "body_obtained": true
+  },
+  {
+    "identity": "KOSCOM_HISTORY",
+    "official_url": "https://www.koscom.co.kr/mobile/main/contents.do?menuNo=400044",
+    "checked_at": "2026-10-16T17:02:13.436865+00:00",
+    "response_sha256": "da9a633769c4720997c4c506ce5e9377208eab77163d2b0eea5e2510b6ce54bb",
+    "body_obtained": true
+  }
+]
