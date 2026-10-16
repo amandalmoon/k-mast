@@ -1,0 +1,121 @@
+{
+  "origin": "SELF_AUTHORED_SYNTHETIC_NOT_REAL_MARKET_DATA",
+  "official_commit": "2077773a69a428daf63e148182511f068cc45de3",
+  "rest": [
+    {
+      "request": {
+        "operation": "daily",
+        "symbol": "005930",
+        "start": "2026-10-14",
+        "end": "2026-10-15"
+      },
+      "response": {
+        "rt_cd": "0",
+        "output1": {},
+        "output2": [
+          {
+            "stck_bsop_date": "20261014",
+            "stck_oprc": "100",
+            "stck_hgpr": "110",
+            "stck_lwpr": "95",
+            "stck_clpr": "105",
+            "acml_vol": "0"
+          },
+          {
+            "stck_bsop_date": "20261015",
+            "stck_oprc": "100",
+            "stck_hgpr": "110",
+            "stck_lwpr": "95",
+            "stck_clpr": "105",
+            "acml_vol": "1000"
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "operation": "minute_today",
+        "symbol": "005930",
+        "at": "09:05:00"
+      },
+      "response": {
+        "rt_cd": "0",
+        "output1": {},
+        "output2": [
+          {
+            "stck_bsop_date": "20261016",
+            "stck_cntg_hour": "090500",
+            "stck_oprc": "100",
+            "stck_hgpr": "110",
+            "stck_lwpr": "95",
+            "stck_prpr": "105",
+            "cntg_vol": "10"
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "operation": "price",
+        "symbol": "005930"
+      },
+      "response": {
+        "rt_cd": "0",
+        "output": {
+          "stck_prpr": "105",
+          "acml_vol": "1000"
+        }
+      }
+    },
+    {
+      "request": {
+        "operation": "quote",
+        "symbol": "005930"
+      },
+      "response": {
+        "rt_cd": "0",
+        "output1": {
+          "bidp1": "104",
+          "askp1": "106",
+          "bidp_rsqn1": "30",
+          "askp_rsqn1": "40"
+        }
+      }
+    },
+    {
+      "request": {
+        "operation": "index",
+        "symbol": "0001"
+      },
+      "response": {
+        "rt_cd": "0",
+        "output": {
+          "bstp_nmix_prpr": "1000.12"
+        }
+      }
+    }
+  ],
+  "stream": [
+    "0|H0STASP0|001|005930^090459^0^106^0^0^0^0^0^0^0^0^0^104^0^0^0^0^0^0^0^0^0^40^0^0^0^0^0^0^0^0^0^30^0^0^0^0^0^0^0^0^0^0^0^0^0^0^0^0^0^0^0^0^0^0^0^0^0^0^0^0^0",
+    "0|H0STCNT0|001|005930^090459^105^0^0^0^0^0^0^0^106^104^10^0^0^0^0^0^0^0^0^0^0^0^0^0^0^0^0^0^0^0^0^20261016^0^0^40^30^0^0^0^0^0^0^0^0^0"
+  ],
+  "dart": [
+    {
+      "corp_code": "00126380",
+      "stock_code": "005930",
+      "rcept_no": "20261014000001",
+      "rcept_dt": "20261014",
+      "report_nm": "SYNTHETIC REPORT",
+      "pblntf_ty": "A"
+    },
+    {
+      "corp_code": "00126380",
+      "stock_code": "005930",
+      "rcept_no": "20261015000001",
+      "rcept_dt": "20261015",
+      "report_nm": "[기재정정] SYNTHETIC REPORT",
+      "pblntf_ty": "A",
+      "supersedes_receipt": "20261014000001"
+    }
+  ]
+}

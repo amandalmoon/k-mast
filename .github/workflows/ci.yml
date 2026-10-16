@@ -1,4 +1,4 @@
-name: KM-000 contracts
+name: K-MAST offline data contracts
 on: [push, pull_request]
 jobs:
   offline-contracts:
@@ -19,6 +19,7 @@ jobs:
       - run: python -m pytest -q --junitxml=artifacts/junit.xml
       - run: python -m build --no-isolation
       - run: python -m kmast.demo
+      - run: python -m kmast.data.cli fixture --output artifacts/km001-ci-fixture
       - uses: actions/upload-artifact@v4
         if: always()
         with:

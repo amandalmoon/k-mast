@@ -72,3 +72,18 @@ Linux/macOS에서는 `.venv/bin/python`을 사용한다. `scripts/verify.py`는 
 위 기존 설계 문서의 미실행 표기는 원본 문서 작성 시점의 상태이며, 현재 코드 증거와 구별한다.
 루트 `SHA256SUMS.txt`는 제공 원본의 목록이다. README에 이 실행 안내를 추가했으므로
 원본과의 대조는 보존 커밋 `09362323ebac4c75eafbfd5dd1bbbaf68f60e910`을 사용한다.
+
+## KM-001 읽기 전용 데이터 경로
+
+공식 KIS 샘플에 맞춘 제한된 REST/WS 통신과 원본→정규화→Parquet→manifest→재로딩을
+구현했다. 기본 실행은 합성 Fixture이며 실제 시장 데이터 준비 상태는 보류다.
+
+```powershell
+.\.venv\Scripts\python -m kmast.data.cli fixture --output data/km001
+.\.venv\Scripts\python scripts/verify.py --milestone km001
+```
+
+[실행법과 연결 조건](docs/implementation/KM001_USAGE.md) ·
+[데이터 가용성 행렬](docs/implementation/DATA_AVAILABILITY_MATRIX.md) ·
+[KM-001 종료 보고서](docs/implementation/KM001_CLOSURE_REPORT.md).
+실제 인증/시장 데이터 조회·주문·취소는 이번 작업에서 수행하지 않았고 KM-002도 자동 시작하지 않는다.

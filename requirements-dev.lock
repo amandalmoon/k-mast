@@ -8,6 +8,7 @@ packaging==26.3
 pathspec==1.1.1
 pip==25.0.1
 pluggy==1.7.0
+pyarrow==21.0.0
 pydantic==2.12.3
 pydantic_core==2.41.4
 Pygments==2.21.0
@@ -19,4 +20,5 @@ setuptools==80.9.0
 types-PyYAML==6.0.12.20250915
 typing-inspection==0.4.4
 typing_extensions==4.16.0
+websockets==15.0.1
 wheel==0.45.1

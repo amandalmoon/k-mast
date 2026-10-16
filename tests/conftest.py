@@ -1,5 +1,7 @@
+import json
 import socket
 from datetime import UTC, datetime, timedelta
+from importlib.resources import files
 
 import pytest
 
@@ -7,6 +9,13 @@ from kmast.core.contracts import SignalIntent
 from kmast.core.events import MarketEvent
 
 NOW = datetime(2026, 10, 16, tzinfo=UTC)
+
+
+@pytest.fixture
+def fixture():
+    return json.loads(
+        files("kmast.data").joinpath("fixtures/market.json").read_text(encoding="utf-8")
+    )
 
 
 @pytest.fixture(autouse=True)

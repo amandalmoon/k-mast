@@ -14,3 +14,7 @@ dist/
 *.pem
 *.key
 data/raw/
+data/km001/
+.reference/
+# Earlier generated draft kept locally; final evidence is fixture-data-v1.
+artifacts/km001/fixture-data/

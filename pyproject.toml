@@ -5,18 +5,23 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "kmast"
 version = "1.2.0"
-description = "K-MAST KM-000 offline contracts; LIVE disabled"
+description = "K-MAST v1.2 read-only data acquisition; orders disabled"
 requires-python = ">=3.11"
-dependencies = ["pydantic==2.12.3", "PyYAML==6.0.3"]
+dependencies = ["pydantic==2.12.3", "PyYAML==6.0.3", "pyarrow==21.0.0", "websockets==15.0.1"]
 
 [project.optional-dependencies]
 dev = ["pytest==8.4.2", "ruff==0.14.1", "mypy==1.18.2", "types-PyYAML==6.0.12.20250915", "build==1.3.0"]
 
 [project.scripts]
 kmast = "kmast.demo:main"
+kmast-data = "kmast.data.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+"kmast.brokers.kis" = ["ws_columns.json"]
+"kmast.data" = ["fixtures/*.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -33,4 +38,8 @@ select = ["E", "F", "I", "B", "UP"]
 python_version = "3.11"
 strict = true
 plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = ["pyarrow", "pyarrow.*"]
+ignore_missing_imports = true
 

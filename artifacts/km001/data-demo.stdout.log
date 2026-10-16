@@ -1,0 +1,73 @@
+{
+  "scope": "SYNTHETIC_FIXTURE_ONLY",
+  "dataset_ids": [
+    "01eeeb5e225d613f0e6a34fb3d7813093ee8ce7484d94681fa9b451f66a843f2",
+    "6e791d57b60aceea5f1a3e0c008f012ede23949ef7943675f020bf338a966609",
+    "a79aeec835825a366b6eacc00c5658604d4bc291645659dee6f80e144132c8e0",
+    "d2763176431aa9ad68076e4087cfe48045fa94df4b6cc9158bde0983b4fde371",
+    "d934a3f7abd9269748ffe1bed4c5c8df7f7c8b14e5bc4b222755aa2998120b8b",
+    "e7ed02b6355386c98ba2cfa7f01c634c34d7197f8c297fc7636d2e73a405e14a",
+    "f400eb519a3dbc136c68ad87f70ab83bb7c2286920a40a17d1591e2ee2f441a8"
+  ],
+  "rows": 8,
+  "public_events": 2,
+  "normalized_hash": "b410fd47bf92216af367078c79168dd469e35e9f98571ed68921f29f53dc5cb6",
+  "status": "KM001_ADAPTER_READY_DATA_HOLD",
+  "strategies": [
+    {
+      "strategy": "A",
+      "status": "DATA_BLOCKED",
+      "missing": [
+        "corporate_actions",
+        "daily_history",
+        "delisted",
+        "index_sector",
+        "pit_universe"
+      ],
+      "economic_approval": false,
+      "live_approved": false
+    },
+    {
+      "strategy": "B",
+      "status": "DATA_BLOCKED",
+      "missing": [
+        "fill_evidence",
+        "latency",
+        "opening_range",
+        "spread",
+        "vwap_rvol"
+      ],
+      "economic_approval": false,
+      "live_approved": false
+    },
+    {
+      "strategy": "C",
+      "status": "DATA_BLOCKED",
+      "missing": [
+        "adverse_selection",
+        "bid_ask",
+        "intraday",
+        "liquidity",
+        "vwap"
+      ],
+      "economic_approval": false,
+      "live_approved": false
+    },
+    {
+      "strategy": "D",
+      "status": "DATA_BLOCKED",
+      "missing": [
+        "correction_lineage",
+        "dart",
+        "event_mapping",
+        "exante_baseline",
+        "publication_pit"
+      ],
+      "economic_approval": false,
+      "live_approved": false
+    }
+  ],
+  "actual_market_rows": 0,
+  "order_calls": 0,
+  "cancel_calls": 0
+}

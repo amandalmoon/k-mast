@@ -53,6 +53,7 @@ class TokenManager:
             if self._token is None or now + self.margin >= self._token.expires_at:
                 try:
                     token = self.provider.issue(self.config)
+                    now = self.clock.now()
                     if (
                         token.environment != self.config.environment
                         or token.account_ref != self.config.account_ref

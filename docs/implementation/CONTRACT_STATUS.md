@@ -56,3 +56,12 @@
 | NOT_APPLICABLE | KM-000의 실제 주문·실자금 수익성 검증; 수행하지 않음 |
 
 ECONOMIC_EDGE_UNVERIFIED / LIVE_NOT_APPROVED. GitHub Actions 정의는 있으나 원격 실행은 미수행.
+
+## KM-001 후속 구현
+
+KM-000의 위 표는 역사적 종료 상태다. KM-001의 요청 스키마·인증/REST/WS 읽기 통신,
+immutable Raw/Parquet 저장·PIT/세션/종목/기업행위/공시/비용 계약과 합성 E2E를 추가했다.
+신호·비용·손익·주문 권한 계약은 유지한다. 실제 인증의 응답 수신 중 시계가 진행될 수 있어
+TokenManager의 발급 직후 검증 시각을 다시 읽도록 수정했다(회귀 및 느린 발급 시험).
+새 근거는 [API 가정](API_ASSUMPTIONS.md), [가용성 행렬](DATA_AVAILABILITY_MATRIX.md),
+[실행법](KM001_USAGE.md), [KM-001 보고서](KM001_CLOSURE_REPORT.md)를 참조한다.
