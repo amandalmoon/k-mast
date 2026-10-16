@@ -1,0 +1,32 @@
+E501 Line too long (101 > 100)
+  --> scripts\audit_km003_sources.py:28:101
+   |
+26 |         "KIS_DAILY",
+27 |         "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/examples_llm/dome…
+28 |         "Read-only authentication authorized; local key setup declined; no authentication attempted",
+   |                                                                                                     ^
+29 |     ),
+30 | )
+   |
+
+E501 Line too long (107 > 100)
+  --> scripts\check_km003_evidence.py:71:101
+   |
+69 |     assert Decimal(state["account"]["fees_and_taxes"]) == 1
+70 |     print(
+71 |         "PASS: four independent reference equations, fixed-budget capital, source hashes, Mock attribution"
+   |                                                                                                     ^^^^^^^
+72 |     )
+   |
+
+E501 Line too long (103 > 100)
+  --> scripts\wheel_smoke_km003.py:49:101
+   |
+47 |     assert json.loads(result.stdout) == expected
+48 |     print(
+49 |         "PASS: installed wheel outside checkout; four reference states and Mock journal hash identical"
+   |                                                                                                     ^^^
+50 |     )
+   |
+
+Found 3 errors.

@@ -1,0 +1,5 @@
+A: PASS synthetic NAV=9803.19, net=-196.81, HOLD
+B: PASS synthetic NAV=9783.32, net=-216.68, HOLD
+C: PASS synthetic NAV=9997, net=-3, HOLD
+D: PASS synthetic NAV=9753.39, net=-246.61, HOLD
+PASS: reference equations, fixed-budget capital, hashes and Mock attribution

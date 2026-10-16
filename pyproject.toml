@@ -16,6 +16,7 @@ dev = ["pytest==8.4.2", "ruff==0.14.1", "mypy==1.18.2", "types-PyYAML==6.0.12.20
 kmast = "kmast.demo:main"
 kmast-data = "kmast.data.cli:main"
 kmast-mock = "kmast.execution.demo:main"
+kmast-alpha = "kmast.simulation.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

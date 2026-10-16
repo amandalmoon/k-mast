@@ -1,0 +1,36 @@
+{
+  "checks": [
+    {
+      "name": "pytest",
+      "command": [
+        "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "--junitxml=artifacts/km003/baseline-junit.xml"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "remote-heads",
+      "command": [
+        "git",
+        "ls-remote",
+        "--heads",
+        "origin"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "starting-head",
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "km002_hash_mismatches": [],
+  "km002_implementation_is_ancestor": true
+}

@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-10-16T12:56:36.419843+00:00",
+  "scope": "PUBLIC_DOCUMENTS_ONLY",
+  "sources": [
+    {
+      "source": "FSC_DAILY",
+      "url": "https://www.data.go.kr/data/15094808/openapi.do",
+      "status": 200,
+      "sha256": "9ea7795fea80c1c544bf2f578e216a85f80bfb1aea183c4a5aeb994c7637c25d",
+      "note": "License and publication delay require review; portal now states Type 4 and redistribution restrictions"
+    },
+    {
+      "source": "KRX",
+      "url": "https://openapi.krx.co.kr/contents/OPP/MAIN/main/index.cmd",
+      "status": "FETCH_UNAVAILABLE",
+      "sha256": null,
+      "note": "API key application and applicable market data use agreement required"
+    },
+    {
+      "source": "DART",
+      "url": "https://opendart.fss.or.kr/guide/detail.do?apiGrpCd=DS001&apiId=2019001",
+      "status": 200,
+      "sha256": "63bc4e286e14bdb0ece90cbd1f0ab474de6367cea8b4240804d32263e2492ec3",
+      "note": "Authentication key required; receipt date is not an intraday publication timestamp"
+    },
+    {
+      "source": "KIS_DAILY",
+      "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/examples_llm/domestic_stock/inquire_daily_itemchartprice/inquire_daily_itemchartprice.py",
+      "status": 200,
+      "sha256": "429f45248678d60a67990da1760af5965597201a3f9b790fb27a34e1fcfb2c06",
+      "note": "User authorized read-only authentication but declined local key setup; no authenticated request made"
+    }
+  ],
+  "actual_authentication_calls": 0,
+  "real_market_rows": 0,
+  "credential_setup": "USER_DECLINED_THIS_RUN",
+  "A": "DATA_BLOCKED",
+  "B": "DATA_BLOCKED",
+  "C": "DATA_BLOCKED",
+  "D": "DATA_BLOCKED"
+}

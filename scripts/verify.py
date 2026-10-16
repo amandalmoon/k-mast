@@ -11,7 +11,9 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--milestone", choices=("km000", "km001", "km002"), default="km000")
+    parser.add_argument(
+        "--milestone", choices=("km000", "km001", "km002", "km003"), default="km000"
+    )
     args = parser.parse_args()
     evidence = ROOT / "artifacts" / args.milestone
     evidence.mkdir(parents=True, exist_ok=True)
@@ -62,6 +64,31 @@ def main() -> None:
             "artifacts/km002/scenarios-v2",
         ]
         checks["wheel-smoke"] = ["scripts/wheel_smoke_km002.py"]
+    if args.milestone == "km003":
+        checks["regression"] = [
+            "-m",
+            "pytest",
+            "-q",
+            "tests/test_contracts.py",
+            "tests/test_broker.py",
+            "tests/test_study.py",
+            "tests/test_km001.py",
+            "tests/test_km001_edges.py",
+            "tests/test_km002.py",
+            "tests/test_km002_edges.py",
+        ]
+        checks["alpha-functional"] = [
+            "-m",
+            "kmast.simulation.cli",
+            "--output",
+            "artifacts/km003/functional-v1",
+        ]
+        checks["alpha-replay"] = checks["alpha-functional"].copy()
+        checks["independent-reference"] = [
+            "scripts/check_km003_evidence.py",
+            "artifacts/km003/functional-v1",
+        ]
+        checks["wheel-smoke"] = ["scripts/wheel_smoke_km003.py"]
     results = []
     for name, args in checks.items():
         result = subprocess.run([sys.executable, *args], cwd=ROOT, capture_output=True)

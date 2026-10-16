@@ -86,3 +86,17 @@ holding_deadlines 계약을 사용한다. 고정 예산×계좌 NAV를 sleeve �
 
 KM002_LEDGER_OMS_MOCK_READY의 범위는 합성 Gate A~E다.
 KM001_REAL_DATA_HOLD / ECONOMIC_EDGE_UNVERIFIED / LIVE_NOT_APPROVED.
+
+## KM-003 후속 구현
+
+기존 core·data·broker·execution·strategies 프로토콜과 164개 시험을 보존했다.
+새 alpha 패키지는 순수 Context→SignalIntent 전체 snapshot 규칙이며, 기존 최상위
+ARCH-01을 유지하고 ALPHA-001으로 새 패키지 전체의 broker/network/OMS 금지를 검사한다.
+연결 orchestration은 simulation.bridge에만 있다. 계좌/귀속은 기존 KM-002,
+독립 reference는 새 REFERENCE 장부로 구분하며 합산하지 않는다.
+별도 원장에 즉시 경제 결제를 쓰는 reference 가정을 명시했고 실제 계좌 T+2 계약은 바꾸지 않았다.
+공시 원문 자동 해석·실제 queue 모형·실데이터/OOS/수익성 승인은 미구현/보류다.
+권리 단절 미해결 종목은 진입을 차단한다. 예측 horizon·TTL·원래 청산기한을 분리한다.
+
+기술 판정은 KM003_STRATEGY_CODE_READY_DATA_HOLD다.
+상세 범위·증거·실제 자료 확보 조건은 KM003_USAGE/KM003_DATA_PLAN/KM003_CLOSURE_REPORT를 참조한다.

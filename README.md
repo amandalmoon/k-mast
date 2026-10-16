@@ -101,3 +101,18 @@ Linux/macOS에서는 `.venv/bin/python`을 사용한다. `scripts/verify.py`는 
 [실행 계약과 한계](docs/implementation/KM002_USAGE.md) ·
 [KM-002 종료 보고서](docs/implementation/KM002_CLOSURE_REPORT.md).
 실제 데이터·경제성·LIVE 승인은 계속 보류이며 KM-003은 자동 실행하지 않는다.
+
+## KM-003 Alpha 코드·독립 reference
+
+기존 SignalIntent를 출력하는 A 추세/상대강도, B ORB, C 평균회귀, D 사건 규칙과
+독립 reference·기능 재생 경로를 추가했다. 실제 시장자료와 비용 검증은 HOLD다.
+
+```powershell
+.\.venv\Scripts\python -m kmast.simulation.cli --output data/km003
+.\.venv\Scripts\python scripts/verify.py --milestone km003
+```
+
+[전략·reference 실행 계약](docs/implementation/KM003_USAGE.md) ·
+[데이터 조사·확보 계획](docs/implementation/KM003_DATA_PLAN.md) ·
+[KM-003 종료 보고서](docs/implementation/KM003_CLOSURE_REPORT.md).
+기능용 합성 손익은 시장 수익성 증거가 아니며 KM-004는 자동 실행하지 않는다.

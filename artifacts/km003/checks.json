@@ -1,0 +1,132 @@
+[
+  {
+    "name": "pytest",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "-q",
+      "--junitxml=artifacts/km003/junit.xml"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "ruff",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "ruff",
+      "check",
+      "."
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "format",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "ruff",
+      "format",
+      "--check",
+      "."
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "mypy",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "mypy",
+      "src"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "build",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "build",
+      "--no-isolation"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "demo",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "kmast.demo"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "regression",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_contracts.py",
+      "tests/test_broker.py",
+      "tests/test_study.py",
+      "tests/test_km001.py",
+      "tests/test_km001_edges.py",
+      "tests/test_km002.py",
+      "tests/test_km002_edges.py"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "alpha-functional",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "kmast.simulation.cli",
+      "--output",
+      "artifacts/km003/functional-v1"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "alpha-replay",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "kmast.simulation.cli",
+      "--output",
+      "artifacts/km003/functional-v1"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "independent-reference",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "scripts/check_km003_evidence.py",
+      "artifacts/km003/functional-v1"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "wheel-smoke",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "scripts/wheel_smoke_km003.py"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  }
+]
