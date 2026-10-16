@@ -1,0 +1,5 @@
+recursive-include tests *.py
+recursive-include configs *.yaml
+include requirements-dev.lock
+include AGENTS.md
+include .env.example

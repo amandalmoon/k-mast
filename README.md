@@ -45,3 +45,30 @@
 ## 완료 판정
 
 `FINAL_IMPLEMENTATION_BASELINE` / `GO_FOR_V1_2_IMPLEMENTATION` / `ECONOMIC_EDGE_UNVERIFIED` / `LIVE_NOT_APPROVED`.
+
+## KM-000 로컬 구현 (2026-10-16)
+
+Python 3.11+에서 아래 명령으로 설치·검증한다. 최초 의존성 설치에는 패키지 저장소 접근이
+필요하다. 설치 후 계약 테스트·빌드·demo는 API 키와 외부 서비스 없이 실행한다.
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python -m pip install -r requirements-dev.lock
+.\.venv\Scripts\python -m pip install --no-deps --no-build-isolation -e .
+.\.venv\Scripts\python scripts/verify.py
+.\.venv\Scripts\python -m kmast.demo
+```
+
+Linux/macOS에서는 `.venv/bin/python`을 사용한다. `scripts/verify.py`는 pytest, ruff,
+포맷, mypy, sdist/wheel 빌드와 demo를 실행하고 `artifacts/km000/`에 원문 로그를 남긴다.
+오프라인 설치가 필요하면 먼저 해당 플랫폼용 wheel을 별도 확보해야 한다.
+
+- [KM-000 종료 보고서](docs/implementation/KM000_CLOSURE_REPORT.md)
+- [계약·범위·시험 대응표](docs/implementation/CONTRACT_STATUS.md)
+- [KIS 공식 자료 대조 및 미확인 가정](docs/implementation/API_ASSUMPTIONS.md)
+
+`configs/live.yaml`은 의도적으로 로더에서 거부된다. 다른 모드도 주문/취소가 봉쇄되어 있다.
+환경변수는 권한을 활성화하지 않는다. 실제 인증·수집·주문 transport는 구현하지 않았다.
+위 기존 설계 문서의 미실행 표기는 원본 문서 작성 시점의 상태이며, 현재 코드 증거와 구별한다.
+루트 `SHA256SUMS.txt`는 제공 원본의 목록이다. README에 이 실행 안내를 추가했으므로
+원본과의 대조는 보존 커밋 `09362323ebac4c75eafbfd5dd1bbbaf68f60e910`을 사용한다.

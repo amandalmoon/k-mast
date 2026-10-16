@@ -1,0 +1,23 @@
+Processing c:\users\user\desktop\k-mast\dist\kmast-1.2.0-py3-none-any.whl
+Installing collected packages: kmast
+Successfully installed kmast-1.2.0
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: C:\Users\User\Desktop\k-mast\.venv\Scripts\python.exe -m pip install --upgrade pip
+C:\Users\User\AppData\Local\Temp\kmast-wheel-lteg052o\kmast\__init__.py
+{
+  "mode": "RESEARCH",
+  "order_enabled": false,
+  "live_enabled": false,
+  "events": 1,
+  "duplicates": 1,
+  "replay_hash": "830159f1fd8f36089d06c5630bccc44c6e8d6c6d66b8920ef8601ea0860029a7",
+  "G3": "HOLD",
+  "broker": {
+    "operation": "quote",
+    "source": "SYNTHETIC_MOCK",
+    "status": "OK"
+  },
+  "economic_status": "ECONOMIC_EDGE_UNVERIFIED",
+  "live_status": "LIVE_NOT_APPROVED"
+}

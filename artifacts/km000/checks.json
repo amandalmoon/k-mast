@@ -1,0 +1,71 @@
+[
+  {
+    "name": "pytest",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "-q",
+      "--junitxml=artifacts/km000/junit.xml"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "ruff",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "ruff",
+      "check",
+      "."
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "format",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "ruff",
+      "format",
+      "--check",
+      "."
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "mypy",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "mypy",
+      "src"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "build",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "build",
+      "--no-isolation"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "demo",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "kmast.demo"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  }
+]

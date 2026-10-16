@@ -1,0 +1,5 @@
+# Deliberately rejected by loader. LIVE cannot be activated in KM-000.
+mode: LIVE
+order_enabled: false
+live_enabled: false
+config_version: km000-v12

@@ -1,0 +1,39 @@
+from enum import StrEnum
+
+
+class Mode(StrEnum):
+    RESEARCH = "RESEARCH"
+    SHADOW = "SHADOW"
+    PAPER = "PAPER"
+    LIVE = "LIVE"
+
+
+class Environment(StrEnum):
+    PAPER = "PAPER"
+    LIVE = "LIVE"
+
+
+class Policy(StrEnum):
+    PBASE_FIXED = "PBASE_FIXED"
+    PBASE_RISK = "PBASE_RISK"
+    PCOV_ROBUST = "PCOV_ROBUST"
+    PREGIME_DYNAMIC = "PREGIME_DYNAMIC"
+    PNET_OPT = "PNET_OPT"
+
+
+class CostBasis(StrEnum):
+    GROSS = "GROSS_EXPECTATION_WITH_SINGLE_EXECUTION_COST"
+    NET_REALIZED = "NET_REALIZED_AFTER_EXECUTION_COST"
+    UNKNOWN = "UNKNOWN"
+
+
+class AvailabilityMethod(StrEnum):
+    OBSERVED_LIVE = "OBSERVED_LIVE"
+    DOCUMENTED_RELEASE_PLUS_DELAY = "DOCUMENTED_RELEASE_PLUS_DELAY"
+    CONSERVATIVE_BOUND = "CONSERVATIVE_BOUND"
+
+
+class LedgerType(StrEnum):
+    ACCOUNT = "ACCOUNT"
+    ATTRIBUTION = "ATTRIBUTION"
+    REFERENCE = "REFERENCE"

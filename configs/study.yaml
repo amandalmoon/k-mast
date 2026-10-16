@@ -1,0 +1,17 @@
+objective_id: PROFIT_FIRST_RISK_CONSTRAINED_V12
+primary_metric: NET_OPERATING_PNL_KRW
+baseline_policy_id: null
+capital_scenarios: null
+valuation_calendar: null
+common_horizon: null
+cost_basis: GROSS_EXPECTATION_WITH_SINGLE_EXECUTION_COST
+fixed_cost_schedule_id: null
+fold_manifest_id: null
+label_maturity_policy_id: null
+trial_registry_id: null
+minimum_economic_improvement: null
+stress_loss_limit: null
+expected_shortfall_limit: null
+freeze_approved_by: null
+optimizer_approved: false
+live_approved: false
