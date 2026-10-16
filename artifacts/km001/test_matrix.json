@@ -1,0 +1,164 @@
+{
+  "KIS-001": [
+    {
+      "test": "test_KIS_001_official_request_contract",
+      "status": "PASS"
+    }
+  ],
+  "KIS-002": [
+    {
+      "test": "test_KIS_002_environment_separation",
+      "status": "PASS"
+    }
+  ],
+  "KIS-003": [
+    {
+      "test": "test_KIS_003_account_and_tr_pacing",
+      "status": "PASS"
+    }
+  ],
+  "KIS-004": [
+    {
+      "test": "test_KIS_004_retry_policy[failure0]",
+      "status": "PASS"
+    },
+    {
+      "test": "test_KIS_004_retry_policy[failure1]",
+      "status": "PASS"
+    },
+    {
+      "test": "test_KIS_004_retry_policy[failure2]",
+      "status": "PASS"
+    },
+    {
+      "test": "test_KIS_004_retry_policy[failure3]",
+      "status": "PASS"
+    }
+  ],
+  "KIS-005": [
+    {
+      "test": "test_KIS_005_subscription_and_unsubscribe",
+      "status": "PASS"
+    }
+  ],
+  "KIS-006": [
+    {
+      "test": "test_KIS_006_gap_and_sync",
+      "status": "PASS"
+    }
+  ],
+  "KIS-007": [
+    {
+      "test": "test_KIS_007_closed_capability",
+      "status": "PASS"
+    }
+  ],
+  "DATA-001": [
+    {
+      "test": "test_DATA_001_raw_provenance_hash",
+      "status": "PASS"
+    }
+  ],
+  "DATA-002": [
+    {
+      "test": "test_DATA_002_recollection_deduplicates",
+      "status": "PASS"
+    }
+  ],
+  "DATA-003": [
+    {
+      "test": "test_DATA_003_conflict_quarantine",
+      "status": "PASS"
+    }
+  ],
+  "DATA-004": [
+    {
+      "test": "test_DATA_004_time_semantics",
+      "status": "PASS"
+    }
+  ],
+  "DATA-005": [
+    {
+      "test": "test_DATA_005_future_input_blocked",
+      "status": "PASS"
+    }
+  ],
+  "DATA-006": [
+    {
+      "test": "test_DATA_006_incomplete_bar",
+      "status": "PASS"
+    }
+  ],
+  "DATA-007": [
+    {
+      "test": "test_DATA_007_venue_session",
+      "status": "PASS"
+    }
+  ],
+  "DATA-008": [
+    {
+      "test": "test_DATA_008_corporate_action_single_cost",
+      "status": "PASS"
+    }
+  ],
+  "DATA-009": [
+    {
+      "test": "test_DATA_009_historical_security_status",
+      "status": "PASS"
+    }
+  ],
+  "DATA-010": [
+    {
+      "test": "test_DATA_010_missing_volume_is_not_zero",
+      "status": "PASS"
+    }
+  ],
+  "DATA-011": [
+    {
+      "test": "test_DATA_011_e2e_deterministic_storage",
+      "status": "PASS"
+    }
+  ],
+  "DATA-012": [
+    {
+      "test": "test_DATA_012_coverage_denominator",
+      "status": "PASS"
+    }
+  ],
+  "DART-001": [
+    {
+      "test": "test_DART_001_date_is_not_publication_time",
+      "status": "PASS"
+    }
+  ],
+  "DART-002": [
+    {
+      "test": "test_DART_002_correction_lineage",
+      "status": "PASS"
+    }
+  ],
+  "ECON-001": [
+    {
+      "test": "test_ECON_001_unverified_cost_sources",
+      "status": "PASS"
+    }
+  ],
+  "ECON-002": [
+    {
+      "test": "test_ECON_002_fixture_cannot_approve_strategy",
+      "status": "PASS"
+    }
+  ],
+  "SEC-002": [
+    {
+      "test": "test_SEC_002_collection_redaction",
+      "status": "PASS"
+    }
+  ],
+  "SAFE-001": [
+    {
+      "test": "test_SAFE_001_no_trading_after_km001",
+      "status": "PASS"
+    }
+  ]
+}
