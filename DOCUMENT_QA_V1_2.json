@@ -1,0 +1,125 @@
+{
+  "qa_scope": "K-MAST v1.2 Markdown structural/integrity QA only; NOT code execution, strategy profitability or live brokerage validation",
+  "date": "2026-10-16",
+  "document_count": 14,
+  "source_v11_count": 8,
+  "tests": [
+    {
+      "check": "eight_normative_md",
+      "result": "PASS",
+      "detail": "00~07 8개의 권위 문서"
+    },
+    {
+      "check": "all_expected_documents",
+      "result": "PASS",
+      "detail": "8개 명세 + 안내·이전·이력·과거감사·근거·원본증빙"
+    },
+    {
+      "check": "no_executable_work_instructions",
+      "result": "PASS",
+      "detail": "사용자 요청에 따라 작업지시서는 문서화하지 않음"
+    },
+    {
+      "check": "v1_2_frozen",
+      "result": "PASS",
+      "detail": "모든 권위 문서의 버전 통일"
+    },
+    {
+      "check": "protect_live",
+      "result": "PASS",
+      "detail": "8개 권위 문서 LIVE 미승인 표시"
+    },
+    {
+      "check": "all_local_links",
+      "result": "PASS",
+      "detail": "86 Markdown links checked; bad=[]"
+    },
+    {
+      "check": "code_fences_balanced",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "check": "math_blocks_balanced",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "check": "control_chars_absent",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "check": "markdown_table_columns",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "check": "no_old_audit_link_in_specs",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "check": "profit_first_in_master",
+      "result": "PASS",
+      "detail": "NET_OPERATING_PNL_KRW"
+    },
+    {
+      "check": "net_risk_constrained_objective",
+      "result": "PASS",
+      "detail": "\\max_{w\\in\\mathcal W}"
+    },
+    {
+      "check": "risk_ES_hard_constraint",
+      "result": "PASS",
+      "detail": "\\widehat{ES}"
+    },
+    {
+      "check": "order_no_trade",
+      "result": "PASS",
+      "detail": "HOLD_TARGET"
+    },
+    {
+      "check": "MPT_origin",
+      "result": "PASS",
+      "detail": "R19"
+    },
+    {
+      "check": "CVaR_source",
+      "result": "PASS",
+      "detail": "R20"
+    },
+    {
+      "check": "profit_OOS_go",
+      "result": "PASS",
+      "detail": "ECON_GO"
+    },
+    {
+      "check": "staged_optimizer",
+      "result": "PASS",
+      "detail": "PBASE_FIXED"
+    },
+    {
+      "check": "live_safety",
+      "result": "PASS",
+      "detail": "LIVE_NOT_APPROVED"
+    },
+    {
+      "check": "scope_4_alphas",
+      "result": "PASS",
+      "detail": "A 추세"
+    },
+    {
+      "check": "source_integrity",
+      "result": "PASS",
+      "detail": "BASELINE_V1_1_SHA256.json"
+    },
+    {
+      "check": "baseline_hashes_match",
+      "result": "PASS",
+      "detail": "v1.1 8개 원본 SHA-256 일치"
+    }
+  ],
+  "failures": [],
+  "status": "PASS"
+}

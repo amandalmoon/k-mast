@@ -1,0 +1,46 @@
+{
+  "baseline": "K-MAST v1.1",
+  "creation_date": "2026-10-16",
+  "files": [
+    {
+      "name": "00_프로젝트_총괄_계획서.md",
+      "sha256": "f14977d7ad95b15de4072e9a509f5d8d6e208107fcbe06d16323eb7bbae94213",
+      "bytes": 11714
+    },
+    {
+      "name": "01_시스템_아키텍처_및_인터페이스.md",
+      "sha256": "518a7be6d1556b90456db65ccc550de59083978843c3b087fd93f860b3a2ca98",
+      "bytes": 12662
+    },
+    {
+      "name": "02_알파_전략_및_레짐_명세.md",
+      "sha256": "3dc211b3a0ac38c1646382077115549b429a7b850263dc1617c66cba0dd5d7ad",
+      "bytes": 12599
+    },
+    {
+      "name": "03_데이터_및_KIS_API_연동_규격.md",
+      "sha256": "f786da93a0e19abe2603509c60a7cddf61580707dac78bf4c2393dcef12bd5bc",
+      "bytes": 11227
+    },
+    {
+      "name": "04_포트폴리오_리스크_및_주문관리_규격.md",
+      "sha256": "aeeacd479cdd271f39f225b40601eec0ad54b6b9759563f9f20862c8d7bc7376",
+      "bytes": 14063
+    },
+    {
+      "name": "05_백테스트_포워드_검증_프로토콜.md",
+      "sha256": "ba0ac84d2662efceb4906634ebaf3ab0b42ad12dcd607fc491c82336d43c30e2",
+      "bytes": 14152
+    },
+    {
+      "name": "06_운영_보안_배포_SOP.md",
+      "sha256": "a1f6c9b3c91555e21922f9f604ccbc9123ce01de990748d36197d45d039db117",
+      "bytes": 8958
+    },
+    {
+      "name": "07_개발_로드맵_마일스톤_승인기준.md",
+      "sha256": "86d47b393e2af5224bf421b7bacc503f5167252d4269f9aaaa4e6b041f626d01",
+      "bytes": 8782
+    }
+  ]
+}
