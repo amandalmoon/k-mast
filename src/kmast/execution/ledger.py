@@ -18,6 +18,7 @@ from kmast.execution.events import (
     Reconcile,
     SeedPosition,
     Settle,
+    SplitAction,
     Transfer,
 )
 from kmast.execution.models import (
@@ -500,6 +501,66 @@ def reduce_event(state: ExecutionState, event: Event) -> ExecutionState:
                     key=lambda q: q.symbol,
                 )
             ),
+        )
+    elif isinstance(event, SplitAction):
+        if event.effective_date > event.at.astimezone(KST).date() or (
+            state.last_event_at is not None and event.at < state.last_event_at
+        ):
+            raise ValueError("split effect unavailable or late event requires replay")
+        affected_orders = {o.client_order_id for o in state.orders if o.symbol == event.symbol}
+        if any(o.symbol == event.symbol and o.state not in TERMINAL for o in state.orders) or any(
+            not item.settled
+            and any(
+                f.exec_id == item.exec_id and f.order_id in affected_orders for f in state.fills
+            )
+            for item in state.settlements
+        ):
+            raise ValueError("split requires settled inventory and resolved orders")
+        if any(
+            f.order_id in affected_orders and f.at.astimezone(KST).date() >= event.effective_date
+            for f in state.fills
+        ):
+            raise ValueError("post-effective execution requires explicit corporate-action replay")
+        if not state.account.quantity(event.symbol):
+            raise ValueError("split action requires owned inventory")
+
+        def split_book(book: Book) -> Book:
+            lots = []
+            for lot in book.lots:
+                if lot.symbol != event.symbol:
+                    lots.append(lot)
+                    continue
+                quantity = lot.quantity * event.multiplier
+                if quantity != int(quantity):
+                    raise ValueError("fractional split requires explicit cash-in-lieu")
+                lots.append(
+                    change(
+                        lot,
+                        quantity=int(quantity),
+                        unit_cost=lot.unit_cost / event.multiplier,
+                        origin_unit_cost=lot.origin_unit_cost / event.multiplier,
+                        lineage=(*lot.lineage, event.action_id),
+                    )
+                )
+            return change(book, lots=tuple(lots))
+
+        state = change(
+            state,
+            account=split_book(state.account),
+            attribution=tuple(change(a, book=split_book(a.book)) for a in state.attribution),
+            quotes=tuple(
+                change(
+                    q,
+                    price=q.price / event.multiplier,
+                    session="UNKNOWN",
+                    halted=True,
+                    source_ref="MECHANICAL_SPLIT_NOT_EXECUTABLE",
+                )
+                if q.symbol == event.symbol
+                else q
+                for q in state.quotes
+            ),
+            reconciled=False,
         )
     elif isinstance(event, CashPolicy):
         state = change(state, cash_policy=event.policy)

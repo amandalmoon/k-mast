@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/examples_llm/domestic_stock/inquire_daily_indexchartprice/inquire_daily_indexchartprice.py",
+    "sha256": "eac2a5b896782acd1fe64f5634feb455ed05559238098705f3a1cc5a40364afd"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/examples_llm/domestic_stock/inquire_daily_indexchartprice/chk_inquire_daily_indexchartprice.py",
+    "sha256": "b25af75f3d48c9a5f8b205ee4f06c994bc5692716ec88f632964f39c60b7c6c0"
+  }
+]

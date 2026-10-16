@@ -1,0 +1,84 @@
+{
+  "proposal": {
+    "identity": "1593d6d1ad378f1c63f1a637da8defa52afa4c495f2f29979274edcb45ea2bab",
+    "policy": "PBASE_RISK",
+    "status": "PROPOSAL_ONLY",
+    "reasons": [
+      "FLOORED_CAPPED_INVERSE_VOL_NOT_OPTIMIZED_RISK_PARITY"
+    ],
+    "weights": [
+      [
+        "A",
+        "0.4"
+      ],
+      [
+        "B",
+        "0.3809088021254184737289323789"
+      ]
+    ],
+    "cash_weight": "0.2190911978745815262710676211",
+    "covariance": [
+      [
+        "0.0002333333333333333333333333334",
+        "0.0002666666666666666666666666667"
+      ],
+      [
+        "0.0002666666666666666666666666667",
+        "0.0004333333333333333333333333333"
+      ]
+    ],
+    "variance": "0.0001814668678526251299688437759",
+    "volatility": "0.01347096387986491224890826176",
+    "risk_contributions": [
+      [
+        "A",
+        "0.005787529849781355184625144733"
+      ],
+      [
+        "B",
+        "0.007683434030083557064283117028"
+      ]
+    ],
+    "input_hash": "1593d6d1ad378f1c63f1a637da8defa52afa4c495f2f29979274edcb45ea2bab",
+    "scope": "SYNTHETIC_ONLY",
+    "live_approved": false
+  },
+  "mock_fixed_freeze": {
+    "budget_id": "RISK_CANDIDATE_FIXED_1593d6d1ad378f1c63f1a637da8defa52afa4c495f2f29979274edcb45ea2bab",
+    "policy_id": "PBASE_FIXED",
+    "sleeves": [
+      {
+        "strategy_id": "A",
+        "weight": "0.4",
+        "risk_budget": null,
+        "capital_cap": null
+      },
+      {
+        "strategy_id": "B",
+        "weight": "0.3809088021254184737289323789",
+        "risk_budget": null,
+        "capital_cap": null
+      }
+    ],
+    "approved_by": "SYNTHETIC_EXPLICIT_DIAGNOSTIC"
+  },
+  "real_panel": {
+    "identity": "99c4034b30c1f392611ed280076558d1f1a762010ca94cab35eae81b8a8cb595",
+    "policy": "PBASE_RISK",
+    "status": "HOLD",
+    "reasons": [
+      "NO_UNAMBIGUOUS_RETURN_PANEL"
+    ],
+    "weights": [],
+    "cash_weight": "1",
+    "covariance": [],
+    "variance": null,
+    "volatility": null,
+    "risk_contributions": [],
+    "input_hash": "99c4034b30c1f392611ed280076558d1f1a762010ca94cab35eae81b8a8cb595",
+    "scope": "SYNTHETIC_ONLY",
+    "live_approved": false
+  },
+  "promotion": "DISABLED",
+  "economics": "UNVERIFIED"
+}

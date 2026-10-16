@@ -28,7 +28,7 @@ def parse_rest(
         raise ValueError("cached request parameters do not match provenance")
     rows = (
         body.get("output2")
-        if request.operation in {"daily", "minute_today", "minute_history"}
+        if request.operation in {"daily", "index_daily", "minute_today", "minute_history"}
         else (body.get("output1") if request.operation == "quote" else body.get("output"))
     )
     if isinstance(rows, dict):
@@ -58,7 +58,30 @@ def parse_rest(
         flags: list[str] = []
         if meta.session == "UNKNOWN":
             flags.append("SESSION_UNVERIFIED")
-        if request.operation in {"daily", "minute_today", "minute_history"}:
+        if request.operation == "index_daily":
+            day = datetime.strptime(row["stck_bsop_date"], "%Y%m%d").date()
+            if (
+                request.start is None
+                or request.end is None
+                or not request.start <= day <= request.end
+            ):
+                raise ValueError("index response outside requested scope")
+            common |= dict(
+                kind="INDEX",
+                exchange_date=day,
+                timestamp_precision="DATE_ONLY",
+                price=number(row, "bstp_nmix_prpr"),
+                close=number(row, "bstp_nmix_prpr"),
+                open=number(row, "bstp_nmix_oprc"),
+                high=number(row, "bstp_nmix_hgpr"),
+                low=number(row, "bstp_nmix_lwpr"),
+                price_unit="INDEX_POINTS",
+                volume_unit="UNVERIFIED",
+                complete=day < meta.received_at.astimezone(KST).date(),
+            )
+            flags.append("INDEX_HISTORICAL_RELEASE_UNVERIFIED")
+            key = day.isoformat()
+        elif request.operation in {"daily", "minute_today", "minute_history"}:
             day = datetime.strptime(row["stck_bsop_date"], "%Y%m%d").date()
             common["exchange_date"] = day
             if day > meta.received_at.astimezone(KST).date():
@@ -79,6 +102,8 @@ def parse_rest(
                 volume=number(row, "acml_vol" if daily else "cntg_vol"),
             )
             if daily:
+                if row.get("acml_tr_pbmn") not in (None, ""):
+                    common["turnover"] = number(row, "acml_tr_pbmn")
                 # A date is retained as a date: no invented exchange close/publication timestamp.
                 common["timestamp_precision"] = "DATE_ONLY"
                 common["complete"] = day < meta.received_at.astimezone(KST).date()

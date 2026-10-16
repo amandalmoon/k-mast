@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--milestone", choices=("km000", "km001", "km002", "km003"), default="km000"
+        "--milestone", choices=("km000", "km001", "km002", "km003", "km004"), default="km000"
     )
     args = parser.parse_args()
     evidence = ROOT / "artifacts" / args.milestone
@@ -89,6 +89,36 @@ def main() -> None:
             "artifacts/km003/functional-v1",
         ]
         checks["wheel-smoke"] = ["scripts/wheel_smoke_km003.py"]
+    if args.milestone == "km004":
+        checks["risk-diagnostic"] = ["scripts/risk_diagnostic_km004.py"]
+        checks["regression220"] = [
+            "-m",
+            "pytest",
+            "-q",
+            "--ignore=tests/test_km004.py",
+            "--ignore=tests/test_km004_edges.py",
+        ]
+        checks["joint-demo"] = [
+            "-m",
+            "kmast.portfolio.demo",
+            "--output",
+            "artifacts/km004/joint-v1",
+        ]
+        checks["joint-replay"] = checks["joint-demo"].copy()
+        checks["independent-accounting"] = ["scripts/check_km004_evidence.py"]
+        checks["wheel-smoke"] = ["scripts/wheel_smoke_km004.py"]
+        checks["old-mock-replay"] = [
+            "-m",
+            "kmast.execution.demo",
+            "--output",
+            "artifacts/km002/scenarios-v2",
+        ]
+        checks["old-alpha-replay"] = [
+            "-m",
+            "kmast.simulation.cli",
+            "--output",
+            "artifacts/km003/functional-v1",
+        ]
     results = []
     for name, args in checks.items():
         result = subprocess.run([sys.executable, *args], cwd=ROOT, capture_output=True)
@@ -103,7 +133,7 @@ def main() -> None:
             }
         )
         print(f"{name}: {results[-1]['status']}")
-    (evidence / "checks.json").write_text(json.dumps(results, indent=2) + "\n", encoding="utf-8")
+    (evidence / "checks.json").write_bytes((json.dumps(results, indent=2) + "\n").encode("utf-8"))
     sys.exit(int(any(r["exit_code"] != 0 for r in results)))
 
 

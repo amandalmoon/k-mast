@@ -1,9 +1,9 @@
 from datetime import date
 from typing import Annotated, Literal
 
-from pydantic import AwareDatetime, Field, TypeAdapter
+from pydantic import AwareDatetime, Field, TypeAdapter, model_validator
 
-from kmast.core.base import Contract, Identifier
+from kmast.core.base import Contract, Identifier, Positive
 from kmast.core.contracts import PortfolioDecision
 from kmast.execution.models import (
     Cash,
@@ -120,6 +120,23 @@ class Reconcile(EventBase):
     discovered_fills: tuple[Fill, ...] = ()
 
 
+class SplitAction(EventBase):
+    kind: Literal["SPLIT_ACTION"] = "SPLIT_ACTION"
+    action_id: Identifier
+    symbol: Identifier
+    multiplier: Positive
+    available_at: AwareDatetime
+    effective_date: date
+    source_ref: Identifier
+    price_basis: Literal["RAW"] = "RAW"
+
+    @model_validator(mode="after")
+    def economic_identity(self) -> "SplitAction":
+        if self.event_id != "SPLIT:" + self.action_id or self.available_at > self.at:
+            raise ValueError("split requires canonical event identity and available source")
+        return self
+
+
 Event = Annotated[
     Flow
     | Allocate
@@ -133,7 +150,9 @@ Event = Annotated[
     | Settle
     | Transfer
     | Income
-    | Reconcile,
+    | Reconcile
+    | SplitAction,
+    # split is an additive event; existing event/state serialization is unchanged.
     Field(discriminator="kind"),
 ]
 EVENT_ADAPTER: TypeAdapter[Event] = TypeAdapter(Event)

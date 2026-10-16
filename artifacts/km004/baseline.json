@@ -1,0 +1,158 @@
+{
+  "checks": [
+    {
+      "name": "regression214",
+      "command": [
+        "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "--ignore=tests/test_kis_env.py",
+        "--junitxml=artifacts/km004/baseline214.xml"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "regression220",
+      "command": [
+        "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "mypy",
+      "command": [
+        "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "src"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "ruff",
+      "command": [
+        "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "remote",
+      "command": [
+        "git",
+        "ls-remote",
+        "--heads",
+        "origin"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "head",
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "ancestry",
+      "command": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "d6198b88c23233f5a483735e4e8841534535d76b",
+        "HEAD"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "km003_source_mismatches": [],
+  "prior_real_rows_verified": 4,
+  "starting_hashes": {
+    "src/kmast/demo.py": "7500d53142fba45fc8974f9fa60a4d59026bedd36edfe82208912d6aaafbd2d6",
+    "src/kmast/__init__.py": "19dcfa4b44e8e13ab03208fca07a6d11fb8ca2efaeb55589d22a803541986e69",
+    "src/kmast.egg-info/dependency_links.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "src/kmast.egg-info/entry_points.txt": "7e71bac500670812159304e41bbf791a6e49cd340abcd575756494f7c8324476",
+    "src/kmast.egg-info/PKG-INFO": "67ab411812fcc5e20253ee3e220ee17489c110980b229ffda9fb175138fac7ea",
+    "src/kmast.egg-info/requires.txt": "b9dc06859720e7490951752086be3633948752f393695dc480d1dc9e3e724337",
+    "src/kmast.egg-info/SOURCES.txt": "b59ec6ee5d5c08280d90df227a60ce6e9b409a0ca3423d7959bdc795658fe3c3",
+    "src/kmast.egg-info/top_level.txt": "aac6de38052bea65e8e45241d7dc31f7efcd09c2acb30ebf64615b887505f8a6",
+    "src/kmast/alpha/fixtures.py": "19c38d41944e5a8a0113e1a3cadea72bbfc4854a2bfcc4adbad55c097ed1c836",
+    "src/kmast/alpha/models.py": "dceb28f00bd7d403d5ca7b7057672626c0b09a0e2533d1ae9eab74bfd19561af",
+    "src/kmast/alpha/readiness.py": "9b52c01a59336ac2d9e83f58e6285ec4a9ca5dc42dab507d4d6fc5ff3159e63b",
+    "src/kmast/alpha/reference.py": "65f079f6117e94721d2b3f2cdd5daca14a20d4c5e4766a50d9468750a7e3767b",
+    "src/kmast/alpha/rules.py": "3edeb1abb9e89b36447166182ef655d430e8abb44d2c6e41aaad6b015f4ef238",
+    "src/kmast/alpha/__init__.py": "91e618d0abf9db226e206e4cb3db3a1938a36fe5ff1896cab984c7a4d71caa0b",
+    "src/kmast/brokers/interfaces.py": "8ff1416cf97acf08082c757554539b17e1a79cd169cdfba2f98cc98d89377154",
+    "src/kmast/brokers/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/kmast/core/base.py": "4f1a6b613fee9d712fa2fdb26d10142ae3d73ec7d180f2fb2f74ee097cf10934",
+    "src/kmast/core/clock.py": "a100e1da62bc75686e1f043caa8700dc8e2bfdbdb6f23f0ef8b1f61822d094dc",
+    "src/kmast/core/config.py": "51b1596f95eab39b8c7e9e5cd7ea16a7add8166c2ac2842c4ceead257a6d709b",
+    "src/kmast/core/contracts.py": "cc3e80a16d9a4a689947154c370d62cc09b16e2187f18f437d17d214deaa3bd3",
+    "src/kmast/core/enums.py": "c5969d604c6d1ef87a0b8aeb58143ab692c7167f45f58a729f5f47381243b560",
+    "src/kmast/core/events.py": "5a481f230d0402d67c4e6aa25d0d0f7c6659429188c0c99a2d4e706edc298178",
+    "src/kmast/core/study.py": "321878c41a8cc5251f038f64817483e5d072ee994b407cc533f0b016edc01526",
+    "src/kmast/core/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/kmast/data/cli.py": "cf493b8543a3eb36915a875d5b91968bbae3e942547d6aa5ec2d59d2264bec1f",
+    "src/kmast/data/dart.py": "c1d2b317d44c8967fc84a6835bf292ed5fe3c780b266ec317bc27fb6b1764496",
+    "src/kmast/data/models.py": "bfaa056353f026f8e57c7fddbf101f9268d46274058190c54372311b4bc37d24",
+    "src/kmast/data/normalization.py": "d8cfa5bf87bd698e65d79077a30cb604ecf43297e837843054004d113d4dbec0",
+    "src/kmast/data/parsers.py": "391da81ea148f951ab4295b56f5a2643cd7126e1228707ba166212116b3165da",
+    "src/kmast/data/pipeline.py": "7588ea5715c960b30957f1ea7f9c0af5e9d86e7ac2c424e697e6f5d34978cd52",
+    "src/kmast/data/readiness.py": "6c1434caff2c8fbbba08ea6db63eba3778900bf471984b518c93308607d9f84b",
+    "src/kmast/data/replay.py": "45d6c59b9f46b3914cc011af09f7ab6252fe71e0cc265ac7dfc28a490b310b75",
+    "src/kmast/data/sessions.py": "76637c2080d61b877aa695ac9f4cc2a686b84fb48b401620f32b4e11c3083c82",
+    "src/kmast/data/store.py": "ba08415935e568c15d22a95c53c61f7f212d0fe59d5da6c8af48610e81df7437",
+    "src/kmast/data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/kmast/execution/demo.py": "4f874fcdb7d35711ad5a5782b49c4354f5422d1f35f0ae8699d355aa12974a90",
+    "src/kmast/execution/engine.py": "78a082823014b6e9c0f6b1927e7d98a2174dff1b31990148af3c8a9ae6fa7062",
+    "src/kmast/execution/events.py": "011b6f3823603e1349eb171dc4a530260fb0009ceba8127ea6786331bc2546b3",
+    "src/kmast/execution/ledger.py": "5bc1c37f08529eac28f5744801a4f8339e88189abee3cb16be5fcfe40e7ef5c5",
+    "src/kmast/execution/models.py": "38b40daf7019ad657feee95e1419983fb2e37f53d40a585bafcc36f46f80ff1b",
+    "src/kmast/execution/portfolio.py": "4bd77027f16c4530392f769a698342ae633490c3488d859cad07fa365d0b3535",
+    "src/kmast/execution/readers.py": "36fbf6d274c105512bdd38d4b5b1111f068b82758753d3cbb57588d91f37a1ad",
+    "src/kmast/execution/risk.py": "f4173857f210915184cbd177906198917f94f4b7c72ab8e2529eeed6478e07aa",
+    "src/kmast/execution/store.py": "277b85e8daae6b06486425bfe2fd66f7ac9da1a09302a575d1179d71c632c35b",
+    "src/kmast/execution/__init__.py": "00acbb412efe84575aca8f10fff9859e3b3a7dd9c94fa9a3491fbafa66a61fea",
+    "src/kmast/simulation/bridge.py": "1a22cbfdbf3f10f3bc6b1c84e3850b4f136e435bdd31afba960fa61aff398722",
+    "src/kmast/simulation/cli.py": "c0beb43096e5edfbf0ea92eb7ca727b447d6d70cde50056371ada792a82ae50c",
+    "src/kmast/simulation/__init__.py": "a50bd027408486487d44941034faf5012b4cfabe8ecf16b2927b36fedd2ae837",
+    "src/kmast/strategies/interfaces.py": "e918ff25268707a760efef463ef8af08cbef230a1e64b30434d3aff0df248b7a",
+    "src/kmast/strategies/__init__.py": "9d55deab36130e5481c70389f4353b9f540500b9752773dc02dc90e4eb36f42d",
+    "src/kmast/brokers/kis/adapter.py": "1804165639763ec84d295f5943b1bfdd2023610dad286f2b6a26a019fd467615",
+    "src/kmast/brokers/kis/network.py": "627b944b6d7fa4d0fb0846bbeeffa4874cb76848368c0c561a78d696a929e852",
+    "src/kmast/brokers/kis/pagination.py": "c608b19a6d223d4dc78ff0debc293836175847aa6996de3ad4b0ae54a31595d6",
+    "src/kmast/brokers/kis/requests.py": "cd64e33e8bcd78fb29c38057dfb84689e3753327a5419282b4422ac3e43dd7c9",
+    "src/kmast/brokers/kis/stream.py": "5e84c1182e3b74b3505174eea92871f59acfa15476203dcd5e7acb33d0cf6cc8",
+    "src/kmast/brokers/kis/wire_contract.py": "737845753a25f1d5b850f040abb67b1e318be892841a66d2098c8aa38dcb7327",
+    "src/kmast/brokers/kis/ws_columns.json": "b4d8a88fbe492b62c3917a0d6649626af1b8f881e1afd1b3ce2d13d4c979a7c1",
+    "src/kmast/brokers/kis/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/kmast/data/fixtures/market.json": "b704f717de51544735af5e789dc001fd767306c67cfd245874e06c2dc081f620",
+    "tests/conftest.py": "b813bc36cfac5f7c57d85d58eebbcdea817749bec4cc1afbcb8e09c01415a13a",
+    "tests/km002_helpers.py": "f14e66bc2858ef07cb9b60b1142c9a6d4611959a737289891dfd5074d7b4c0ed",
+    "tests/test_broker.py": "f199a76d6970e55fffb819e3d5df67cfd1711da1217d6a3540b200a16c4f5871",
+    "tests/test_contracts.py": "02c6e7efb385bbea55b14901d709e646e02fd88d90f323d0580c283c9412f960",
+    "tests/test_kis_env.py": "6c79e2a82a525348058af15dc48b99ec6e805f35e1500e1e7fc7d6f6ab1bfbed",
+    "tests/test_km001.py": "452e92f5c7ce1855930c8790c21f56f57d7ce14c1525d9a969451ce3c476d968",
+    "tests/test_km001_edges.py": "87e2561073045a3274b347d3ffb5fed20a30dcd2c08e10e8ae9d511fc3109d4a",
+    "tests/test_km002.py": "7915efe65a8f1b727bbfec75934b231081e7a0c6a323a4410bacc771a9bf83a2",
+    "tests/test_km002_edges.py": "25fef41d14c217dd6c5a37fe50026e8809660efff3e41319182c2961124f4137",
+    "tests/test_km003.py": "a9230f19e3b25b63b1381ee7b8e41ae00e7545b460038429bd422f3adece7970",
+    "tests/test_km003_edges.py": "a69f45876e88d208b2bb2097821cc4b01761a711337b11917ae6e4fac47d9109",
+    "tests/test_study.py": "fa03b5d6f453596ccc18ed84a4ae6cb853bb6a20db34e907109fb061aafe3084",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "configs/live.yaml": "1e1817e1755274e6c6949d2f55418c222cd99cd83fcaea58b93186f53b6ae283",
+    "configs/paper.yaml": "52de352b3c675034b95ac8f1c28d695ce98fc1463c1f6cacc8c0d11e4e500613",
+    "configs/research.yaml": "918a5494b440048943a1e30915cfab2b7c8e6f467b9429088a46eb23048e1c55",
+    "configs/shadow.yaml": "adae7b150942975da2a019219da002bd881e298629b0691235e72b343873bbf6",
+    "configs/study.yaml": "cde23b3d7f961c66a6036f3fe8e928403ccb9116cb6f88d411e959c6e9ff6efd"
+  }
+}

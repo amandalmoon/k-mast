@@ -22,12 +22,17 @@ def validate_read_payload(config: BrokerConfig, path: str, params: dict[str, str
             symbol=params["FID_INPUT_ISCD"],
             venue=venues[params["FID_COND_MRKT_DIV_CODE"]],
             start=datetime.strptime(params["FID_INPUT_DATE_1"], "%Y%m%d").date()
-            if operation == "daily"
+            if operation in {"daily", "index_daily"}
             else None,
             end=datetime.strptime(
-                params["FID_INPUT_DATE_2" if operation == "daily" else "FID_INPUT_DATE_1"], "%Y%m%d"
+                params[
+                    "FID_INPUT_DATE_2"
+                    if operation in {"daily", "index_daily"}
+                    else "FID_INPUT_DATE_1"
+                ],
+                "%Y%m%d",
             ).date()
-            if operation in {"daily", "minute_history"}
+            if operation in {"daily", "index_daily", "minute_history"}
             else None,
             at=datetime.strptime(params["FID_INPUT_HOUR_1"], "%H%M%S").time()
             if operation in {"minute_today", "minute_history"}

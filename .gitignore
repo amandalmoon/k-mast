@@ -24,3 +24,4 @@ data/km002/
 *.sqlite-shm
 artifacts/km002/scenarios-v1/
 data/km003*/
+data/km004*/

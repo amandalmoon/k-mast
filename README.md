@@ -116,3 +116,18 @@ Linux/macOS에서는 `.venv/bin/python`을 사용한다. `scripts/verify.py`는 
 [데이터 조사·확보 계획](docs/implementation/KM003_DATA_PLAN.md) ·
 [KM-003 종료 보고서](docs/implementation/KM003_CLOSURE_REPORT.md).
 기능용 합성 손익은 시장 수익성 증거가 아니며 KM-004는 자동 실행하지 않는다.
+
+## KM-004 데이터 부분 확보·공동계좌 기준배분
+
+실제 일봉 180행을 private store에 확보했다. 사용권·PIT·실제 비용 검증이 부족해
+실제 경제성 평가는 HOLD다. 공동계좌 FIXED 보존성과 위험배분 후보 진단은 합성 기능시험이다.
+
+```powershell
+.\.venv\Scripts\python scripts/verify.py --milestone km004
+.\.venv\Scripts\python -m kmast.portfolio.demo --output data/km004-joint
+```
+
+[KM-004 종료 보고서](docs/implementation/KM004_CLOSURE_REPORT.md).
+위 검증은 인증이나 시장 조회를 실행하지 않는다. 로컬 실제 자료 재검사는
+`python -m scripts.diagnose_km004`로 수행한다. 수집 스크립트는 별도 명시 실행에만 사용한다.
+자동 PBASE_RISK 승격, LIVE, 원격 push 및 KM-005 실행은 비활성 상태다.
