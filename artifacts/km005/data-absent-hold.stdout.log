@@ -1,0 +1,11 @@
+{
+  "status": "KM005_DATA_HOLD",
+  "data_access": "DATA_NOT_ACCESSIBLE",
+  "g1": "HOLD_LICENSE_UNVERIFIED",
+  "gates": {
+    "G2": "NOT_EXECUTED",
+    "G3": "HOLD_MULTISTRATEGY_PANEL",
+    "economic_status": "ECON_NOT_EXECUTED",
+    "live_status": "LIVE_NOT_APPROVED"
+  }
+}

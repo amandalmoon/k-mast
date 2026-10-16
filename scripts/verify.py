@@ -12,7 +12,9 @@ ROOT = Path(__file__).resolve().parents[1]
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--milestone", choices=("km000", "km001", "km002", "km003", "km004"), default="km000"
+        "--milestone",
+        choices=("km000", "km001", "km002", "km003", "km004", "km005"),
+        default="km000",
     )
     args = parser.parse_args()
     evidence = ROOT / "artifacts" / args.milestone
@@ -119,6 +121,34 @@ def main() -> None:
             "--output",
             "artifacts/km003/functional-v1",
         ]
+    if args.milestone == "km005":
+        checks["regression252"] = ["-m", "pytest", "-q", "--ignore=tests/test_km005.py"]
+        checks["km005-new"] = ["-m", "pytest", "-q", "tests/test_km005.py"]
+        checks["data-absent-hold"] = [
+            "-m",
+            "kmast.research.cli",
+            "--output",
+            "artifacts/km005/offline",
+        ]
+        checks["km002-replay"] = [
+            "-m",
+            "kmast.execution.demo",
+            "--output",
+            "artifacts/km002/scenarios-v2",
+        ]
+        checks["km003-replay"] = [
+            "-m",
+            "kmast.simulation.cli",
+            "--output",
+            "artifacts/km003/functional-v1",
+        ]
+        checks["km004-replay"] = [
+            "-m",
+            "kmast.portfolio.demo",
+            "--output",
+            "artifacts/km004/joint-v1",
+        ]
+        checks["economic-evidence"] = ["scripts/check_km005_evidence.py"]
     results = []
     for name, args in checks.items():
         result = subprocess.run([sys.executable, *args], cwd=ROOT, capture_output=True)

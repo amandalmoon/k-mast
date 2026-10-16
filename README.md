@@ -131,3 +131,17 @@ Linux/macOS에서는 `.venv/bin/python`을 사용한다. `scripts/verify.py`는 
 위 검증은 인증이나 시장 조회를 실행하지 않는다. 로컬 실제 자료 재검사는
 `python -m scripts.diagnose_km004`로 수행한다. 수집 스크립트는 별도 명시 실행에만 사용한다.
 자동 PBASE_RISK 승격, LIVE, 원격 push 및 KM-005 실행은 비활성 상태다.
+
+## KM-005 실제 자료 적격성·경제성 게이트
+
+Alpha A candidate-v1과 기존 장부·OMS 계약을 유지한 채 이용권한, 원/수정 관측일 중복,
+품질, 비용 provenance, G0/OOS 버전 동결을 검사한다. 실제 경제성은 데이터 부족으로 실행하지 않았다.
+
+```powershell
+.\.venv\Scripts\python scripts/verify.py --milestone km005
+.\.venv\Scripts\python -m kmast.research.cli --output artifacts/km005/offline
+```
+
+두 명령은 인증·시세 조회 없이 실행되며 자료가 없으면 명시적인 HOLD와 null 성과지표를 반환한다.
+[데이터·권한 조사와 보완 경로](docs/implementation/KM005_DATA_QUALIFICATION.md)를 참고한다.
+완료된 작업의 정상 push는 사용자 상시 승인 범위다. 실전과 KM-006은 활성화하지 않는다.

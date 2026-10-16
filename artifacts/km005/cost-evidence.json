@@ -1,0 +1,119 @@
+{
+  "status": "UNVERIFIED_NO_ECONOMIC_EVALUATION",
+  "items": {
+    "buy_fee": {
+      "value": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ref": null
+    },
+    "sell_fee": {
+      "value": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ref": null
+    },
+    "sell_tax": {
+      "value": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ref": null
+    },
+    "spread": {
+      "value": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ref": null
+    },
+    "market_impact": {
+      "value": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ref": null
+    },
+    "slippage": {
+      "value": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ref": null
+    },
+    "delay": {
+      "value": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ref": null
+    },
+    "partial_fill": {
+      "value": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ref": null
+    },
+    "unfilled": {
+      "value": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ref": null
+    },
+    "cash_interest": {
+      "value": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ref": null
+    },
+    "server_opex": {
+      "value": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ref": null
+    },
+    "data_opex": {
+      "value": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ref": null
+    },
+    "external_opex": {
+      "value": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ref": null
+    }
+  },
+  "scenarios": {
+    "BASE": {
+      "status": "NOT_EXECUTED_G1_HOLD",
+      "parameters": null,
+      "net_pnl": null
+    },
+    "WIDER_SPREAD": {
+      "status": "NOT_EXECUTED_G1_HOLD",
+      "parameters": null,
+      "net_pnl": null
+    },
+    "LONGER_DELAY": {
+      "status": "NOT_EXECUTED_G1_HOLD",
+      "parameters": null,
+      "net_pnl": null
+    },
+    "MORE_UNFILLED": {
+      "status": "NOT_EXECUTED_G1_HOLD",
+      "parameters": null,
+      "net_pnl": null
+    },
+    "LESS_LIQUIDITY": {
+      "status": "NOT_EXECUTED_G1_HOLD",
+      "parameters": null,
+      "net_pnl": null
+    },
+    "LARGER_CAPITAL": {
+      "status": "NOT_EXECUTED_G1_HOLD",
+      "parameters": null,
+      "net_pnl": null
+    }
+  },
+  "account_capital": null,
+  "approved_risk_limits": null,
+  "estimated_cost_is_not_contract": true,
+  "embedded_execution_effect": "IN_FILL_PRICE_ONLY_NOT_DEDUCTED_TWICE"
+}

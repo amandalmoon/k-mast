@@ -1,0 +1,16 @@
+{
+  "id": "f6d72351-0333-4525-a0fc-6c7b454516f6",
+  "version": 28,
+  "lastModifiedDate": "2024-04-11T16:10:59+09:00",
+  "termsType": "MARKET",
+  "url": "https://apiportal.koreainvestment.com/api/terms/public?termsType=MARKET",
+  "sha256": "f3e85562aff5f1aedfaa9e23dcbc3518b09a2bca58c89f049b75a2a5b4421d94",
+  "checked_at": "2026-10-17",
+  "document_title": "Open API customer terms",
+  "personal_use": "CONFIRMED_SCOPE_PERSONAL_PROGRAM_ARTICLE_5_3",
+  "strategy_development": "CONFIRMED_PERSONAL_PROGRAM_SCOPE",
+  "internal_backtest": "UNVERIFIED",
+  "long_term_storage": "UNVERIFIED",
+  "third_party_data": "PROHIBITED_ARTICLE_5_3",
+  "customer_applicability": "NOT_INDEPENDENTLY_VERIFIED"
+}
