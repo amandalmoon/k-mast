@@ -9,3 +9,4 @@
 - New strategies must not silently change frozen signal, cost, cash, or risk contracts.
 - Never commit credentials/account identifiers/tokens or log raw config, request, or validation inputs.
 - No remote push, deployment, live authentication, or actual trading without separate user approval.
+- Standing user approval: after completing and verifying work in this repository, commit the intended changes and push the current work branch to origin. Do not force-push. This approval does not authorize deployment, live authentication, actual trading, or PR merging.
