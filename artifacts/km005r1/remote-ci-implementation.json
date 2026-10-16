@@ -1,0 +1,410 @@
+{
+  "id": 38937223672,
+  "head_sha": "c34c1b0af8b4f7327cf848b1c074aca215151f1d",
+  "head_branch": "km-005r1-data-evidence",
+  "status": "completed",
+  "conclusion": "success",
+  "html_url": "https://github.com/amandalmoon/k-mast/actions/runs/38937223672",
+  "jobs": [
+    {
+      "id": 117095652987,
+      "name": "offline-contracts (3.11)",
+      "status": "completed",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-16T17:07:17Z",
+          "completed_at": "2026-10-16T17:07:18Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-16T17:07:18Z",
+          "completed_at": "2026-10-16T17:07:19Z"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-16T17:07:19Z",
+          "completed_at": "2026-10-16T17:07:19Z"
+        },
+        {
+          "name": "Run python -m pip install -r requirements-dev.lock",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-16T17:07:19Z",
+          "completed_at": "2026-10-16T17:07:31Z"
+        },
+        {
+          "name": "Run python -m pip install --no-deps --no-build-isolation -e .",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-16T17:07:31Z",
+          "completed_at": "2026-10-16T17:07:32Z"
+        },
+        {
+          "name": "Run python -m ruff check .",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-16T17:07:32Z",
+          "completed_at": "2026-10-16T17:07:32Z"
+        },
+        {
+          "name": "Run python -m ruff format --check .",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-16T17:07:32Z",
+          "completed_at": "2026-10-16T17:07:32Z"
+        },
+        {
+          "name": "Run python -m mypy src",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-16T17:07:32Z",
+          "completed_at": "2026-10-16T17:07:37Z"
+        },
+        {
+          "name": "Run python -m pytest -q --junitxml=artifacts/junit.xml",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-16T17:07:37Z",
+          "completed_at": "2026-10-16T17:07:42Z"
+        },
+        {
+          "name": "Run python -m build --no-isolation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-16T17:07:42Z",
+          "completed_at": "2026-10-16T17:07:43Z"
+        },
+        {
+          "name": "Run python -m kmast.demo",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-16T17:07:43Z",
+          "completed_at": "2026-10-16T17:07:44Z"
+        },
+        {
+          "name": "Run python -m kmast.data.cli fixture --output artifacts/km001-ci-fixture",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-16T17:07:44Z",
+          "completed_at": "2026-10-16T17:07:44Z"
+        },
+        {
+          "name": "Run python -m kmast.execution.demo --output artifacts/km002-ci-scenarios",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-16T17:07:44Z",
+          "completed_at": "2026-10-16T17:07:45Z"
+        },
+        {
+          "name": "Run python scripts/check_km002_evidence.py artifacts/km002-ci-scenarios",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-16T17:07:45Z",
+          "completed_at": "2026-10-16T17:07:45Z"
+        },
+        {
+          "name": "Run python -m kmast.simulation.cli --output artifacts/km003-ci-functional",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-16T17:07:45Z",
+          "completed_at": "2026-10-16T17:07:45Z"
+        },
+        {
+          "name": "Run python scripts/check_km003_evidence.py artifacts/km003-ci-functional",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-16T17:07:45Z",
+          "completed_at": "2026-10-16T17:07:45Z"
+        },
+        {
+          "name": "Run python -m kmast.portfolio.demo --output artifacts/km004-ci-joint",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-16T17:07:45Z",
+          "completed_at": "2026-10-16T17:07:46Z"
+        },
+        {
+          "name": "Run python -m kmast.portfolio.demo --output artifacts/km004-ci-joint",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-10-16T17:07:46Z",
+          "completed_at": "2026-10-16T17:07:46Z"
+        },
+        {
+          "name": "Run python -m kmast.research.cli --output artifacts/km005-ci-no-data",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-10-16T17:07:46Z",
+          "completed_at": "2026-10-16T17:07:46Z"
+        },
+        {
+          "name": "Run python scripts/check_km005_evidence.py --report artifacts/km005-ci-no-data/qualification.json",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-10-16T17:07:46Z",
+          "completed_at": "2026-10-16T17:07:46Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-10-16T17:07:46Z",
+          "completed_at": "2026-10-16T17:07:48Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 41,
+          "started_at": "2026-10-16T17:07:48Z",
+          "completed_at": "2026-10-16T17:07:48Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 42,
+          "started_at": "2026-10-16T17:07:48Z",
+          "completed_at": "2026-10-16T17:07:48Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 43,
+          "started_at": "2026-10-16T17:07:48Z",
+          "completed_at": "2026-10-16T17:07:48Z"
+        }
+      ]
+    },
+    {
+      "id": 117095653316,
+      "name": "offline-contracts (3.12)",
+      "status": "completed",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-16T17:07:17Z",
+          "completed_at": "2026-10-16T17:07:18Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-16T17:07:18Z",
+          "completed_at": "2026-10-16T17:07:19Z"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-16T17:07:19Z",
+          "completed_at": "2026-10-16T17:07:19Z"
+        },
+        {
+          "name": "Run python -m pip install -r requirements-dev.lock",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-16T17:07:19Z",
+          "completed_at": "2026-10-16T17:07:28Z"
+        },
+        {
+          "name": "Run python -m pip install --no-deps --no-build-isolation -e .",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-16T17:07:28Z",
+          "completed_at": "2026-10-16T17:07:29Z"
+        },
+        {
+          "name": "Run python -m ruff check .",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-16T17:07:29Z",
+          "completed_at": "2026-10-16T17:07:29Z"
+        },
+        {
+          "name": "Run python -m ruff format --check .",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-16T17:07:29Z",
+          "completed_at": "2026-10-16T17:07:29Z"
+        },
+        {
+          "name": "Run python -m mypy src",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-16T17:07:29Z",
+          "completed_at": "2026-10-16T17:07:32Z"
+        },
+        {
+          "name": "Run python -m pytest -q --junitxml=artifacts/junit.xml",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-16T17:07:32Z",
+          "completed_at": "2026-10-16T17:07:37Z"
+        },
+        {
+          "name": "Run python -m build --no-isolation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-16T17:07:37Z",
+          "completed_at": "2026-10-16T17:07:37Z"
+        },
+        {
+          "name": "Run python -m kmast.demo",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-16T17:07:37Z",
+          "completed_at": "2026-10-16T17:07:38Z"
+        },
+        {
+          "name": "Run python -m kmast.data.cli fixture --output artifacts/km001-ci-fixture",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-16T17:07:38Z",
+          "completed_at": "2026-10-16T17:07:38Z"
+        },
+        {
+          "name": "Run python -m kmast.execution.demo --output artifacts/km002-ci-scenarios",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-16T17:07:38Z",
+          "completed_at": "2026-10-16T17:07:39Z"
+        },
+        {
+          "name": "Run python scripts/check_km002_evidence.py artifacts/km002-ci-scenarios",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-16T17:07:39Z",
+          "completed_at": "2026-10-16T17:07:39Z"
+        },
+        {
+          "name": "Run python -m kmast.simulation.cli --output artifacts/km003-ci-functional",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-16T17:07:39Z",
+          "completed_at": "2026-10-16T17:07:39Z"
+        },
+        {
+          "name": "Run python scripts/check_km003_evidence.py artifacts/km003-ci-functional",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-16T17:07:39Z",
+          "completed_at": "2026-10-16T17:07:39Z"
+        },
+        {
+          "name": "Run python -m kmast.portfolio.demo --output artifacts/km004-ci-joint",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-16T17:07:39Z",
+          "completed_at": "2026-10-16T17:07:39Z"
+        },
+        {
+          "name": "Run python -m kmast.portfolio.demo --output artifacts/km004-ci-joint",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-10-16T17:07:39Z",
+          "completed_at": "2026-10-16T17:07:40Z"
+        },
+        {
+          "name": "Run python -m kmast.research.cli --output artifacts/km005-ci-no-data",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-10-16T17:07:40Z",
+          "completed_at": "2026-10-16T17:07:40Z"
+        },
+        {
+          "name": "Run python scripts/check_km005_evidence.py --report artifacts/km005-ci-no-data/qualification.json",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-10-16T17:07:40Z",
+          "completed_at": "2026-10-16T17:07:40Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-10-16T17:07:40Z",
+          "completed_at": "2026-10-16T17:07:41Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 41,
+          "started_at": "2026-10-16T17:07:41Z",
+          "completed_at": "2026-10-16T17:07:42Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 42,
+          "started_at": "2026-10-16T17:07:42Z",
+          "completed_at": "2026-10-16T17:07:42Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 43,
+          "started_at": "2026-10-16T17:07:42Z",
+          "completed_at": "2026-10-16T17:07:42Z"
+        }
+      ]
+    }
+  ]
+}
