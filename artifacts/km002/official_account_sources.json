@@ -1,0 +1,52 @@
+{
+  "commit": "2077773a69a428daf63e148182511f068cc45de3",
+  "checked_at": "2026-10-16T11:54:11.404535+00:00",
+  "scope": "PUBLIC_DOCUMENTS_ONLY_NO_ACCOUNT_ACCESS",
+  "files": [
+    {
+      "path": "examples_llm/domestic_stock/inquire_balance/inquire_balance.py",
+      "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/examples_llm/domestic_stock/inquire_balance/inquire_balance.py",
+      "sha256": "32f2759f925dfaf9ac710bc7caf3447f31da83d0a3decdee9b02791a3f0cdfe5"
+    },
+    {
+      "path": "examples_llm/domestic_stock/inquire_balance/chk_inquire_balance.py",
+      "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/examples_llm/domestic_stock/inquire_balance/chk_inquire_balance.py",
+      "sha256": "5897fd3ce320a8d9683208689727714c037241b2010cc89f4c7e6c63b6255c89"
+    },
+    {
+      "path": "examples_llm/domestic_stock/inquire_daily_ccld/inquire_daily_ccld.py",
+      "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/examples_llm/domestic_stock/inquire_daily_ccld/inquire_daily_ccld.py",
+      "sha256": "9a039eef4f4c61e6d3b5ec15a85b18508e69f5b069bbbf447a0ba5cfe6044b5b"
+    },
+    {
+      "path": "examples_llm/domestic_stock/inquire_daily_ccld/chk_inquire_daily_ccld.py",
+      "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/examples_llm/domestic_stock/inquire_daily_ccld/chk_inquire_daily_ccld.py",
+      "sha256": "e97ad745cac44abeff7615c68afe96258dc664da1ed60db33d49b4736a34735c"
+    },
+    {
+      "path": "examples_llm/domestic_stock/inquire_psbl_rvsecncl/inquire_psbl_rvsecncl.py",
+      "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/examples_llm/domestic_stock/inquire_psbl_rvsecncl/inquire_psbl_rvsecncl.py",
+      "sha256": "c51f69737ebf2faf5bda92030e81deffe43f7f30d1214afc409f3a5481f36fd0"
+    },
+    {
+      "path": "examples_llm/domestic_stock/inquire_psbl_rvsecncl/chk_inquire_psbl_rvsecncl.py",
+      "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/examples_llm/domestic_stock/inquire_psbl_rvsecncl/chk_inquire_psbl_rvsecncl.py",
+      "sha256": "d45584602a16619438b2c3e71e8104c78b5afe455d73482de6b09982cc02c9c6"
+    },
+    {
+      "path": "examples_llm/domestic_stock/inquire_psbl_order/inquire_psbl_order.py",
+      "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/examples_llm/domestic_stock/inquire_psbl_order/inquire_psbl_order.py",
+      "sha256": "c4af94ce55e3eb176a3ce5ef4c473d5fffb7274e0b2a9cc56c1e3973555d14c9"
+    },
+    {
+      "path": "examples_llm/domestic_stock/inquire_psbl_order/chk_inquire_psbl_order.py",
+      "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/examples_llm/domestic_stock/inquire_psbl_order/chk_inquire_psbl_order.py",
+      "sha256": "2e4e1a42625ed86a165fb3779d32cb9ac5a21d8c9e1f0e8807c4600d6f1e3d5b"
+    },
+    {
+      "path": "examples_user/domestic_stock/domestic_stock_functions_ws.py",
+      "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/examples_user/domestic_stock/domestic_stock_functions_ws.py",
+      "sha256": "b282661c47287d5374a7b67256a91503e1b16b2dfeb40490a581a65e80918453"
+    }
+  ]
+}

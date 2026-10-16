@@ -20,6 +20,8 @@ jobs:
       - run: python -m build --no-isolation
       - run: python -m kmast.demo
       - run: python -m kmast.data.cli fixture --output artifacts/km001-ci-fixture
+      - run: python -m kmast.execution.demo --output artifacts/km002-ci-scenarios
+      - run: python scripts/check_km002_evidence.py artifacts/km002-ci-scenarios
       - uses: actions/upload-artifact@v4
         if: always()
         with:

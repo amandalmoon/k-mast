@@ -87,3 +87,17 @@ Linux/macOS에서는 `.venv/bin/python`을 사용한다. `scripts/verify.py`는 
 [데이터 가용성 행렬](docs/implementation/DATA_AVAILABILITY_MATRIX.md) ·
 [KM-001 종료 보고서](docs/implementation/KM001_CLOSURE_REPORT.md).
 실제 인증/시장 데이터 조회·주문·취소는 이번 작업에서 수행하지 않았고 KM-002도 자동 시작하지 않는다.
+
+## KM-002 Mock 계좌·위험·OMS
+
+합성 계좌의 Decimal/FIFO 장부, 결제·예약, 전략 귀속, 고정예산 목표 집계, 위험 검사와
+영속 Mock 주문 상태기계를 추가했다. 실계좌 주문 전송 기능은 없다.
+
+```powershell
+.\.venv\Scripts\python -m kmast.execution.demo --output data/km002
+.\.venv\Scripts\python scripts/verify.py --milestone km002
+```
+
+[실행 계약과 한계](docs/implementation/KM002_USAGE.md) ·
+[KM-002 종료 보고서](docs/implementation/KM002_CLOSURE_REPORT.md).
+실제 데이터·경제성·LIVE 승인은 계속 보류이며 KM-003은 자동 실행하지 않는다.

@@ -65,3 +65,24 @@ immutable Raw/Parquet 저장·PIT/세션/종목/기업행위/공시/비용 계�
 TokenManager의 발급 직후 검증 시각을 다시 읽도록 수정했다(회귀 및 느린 발급 시험).
 새 근거는 [API 가정](API_ASSUMPTIONS.md), [가용성 행렬](DATA_AVAILABILITY_MATRIX.md),
 [실행법](KM001_USAGE.md), [KM-001 보고서](KM001_CLOSURE_REPORT.md)를 참조한다.
+
+## KM-002 후속 구현과 계약 해석
+
+기존 core/broker/data/strategy 계약과 원래 98개 시험은 변경하지 않는다. execution 패키지에
+합성 계좌/귀속/FIFO·결제/예약·Risk·Mock OMS·SQLite journal·읽기 Protocol을 추가한다.
+38개 필수 시험 ID는 tests/test_km002.py에, 추가 장애/위험/이벤트 이식 시험은
+tests/test_km002_edges.py에 있다. 상세 증거는 artifacts/km002/audit.json과 종료 보고서다.
+
+명세의 other_liabilities는 이 구현에서 수수료·세금 **외** 부채다. 따라서 NAV 계산에서
+fees_payable/taxes_payable을 각각 한 번 차감한다. 원본 NAV 정의의 총부채와 경제적으로
+동일하며 원본 문서를 수정하지 않는다. 계좌 밖 운영비는 원래 PerformanceBridge의 계좌
+NAV 대사를 깨지 않도록 ProjectPerformance로 별도 표현한다. 원본 bridge 필드·항등식은 유지한다.
+
+SignalIntent.horizon은 예측 단위이며 임의 청산기한으로 승격하지 않는다. 별도 합성
+holding_deadlines 계약을 사용한다. 고정 예산×계좌 NAV를 sleeve 목표자본으로 사용하며
+자본 자동 재배분·동적 최적화는 비활성이다. 미확인 정책은 거부/HOLD다. Reference는
+독립 비교 인터페이스와 현금 Mock 연동까지만 구현한다. 운영 브로커/세무 원가, 기업행위
+자동 분개, 여러 호스트의 fencing, PostgreSQL 운영 검증, 실제 수익성은 미완료다.
+
+KM002_LEDGER_OMS_MOCK_READY의 범위는 합성 Gate A~E다.
+KM001_REAL_DATA_HOLD / ECONOMIC_EDGE_UNVERIFIED / LIVE_NOT_APPROVED.

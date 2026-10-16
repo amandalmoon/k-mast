@@ -1,0 +1,265 @@
+* Getting build dependencies for sdist...
+running egg_info
+writing src\kmast.egg-info\PKG-INFO
+writing dependency_links to src\kmast.egg-info\dependency_links.txt
+writing entry points to src\kmast.egg-info\entry_points.txt
+writing requirements to src\kmast.egg-info\requires.txt
+writing top-level names to src\kmast.egg-info\top_level.txt
+reading manifest file 'src\kmast.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'src\kmast.egg-info\SOURCES.txt'
+* Building sdist...
+running sdist
+running egg_info
+writing src\kmast.egg-info\PKG-INFO
+writing dependency_links to src\kmast.egg-info\dependency_links.txt
+writing entry points to src\kmast.egg-info\entry_points.txt
+writing requirements to src\kmast.egg-info\requires.txt
+writing top-level names to src\kmast.egg-info\top_level.txt
+reading manifest file 'src\kmast.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'src\kmast.egg-info\SOURCES.txt'
+running check
+creating kmast-1.2.0
+creating kmast-1.2.0\configs
+creating kmast-1.2.0\docs\implementation
+creating kmast-1.2.0\scripts
+creating kmast-1.2.0\src\kmast
+creating kmast-1.2.0\src\kmast.egg-info
+creating kmast-1.2.0\src\kmast\brokers
+creating kmast-1.2.0\src\kmast\brokers\kis
+creating kmast-1.2.0\src\kmast\core
+creating kmast-1.2.0\src\kmast\data
+creating kmast-1.2.0\src\kmast\data\fixtures
+creating kmast-1.2.0\src\kmast\strategies
+creating kmast-1.2.0\tests
+copying files to kmast-1.2.0...
+copying .env.example -> kmast-1.2.0
+copying AGENTS.md -> kmast-1.2.0
+copying MANIFEST.in -> kmast-1.2.0
+copying README.md -> kmast-1.2.0
+copying pyproject.toml -> kmast-1.2.0
+copying requirements-dev.lock -> kmast-1.2.0
+copying configs\live.yaml -> kmast-1.2.0\configs
+copying configs\paper.yaml -> kmast-1.2.0\configs
+copying configs\research.yaml -> kmast-1.2.0\configs
+copying configs\shadow.yaml -> kmast-1.2.0\configs
+copying configs\study.yaml -> kmast-1.2.0\configs
+copying docs\implementation\API_ASSUMPTIONS.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\CONTRACT_STATUS.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DATA_AVAILABILITY_MATRIX.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\KM000_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\KM001_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\KM001_USAGE.md -> kmast-1.2.0\docs\implementation
+copying scripts\audit_kis.py -> kmast-1.2.0\scripts
+copying scripts\audit_km001.py -> kmast-1.2.0\scripts
+copying scripts\create_km001_fixture.py -> kmast-1.2.0\scripts
+copying scripts\verify.py -> kmast-1.2.0\scripts
+copying scripts\wheel_smoke.py -> kmast-1.2.0\scripts
+copying src\kmast\__init__.py -> kmast-1.2.0\src\kmast
+copying src\kmast\demo.py -> kmast-1.2.0\src\kmast
+copying src\kmast.egg-info\PKG-INFO -> kmast-1.2.0\src\kmast.egg-info
+copying src\kmast.egg-info\SOURCES.txt -> kmast-1.2.0\src\kmast.egg-info
+copying src\kmast.egg-info\dependency_links.txt -> kmast-1.2.0\src\kmast.egg-info
+copying src\kmast.egg-info\entry_points.txt -> kmast-1.2.0\src\kmast.egg-info
+copying src\kmast.egg-info\requires.txt -> kmast-1.2.0\src\kmast.egg-info
+copying src\kmast.egg-info\top_level.txt -> kmast-1.2.0\src\kmast.egg-info
+copying src\kmast\brokers\__init__.py -> kmast-1.2.0\src\kmast\brokers
+copying src\kmast\brokers\interfaces.py -> kmast-1.2.0\src\kmast\brokers
+copying src\kmast\brokers\kis\__init__.py -> kmast-1.2.0\src\kmast\brokers\kis
+copying src\kmast\brokers\kis\adapter.py -> kmast-1.2.0\src\kmast\brokers\kis
+copying src\kmast\brokers\kis\network.py -> kmast-1.2.0\src\kmast\brokers\kis
+copying src\kmast\brokers\kis\pagination.py -> kmast-1.2.0\src\kmast\brokers\kis
+copying src\kmast\brokers\kis\requests.py -> kmast-1.2.0\src\kmast\brokers\kis
+copying src\kmast\brokers\kis\stream.py -> kmast-1.2.0\src\kmast\brokers\kis
+copying src\kmast\brokers\kis\wire_contract.py -> kmast-1.2.0\src\kmast\brokers\kis
+copying src\kmast\brokers\kis\ws_columns.json -> kmast-1.2.0\src\kmast\brokers\kis
+copying src\kmast\core\__init__.py -> kmast-1.2.0\src\kmast\core
+copying src\kmast\core\base.py -> kmast-1.2.0\src\kmast\core
+copying src\kmast\core\clock.py -> kmast-1.2.0\src\kmast\core
+copying src\kmast\core\config.py -> kmast-1.2.0\src\kmast\core
+copying src\kmast\core\contracts.py -> kmast-1.2.0\src\kmast\core
+copying src\kmast\core\enums.py -> kmast-1.2.0\src\kmast\core
+copying src\kmast\core\events.py -> kmast-1.2.0\src\kmast\core
+copying src\kmast\core\study.py -> kmast-1.2.0\src\kmast\core
+copying src\kmast\data\__init__.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\cli.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\dart.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\models.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\normalization.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\parsers.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\pipeline.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\readiness.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\replay.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\sessions.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\store.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\fixtures\market.json -> kmast-1.2.0\src\kmast\data\fixtures
+copying src\kmast\strategies\__init__.py -> kmast-1.2.0\src\kmast\strategies
+copying src\kmast\strategies\interfaces.py -> kmast-1.2.0\src\kmast\strategies
+copying tests\__init__.py -> kmast-1.2.0\tests
+copying tests\conftest.py -> kmast-1.2.0\tests
+copying tests\test_broker.py -> kmast-1.2.0\tests
+copying tests\test_contracts.py -> kmast-1.2.0\tests
+copying tests\test_km001.py -> kmast-1.2.0\tests
+copying tests\test_km001_edges.py -> kmast-1.2.0\tests
+copying tests\test_study.py -> kmast-1.2.0\tests
+copying src\kmast.egg-info\SOURCES.txt -> kmast-1.2.0\src\kmast.egg-info
+Writing kmast-1.2.0\setup.cfg
+Creating tar archive
+removing 'kmast-1.2.0' (and everything under it)
+* Building wheel from sdist
+* Getting build dependencies for wheel...
+running egg_info
+writing src\kmast.egg-info\PKG-INFO
+writing dependency_links to src\kmast.egg-info\dependency_links.txt
+writing entry points to src\kmast.egg-info\entry_points.txt
+writing requirements to src\kmast.egg-info\requires.txt
+writing top-level names to src\kmast.egg-info\top_level.txt
+reading manifest file 'src\kmast.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'src\kmast.egg-info\SOURCES.txt'
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build\lib\kmast
+copying src\kmast\demo.py -> build\lib\kmast
+copying src\kmast\__init__.py -> build\lib\kmast
+creating build\lib\kmast\brokers
+copying src\kmast\brokers\interfaces.py -> build\lib\kmast\brokers
+copying src\kmast\brokers\__init__.py -> build\lib\kmast\brokers
+creating build\lib\kmast\core
+copying src\kmast\core\base.py -> build\lib\kmast\core
+copying src\kmast\core\clock.py -> build\lib\kmast\core
+copying src\kmast\core\config.py -> build\lib\kmast\core
+copying src\kmast\core\contracts.py -> build\lib\kmast\core
+copying src\kmast\core\enums.py -> build\lib\kmast\core
+copying src\kmast\core\events.py -> build\lib\kmast\core
+copying src\kmast\core\study.py -> build\lib\kmast\core
+copying src\kmast\core\__init__.py -> build\lib\kmast\core
+creating build\lib\kmast\data
+copying src\kmast\data\cli.py -> build\lib\kmast\data
+copying src\kmast\data\dart.py -> build\lib\kmast\data
+copying src\kmast\data\models.py -> build\lib\kmast\data
+copying src\kmast\data\normalization.py -> build\lib\kmast\data
+copying src\kmast\data\parsers.py -> build\lib\kmast\data
+copying src\kmast\data\pipeline.py -> build\lib\kmast\data
+copying src\kmast\data\readiness.py -> build\lib\kmast\data
+copying src\kmast\data\replay.py -> build\lib\kmast\data
+copying src\kmast\data\sessions.py -> build\lib\kmast\data
+copying src\kmast\data\store.py -> build\lib\kmast\data
+copying src\kmast\data\__init__.py -> build\lib\kmast\data
+creating build\lib\kmast\strategies
+copying src\kmast\strategies\interfaces.py -> build\lib\kmast\strategies
+copying src\kmast\strategies\__init__.py -> build\lib\kmast\strategies
+creating build\lib\kmast\brokers\kis
+copying src\kmast\brokers\kis\adapter.py -> build\lib\kmast\brokers\kis
+copying src\kmast\brokers\kis\network.py -> build\lib\kmast\brokers\kis
+copying src\kmast\brokers\kis\pagination.py -> build\lib\kmast\brokers\kis
+copying src\kmast\brokers\kis\requests.py -> build\lib\kmast\brokers\kis
+copying src\kmast\brokers\kis\stream.py -> build\lib\kmast\brokers\kis
+copying src\kmast\brokers\kis\wire_contract.py -> build\lib\kmast\brokers\kis
+copying src\kmast\brokers\kis\__init__.py -> build\lib\kmast\brokers\kis
+running egg_info
+writing src\kmast.egg-info\PKG-INFO
+writing dependency_links to src\kmast.egg-info\dependency_links.txt
+writing entry points to src\kmast.egg-info\entry_points.txt
+writing requirements to src\kmast.egg-info\requires.txt
+writing top-level names to src\kmast.egg-info\top_level.txt
+reading manifest file 'src\kmast.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'src\kmast.egg-info\SOURCES.txt'
+creating build\lib\kmast\data\fixtures
+copying src\kmast\data\fixtures\market.json -> build\lib\kmast\data\fixtures
+copying src\kmast\brokers\kis\ws_columns.json -> build\lib\kmast\brokers\kis
+installing to build\bdist.win-amd64\wheel
+running install
+running install_lib
+creating build\bdist.win-amd64\wheel
+creating build\bdist.win-amd64\wheel\kmast
+creating build\bdist.win-amd64\wheel\kmast\brokers
+copying build\lib\kmast\brokers\interfaces.py -> build\bdist.win-amd64\wheel\.\kmast\brokers
+creating build\bdist.win-amd64\wheel\kmast\brokers\kis
+copying build\lib\kmast\brokers\kis\adapter.py -> build\bdist.win-amd64\wheel\.\kmast\brokers\kis
+copying build\lib\kmast\brokers\kis\network.py -> build\bdist.win-amd64\wheel\.\kmast\brokers\kis
+copying build\lib\kmast\brokers\kis\pagination.py -> build\bdist.win-amd64\wheel\.\kmast\brokers\kis
+copying build\lib\kmast\brokers\kis\requests.py -> build\bdist.win-amd64\wheel\.\kmast\brokers\kis
+copying build\lib\kmast\brokers\kis\stream.py -> build\bdist.win-amd64\wheel\.\kmast\brokers\kis
+copying build\lib\kmast\brokers\kis\wire_contract.py -> build\bdist.win-amd64\wheel\.\kmast\brokers\kis
+copying build\lib\kmast\brokers\kis\ws_columns.json -> build\bdist.win-amd64\wheel\.\kmast\brokers\kis
+copying build\lib\kmast\brokers\kis\__init__.py -> build\bdist.win-amd64\wheel\.\kmast\brokers\kis
+copying build\lib\kmast\brokers\__init__.py -> build\bdist.win-amd64\wheel\.\kmast\brokers
+creating build\bdist.win-amd64\wheel\kmast\core
+copying build\lib\kmast\core\base.py -> build\bdist.win-amd64\wheel\.\kmast\core
+copying build\lib\kmast\core\clock.py -> build\bdist.win-amd64\wheel\.\kmast\core
+copying build\lib\kmast\core\config.py -> build\bdist.win-amd64\wheel\.\kmast\core
+copying build\lib\kmast\core\contracts.py -> build\bdist.win-amd64\wheel\.\kmast\core
+copying build\lib\kmast\core\enums.py -> build\bdist.win-amd64\wheel\.\kmast\core
+copying build\lib\kmast\core\events.py -> build\bdist.win-amd64\wheel\.\kmast\core
+copying build\lib\kmast\core\study.py -> build\bdist.win-amd64\wheel\.\kmast\core
+copying build\lib\kmast\core\__init__.py -> build\bdist.win-amd64\wheel\.\kmast\core
+creating build\bdist.win-amd64\wheel\kmast\data
+copying build\lib\kmast\data\cli.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\dart.py -> build\bdist.win-amd64\wheel\.\kmast\data
+creating build\bdist.win-amd64\wheel\kmast\data\fixtures
+copying build\lib\kmast\data\fixtures\market.json -> build\bdist.win-amd64\wheel\.\kmast\data\fixtures
+copying build\lib\kmast\data\models.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\normalization.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\parsers.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\pipeline.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\readiness.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\replay.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\sessions.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\store.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\__init__.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\demo.py -> build\bdist.win-amd64\wheel\.\kmast
+creating build\bdist.win-amd64\wheel\kmast\strategies
+copying build\lib\kmast\strategies\interfaces.py -> build\bdist.win-amd64\wheel\.\kmast\strategies
+copying build\lib\kmast\strategies\__init__.py -> build\bdist.win-amd64\wheel\.\kmast\strategies
+copying build\lib\kmast\__init__.py -> build\bdist.win-amd64\wheel\.\kmast
+running install_egg_info
+Copying src\kmast.egg-info to build\bdist.win-amd64\wheel\.\kmast-1.2.0-py3.12.egg-info
+running install_scripts
+creating build\bdist.win-amd64\wheel\kmast-1.2.0.dist-info\WHEEL
+creating 'C:\Users\User\Desktop\k-mast\dist\.tmp-uq6d4j_t\kmast-1.2.0-py3-none-any.whl' and adding 'build\bdist.win-amd64\wheel' to it
+adding 'kmast/__init__.py'
+adding 'kmast/demo.py'
+adding 'kmast/brokers/__init__.py'
+adding 'kmast/brokers/interfaces.py'
+adding 'kmast/brokers/kis/__init__.py'
+adding 'kmast/brokers/kis/adapter.py'
+adding 'kmast/brokers/kis/network.py'
+adding 'kmast/brokers/kis/pagination.py'
+adding 'kmast/brokers/kis/requests.py'
+adding 'kmast/brokers/kis/stream.py'
+adding 'kmast/brokers/kis/wire_contract.py'
+adding 'kmast/brokers/kis/ws_columns.json'
+adding 'kmast/core/__init__.py'
+adding 'kmast/core/base.py'
+adding 'kmast/core/clock.py'
+adding 'kmast/core/config.py'
+adding 'kmast/core/contracts.py'
+adding 'kmast/core/enums.py'
+adding 'kmast/core/events.py'
+adding 'kmast/core/study.py'
+adding 'kmast/data/__init__.py'
+adding 'kmast/data/cli.py'
+adding 'kmast/data/dart.py'
+adding 'kmast/data/models.py'
+adding 'kmast/data/normalization.py'
+adding 'kmast/data/parsers.py'
+adding 'kmast/data/pipeline.py'
+adding 'kmast/data/readiness.py'
+adding 'kmast/data/replay.py'
+adding 'kmast/data/sessions.py'
+adding 'kmast/data/store.py'
+adding 'kmast/data/fixtures/market.json'
+adding 'kmast/strategies/__init__.py'
+adding 'kmast/strategies/interfaces.py'
+adding 'kmast-1.2.0.dist-info/METADATA'
+adding 'kmast-1.2.0.dist-info/WHEEL'
+adding 'kmast-1.2.0.dist-info/entry_points.txt'
+adding 'kmast-1.2.0.dist-info/top_level.txt'
+adding 'kmast-1.2.0.dist-info/RECORD'
+removing build\bdist.win-amd64\wheel
+Successfully built kmast-1.2.0.tar.gz and kmast-1.2.0-py3-none-any.whl

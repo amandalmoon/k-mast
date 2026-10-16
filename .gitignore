@@ -18,3 +18,8 @@ data/km001/
 .reference/
 # Earlier generated draft kept locally; final evidence is fixture-data-v1.
 artifacts/km001/fixture-data/
+data/km002/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+artifacts/km002/scenarios-v1/

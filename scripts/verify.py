@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--milestone", choices=("km000", "km001"), default="km000")
+    parser.add_argument("--milestone", choices=("km000", "km001", "km002"), default="km000")
     args = parser.parse_args()
     evidence = ROOT / "artifacts" / args.milestone
     evidence.mkdir(parents=True, exist_ok=True)
@@ -39,6 +39,29 @@ def main() -> None:
             "--output",
             "artifacts/km001/fixture-data-v1",
         ]
+    if args.milestone == "km002":
+        checks["regression"] = [
+            "-m",
+            "pytest",
+            "-q",
+            "tests/test_contracts.py",
+            "tests/test_broker.py",
+            "tests/test_study.py",
+            "tests/test_km001.py",
+            "tests/test_km001_edges.py",
+        ]
+        checks["mock-demo"] = [
+            "-m",
+            "kmast.execution.demo",
+            "--output",
+            "artifacts/km002/scenarios-v2",
+        ]
+        checks["mock-replay"] = checks["mock-demo"].copy()
+        checks["independent-accounting"] = [
+            "scripts/check_km002_evidence.py",
+            "artifacts/km002/scenarios-v2",
+        ]
+        checks["wheel-smoke"] = ["scripts/wheel_smoke_km002.py"]
     results = []
     for name, args in checks.items():
         result = subprocess.run([sys.executable, *args], cwd=ROOT, capture_output=True)

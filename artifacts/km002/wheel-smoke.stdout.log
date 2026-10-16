@@ -1,0 +1,1 @@
+PASS: installed wheel, outside-checkout imports and all six deterministic Mock hashes

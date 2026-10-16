@@ -1,0 +1,7 @@
+A: PASS raw JSON quantity=0, NAV=10016, economic=16
+B: PASS raw JSON quantity=170, NAV=9996.00, economic=-4.00
+C: PASS raw JSON quantity=4, NAV=9999, economic=-1
+D: PASS raw JSON quantity=0, NAV=10000, economic=0
+E: PASS raw JSON quantity=50, NAV=10500, economic=0
+F: PASS raw JSON quantity=100, NAV=9499, economic=-501
+PASS: independent arithmetic, attribution, synthetic outcome and hash checks
