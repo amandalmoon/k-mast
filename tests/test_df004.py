@@ -16,7 +16,6 @@ from kmast.research.ewy import (
     nav_available,
     replay,
     require_available,
-    signal_id,
     us_session,
 )
 from scripts.collect_df004_ewy import ROUTE, validate
@@ -101,10 +100,16 @@ def test_publication_boundary_and_nav_reference_not_publication():
 
 
 def test_correction_is_local_to_evidence_identity():
-    before = signal_id("H1_EWY", "005930", at(date(2026, 3, 9), 8), ["past-v1"])
-    # Later correction does not enter a past input snapshot; changed own evidence does.
-    assert before == signal_id("H1_EWY", "005930", at(date(2026, 3, 9), 8), ["past-v1"])
-    assert before != signal_id("H1_EWY", "005930", at(date(2026, 3, 9), 8), ["past-v2"])
+    stock, index, bars, dates = replay_fixture()
+    before = replay(stock, index, bars, dates, set(dates), "H1_EWY", "BASE")
+    # Append then correct a future US bar: neither IDs nor past fills/NAV may change.
+    for close in ("110", "90"):
+        later = (*bars, bar("2026-09-04", close=close))
+        assert replay(stock, index, later, dates, set(dates), "H1_EWY", "BASE") == before
+    # Correct the actual input used by the first decision: identity must change.
+    changed = (bars[0], bar("2026-09-02", close="99"), bars[2])
+    revised = replay(stock, index, changed, dates, set(dates), "H1_EWY", "BASE")
+    assert revised["trace"][0]["signal_id"] != before["trace"][0]["signal_id"]
 
 
 def test_price_only_body_does_not_use_nav():
