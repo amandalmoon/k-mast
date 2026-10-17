@@ -55,12 +55,23 @@ def main():
         milestone="DF009",
         baseline_sha="304bd65da7b142e89c9c9bc74ee963c90625f7c1",
         baseline_tests=471,
-        sampling="DF008 confirmed original cohort only. Three per year 2022/2023/2024/2025; ascending original frozen rank within year; skip any previously selected corporation across years. No price/PnL selection, no substitutions after KRX results.",
+        sampling=(
+            "DF008 confirmed original cohort only. Three per year 2022/2023/2024/"
+            "2025; ascending original frozen rank within year; skip any previousl"
+            "y selected corporation across years. No price/PnL selection, no subs"
+            "titutions after KRX results."
+        ),
         targets=chosen,
         receipt_corporate_id_sha256=digest(canonical(identities)),
         DF008_target_sha256=digest((previous / "document-targets.json").read_bytes()),
         DF008_qualification_sha256=digest((previous / "document-qualification.json").read_bytes()),
-        date_selection="Receipt date and previous Gregorian calendar date, at most two dates per event. A previous date may be a non-session: an empty response is missing evidence, never backfilled by a fabricated session or nearby arbitrary snapshot. Exact date/market calls must be finalized and approved after official API identity/access inspection.",
+        date_selection=(
+            "Receipt date and previous Gregorian calendar date, at most two dates"
+            " per event. A previous date may be a non-session: an empty response "
+            "is missing evidence, never backfilled by a fabricated session or nea"
+            "rby arbitrary snapshot. Exact date/market calls must be finalized an"
+            "d approved after official API identity/access inspection."
+        ),
         proposed_markets=["KOSPI", "KOSDAQ"],
         maximum_unique_requests=48,
         maximum_total_requests=96,
@@ -68,20 +79,51 @@ def main():
         authentication_authorized=False,
         service_paths=None,
         version=None,
-        scope="Historical security basics only. Daily price API documentation can be researched, but no price requests. No KIS or new DART authentication, key issuance, accounts, orders, cancels or LIVE.",
+        scope=(
+            "Historical security basics only. Daily price API documentation can b"
+            "e researched, but no price requests. No KIS or new DART authenticati"
+            "on, key issuance, accounts, orders, cancels or LIVE."
+        ),
         evidence_rules={
-            "CORPORATE_IDENTITY_VERIFIED": "Rehash original XML and explicit AREGCIK match to source corporation.",
-            "HISTORICAL_SECURITY_PRESENT": "Actual successful dated KRX basic response with exact approved basDd, valid distinct standard and short codes, market and stock type. Current snapshots never prove historical existence.",
-            "CORP_STOCK_LINK_VERIFIED": "Contemporaneous DART source six-digit code candidate plus matching historical KRX security, date, market, corporate issuer/name corroboration and listing chronology; corporate ID/name alone insufficient. Ambiguity, rename/merger/transfer/multiple-class conflict quarantined unless independently resolved.",
-            "THEN_LISTED_STATUS_VERIFIED": "Historical security evidence and LIST_DD<=event date, explicit matching market. Does not imply session tradability.",
+            "CORPORATE_IDENTITY_VERIFIED": (
+                "Rehash original XML and explicit AREGCIK match to source corporation."
+            ),
+            "HISTORICAL_SECURITY_PRESENT": (
+                "Actual successful dated KRX basic response with exact approved basDd"
+                ", valid distinct standard and short codes, market and stock type. Cu"
+                "rrent snapshots never prove historical existence."
+            ),
+            "CORP_STOCK_LINK_VERIFIED": (
+                "Contemporaneous DART source six-digit code candidate plus matching h"
+                "istorical KRX security, date, market, corporate issuer/name corrobor"
+                "ation and listing chronology; corporate ID/name alone insufficient. "
+                "Ambiguity, rename/merger/transfer/multiple-class conflict quarantine"
+                "d unless independently resolved."
+            ),
+            "THEN_LISTED_STATUS_VERIFIED": (
+                "Historical security evidence and LIST_DD<=event date, explicit match"
+                "ing market. Does not imply session tradability."
+            ),
             "DELISTING_AND_HALT_PENDING": "Separate dated halt/delisting evidence required.",
             "CORPORATE_ACTION_PENDING": "Separate dated action history required.",
             "PRICE_AND_SESSION_PENDING": "No new prices here; independent subsequent gate.",
         },
         decisions={
-            "price_pilot": "At least five verified historical mappings from three companies, then-market evidence and safe relevant correction lineage. Propose at most three by frozen rank only. Never automatically authorize prices.",
-            "blocked": "Separate unavailable API/key/service, historical date not supplied, issuer/security conflict, security-change-history missing, halt/action/session missing. No failure is NO_ALPHA.",
-            "nulls": "Unobserved fields, publication timestamps and costs per verified event remain NULL; hypothetical fixtures never count as market evidence.",
+            "price_pilot": (
+                "At least five verified historical mappings from three companies, the"
+                "n-market evidence and safe relevant correction lineage. Propose at m"
+                "ost three by frozen rank only. Never automatically authorize prices."
+            ),
+            "blocked": (
+                "Separate unavailable API/key/service, historical date not supplied, "
+                "issuer/security conflict, security-change-history missing, halt/acti"
+                "on/session missing. No failure is NO_ALPHA."
+            ),
+            "nulls": (
+                "Unobserved fields, publication timestamps and costs per verified eve"
+                "nt remain NULL; hypothetical fixtures never count as market evidence"
+                "."
+            ),
         },
         economic_status="ECONOMIC_EDGE_UNVERIFIED",
         live_status="LIVE_NOT_APPROVED",
