@@ -23,6 +23,7 @@ def main() -> None:
             "km005r1",
             "data-first",
             "df002",
+            "df003",
         ),
         default="km000",
     )
@@ -244,12 +245,46 @@ def main() -> None:
         ]
         checks["previous-exploratory"] = ["scripts/check_data_first_evidence.py", "--private"]
         checks["v3-independent"] = ["scripts/check_df002_evidence.py", "--private"]
+    if args.milestone == "df003":
+        checks["regression331"] = ["-m", "pytest", "-q", "--ignore=tests/test_df003.py"]
+        checks["new-hypothesis-controls"] = ["-m", "pytest", "-q", "tests/test_df003.py"]
+        checks["oms-replay"] = [
+            "-m",
+            "kmast.execution.demo",
+            "--output",
+            "artifacts/df003/oms-replay",
+        ]
+        checks["oms-independent"] = [
+            "scripts/check_km002_evidence.py",
+            "artifacts/df003/oms-replay",
+        ]
+        checks["alpha-replay"] = [
+            "-m",
+            "kmast.simulation.cli",
+            "--output",
+            "artifacts/df003/alpha-replay",
+        ]
+        checks["alpha-independent"] = [
+            "scripts/check_km003_evidence.py",
+            "artifacts/df003/alpha-replay",
+        ]
+        checks["joint-replay"] = [
+            "-m",
+            "kmast.portfolio.demo",
+            "--output",
+            "artifacts/df003/joint-replay",
+        ]
+        checks["v2-independent"] = ["scripts/check_data_first_evidence.py", "--private"]
+        checks["v3-independent"] = ["scripts/check_df002_evidence.py", "--private"]
+        checks["hypothesis-independent"] = ["scripts/check_df003_evidence.py", "--private"]
     results = []
     for name, args in checks.items():
         result = subprocess.run([sys.executable, *args], cwd=ROOT, capture_output=True)
         for stream, payload in (("stdout", result.stdout), ("stderr", result.stderr)):
-            if evidence.name == "df002":
-                private_logs = ROOT / "data/data-first-private-market-v1/df002-check-logs"
+            if evidence.name in {"df002", "df003"}:
+                private_logs = (
+                    ROOT / "data/data-first-private-market-v1" / (evidence.name + "-check-logs")
+                )
                 private_logs.mkdir(exist_ok=True)
                 (private_logs / f"{name}.{stream}.log").write_bytes(payload)
                 payload = (

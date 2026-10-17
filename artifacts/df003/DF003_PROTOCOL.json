@@ -1,0 +1,45 @@
+{
+  "protocol": "DF003_V1_FROZEN_BEFORE_NEW_RESULTS",
+  "starting_head": "9b10bbea55d9e74ca9ae0754e6fce91ee433074b",
+  "scope": "EXPLORATORY_REAL_DATA",
+  "economic_status": "ECONOMIC_EDGE_UNVERIFIED",
+  "live_status": "LIVE_NOT_APPROVED",
+  "confirmatory_status": "NOT_EXECUTED",
+  "data_status": "PREVIOUSLY_CONSUMED_EXPLORATORY_SURVIVOR_SAMPLE",
+  "symbols": ["005930", "000660", "035420", "247540", "086520", "028300"],
+  "indices": ["0001", "1001"],
+  "acquisition_interval": ["2025-10-17", "2026-10-16"],
+  "valuation_interval": ["2025-11-14", "2026-10-16"],
+  "evaluation_sessions": 223,
+  "capital_per_independent_reference": "10000000",
+  "candidates": {
+    "A0": "Exact frozen candidate-v1 and V3 replay: 20-high breakout, RS>=0, turnover>=1000, ATR20 volatility weight capped .25, basic 5% entry-price stop, original trend exit, P5D calendar deadline",
+    "A1": "Only replace P5D with 5 completed eligible observed sessions since actual first entry. Exit at the next modeled opening. Other A0 rules unchanged",
+    "A2": "Replace P5D with prior close below mean of preceding 20 closes, retaining A0 entry/weight/basic stop and original trend exit; hard maximum 20 completed eligible observed sessions",
+    "A3": "A2 plus trailing exit when prior close <= max(entry cost, completed holding closes) - 3 * ATR20; ATR20 arithmetic mean of last 20 true ranges using 21 completed bars, refreshed before decision; maximum 20 eligible observed sessions"
+  },
+  "eligible_session": "Completed stock/index-aligned observed date with positive stock volume and turnover, excluding inherited SPECIAL_NO_EXECUTION dates. Count entry-date close as session 1. This is not a certified KRX calendar",
+  "exit_priority": ["BASIC_STOP_5_PERCENT", "OBSERVED_SESSION_MAXIMUM", "ATR_TRAIL_IF_A3", "ORIGINAL_MOVING_AVERAGE_TREND_EXIT"],
+  "entry_controls": "T0/T1/T2/T3 pair with A0/A1/A2/A3 respectively. Replace flat-entry 20-high breakout with prior close >= preceding 20-close mean. Retain same RS, turnover, volatility sizing, .25 cap, no averaging, costs and each paired exit rule",
+  "baselines": ["CASH", "BUY_HOLD", "HOLD_25", "TREND_25"],
+  "cost_scenarios": {
+    "BASE_3FEE_20TAX_5SLIP_100OPEX": {"fee_bps": "3", "sell_tax_bps": "20", "slippage_bps": "5", "fill_fraction": "1"},
+    "STRESS_10FEE_30TAX_20SLIP_100OPEX": {"fee_bps": "10", "sell_tax_bps": "30", "slippage_bps": "20", "fill_fraction": "1"},
+    "PARTIAL_HALF_FILL": {"fee_bps": "3", "sell_tax_bps": "20", "slippage_bps": "5", "fill_fraction": "0.5"}
+  },
+  "daily_opex": "100",
+  "cash_interest": "0",
+  "execution": "Frozen V3: previous-close +/-5% limits, prior-volume .001 capacity proxy, adverse rounded slippage at assumed next observed open+1s, 1-minute expiration, 1-share floor, no automatic favorable residual fill, no T/T+1 sale-proceeds reuse, no forced terminal liquidation. No quote/trade/halt evidence",
+  "execution_confidence": "UNVERIFIED_RESEARCH_ASSUMPTION",
+  "trials": {"candidates": 72, "entry_controls": 72, "baselines": 72, "total_references": 216, "parameter_grid_combinations_per_candidate": 1, "stochastic_repetitions": 0},
+  "exposure_controls": "Report actual mean/max stock exposure, holding days, daily NAV volatility, stock/index return beta and worst close day. POSTHOC_DIAGNOSTIC only: scale each pair's cash-excess PnL by common=min(pair mean exposures)/own mean exposure; no implementation or allocation feedback, zero exposures => NULL. No claim of equal full risk",
+  "candidate_failure_criteria": {
+    "INSUFFICIENT_EVIDENCE": "Missing/invalid common panel, accounting or preservation failure",
+    "RESEARCH_CANDIDATE_REJECT": "A1-A3 improve A0 net in at most 1/6 stocks in BASE and at most 1/6 in STRESS",
+    "RESEARCH_CANDIDATE_RETAIN": "Improve A0 net in >=4/6 stocks in both BASE and STRESS; MDD <= A0 MDD + .02 in >=5/6 BASE stocks; beat paired trend-entry control in >=4/6 BASE stocks; positive A0 improvements in >=2 of the four non-semiconductor-sample stocks",
+    "RESEARCH_CANDIDATE_REVISE": "Valid results not meeting RETAIN or REJECT; A0 remains frozen reference, not a replacement decision"
+  },
+  "safety": "Residual holdings with target zero and failed modeled reduction are RISK_REDUCTION_HOLD irrespective of research ranking. Unknown/halted market cannot be assumed executable. No PARTIAL_EXECUTION_MODEL_V2 or probabilistic calibration introduced",
+  "ewy": "DF004_DATA_CONTRACT_ONLY_NO_EWY_PERFORMANCE_OR_COLLECTION",
+  "prohibited": ["AUTHENTICATION", "NEW_MARKET_DATA_REQUESTS", "ACCOUNT_REQUESTS", "BROKER_ORDERS", "CANCELS", "LIVE_APPROVAL", "OOS_PASS", "PARAMETER_SEARCH", "PR_MERGE", "DEPLOYMENT", "AUTOSTART_DF004"]
+}

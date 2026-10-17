@@ -160,3 +160,11 @@ V2 72개를 보존·재현하고 시점별 입력 계보와 개장 체결 가정
 [DF-002 종료 보고서](docs/implementation/DF002_CLOSURE_REPORT.md)를 참고한다.
 `python scripts/verify.py --milestone df002`는 저장된 비공개 자료를 이용한 독립 회계검사를 포함한다.
 추가 인증·수집·주문 없이 실행하며 경제적 우위와 LIVE는 미승인이다.
+
+## DF-003 보유기한·진입 대조 연구
+
+새 결과 전에 규칙을 동결하고 216개 독립 Reference로 A0~A3·진입 대조군·기준선을 비교했다.
+기존 candidate-v1·V2·V3와 Risk·OMS·Ledger를 보존한다.
+[DF-003 종료 보고서](docs/implementation/DF003_CLOSURE_REPORT.md)를 참고한다.
+`python scripts/verify.py --milestone df003`는 저장된 자료와 기존 331개 회귀시험을 검증한다.
+모든 새 후보는 REVISE이며 실제 실행·경제성·LIVE는 미승인이다. EWY는 데이터 계약만 준비했다.

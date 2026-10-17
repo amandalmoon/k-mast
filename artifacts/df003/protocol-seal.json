@@ -1,0 +1,7 @@
+{
+  "protocol_sha256": "2d66996b11971c2df44789eea1374eef481be8241c3fa052012bfac64fbc3236",
+  "sealed_before_experiments": true,
+  "utc": "2026-10-17T02:59:41.214834+00:00",
+  "trial_count": 216,
+  "parameter_grid_per_candidate": 1
+}

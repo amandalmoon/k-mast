@@ -1,0 +1,30 @@
+{
+  "schema_version": "DF004_DRAFT_INPUT_CONTRACT_V1",
+  "status": "CONTRACT_ONLY_NOT_STARTED",
+  "hypothesis": "US-session Korea-related information adds predictive value for the following eligible Korean regular session AFTER its open",
+  "evaluation_performed": false,
+  "collection_authorized_by_this_contract": false,
+  "required_common_fields": ["source", "record_id", "source_hash", "symbol", "venue", "currency", "session_id", "event_at_utc", "available_at_utc", "acquired_at_utc", "revision", "supersedes_id", "quality_flags", "timestamp_evidence"],
+  "inputs": {
+    "EWY_OHLC": ["actual_session_open", "actual_session_close", "bar_end", "OHLC_basis", "volume", "distribution_and_split_history"],
+    "EWY_NAV": ["nav_value", "valuation_reference_at", "calculation_method", "actually_published_at", "correction_published_at", "currency", "source_evidence"],
+    "FX": ["currency_pair", "quote_direction", "bid", "ask", "observed_at", "actually_available_at", "conversion_convention"],
+    "KR_INDEX": ["KOSPI_or_KOSDAQ", "actual_session", "bar_end", "actually_available_at"],
+    "KR_POST_OPEN_PRICES": ["stock_symbol", "actual_exchange_timestamp", "quote_or_trade_type", "bid_ask_or_trade", "halt_status", "available_at", "no_open_anchor_substitute"],
+    "CALENDARS": ["US_venue_holidays_and_special_sessions", "KRX_holidays_and_special_sessions", "America/New_York_DST", "Asia/Seoul", "UTC_mapping_evidence"],
+    "COSTS": ["effective_at", "fee", "sell_tax", "spread", "slippage_assumption_or_observation", "funding_and_FX_cost", "provenance"]
+  },
+  "time_invariants": [
+    "No feature available_at exceeds the Korean decision_at",
+    "Do not substitute NAV valuation time for its actual publication time",
+    "Only completed US bars may enter the next eligible Korean session decision",
+    "Map actual session identifiers; never add a fixed calendar day or fixed UTC offset across DST",
+    "Do not replace missing post-open prices with a simulated open Tick",
+    "Preserve old revisions for decisions made before later corrections"
+  ],
+  "hold_conditions": ["UNKNOWN_PUBLICATION_TIME", "AMBIGUOUS_HOLIDAY_OR_DST_MAPPING", "MISSING_KR_POST_OPEN_DATA", "UNKNOWN_FX_BASIS", "UNVERIFIED_COSTS_FOR_CONFIRMATORY_USE"],
+  "before_collection_required": ["provider", "symbols", "date_interval", "maximum_requests_including_auth_and_retries", "existing_cache_coverage", "user_approved_scope"],
+  "new_api_calls": 0,
+  "economic_status": "ECONOMIC_EDGE_UNVERIFIED",
+  "live_status": "LIVE_NOT_APPROVED"
+}

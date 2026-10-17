@@ -1,0 +1,11 @@
+{
+  "raw_history_rows": 1952,
+  "complete_rows": 1952,
+  "missing_ohlc": 0,
+  "zero_volume_rows": 488,
+  "quality_flags": [
+    "INDEX_HISTORICAL_RELEASE_UNVERIFIED",
+    "SESSION_UNVERIFIED"
+  ],
+  "interpretation": "FLAGS_RETAINED_NOT_G1_APPROVED"
+}
