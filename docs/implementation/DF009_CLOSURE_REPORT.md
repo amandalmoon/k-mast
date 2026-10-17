@@ -1,0 +1,17 @@
+# DF009 access-pending report
+
+Baseline: `304bd65da7b142e89c9c9bc74ee963c90625f7c1`, 471 tests. Branch: `codex/df009-pit-identity-recovery`. Original D1 economics, A0/A1/EWY, OMS, Risk and DF001–008 evidence remain unchanged.
+
+Completed work: remotely preregistered twelve distinct-company events across four years; downloaded and hashed all four official KRX service specifications; confirmed real basics production paths and basDd/standard/short/name/listing/market/class fields; sealed 46 exact market/date queries and a 92-attempt limit; implemented a default-off, locked, persistent, completion-spaced collector and offline identity qualifier. Key entry was performed by the user in a local file outside Git. No key issuance or account operation occurred.
+
+Actual acquisition: one KOSPI basics request for 20221226 returned HTTP 401 / `Unauthorized API Call`. The response hash is `a5193871d0b3d7288174d924179340dbe1650a42652b426b5304e9d426f68cfa`; safe original bytes, timestamps, request identity, scope and executed sources are preserved privately. The request was counted and collection durably halted, without retry or a second-market request. The other 45 queries remain unattempted. An observed gap minimum is NULL because there is only one request; no multi-request live spacing compliance is claimed.
+
+All twelve DART corporate IDs were reconfirmed. No new historical stock mapping, then-market or price-qualified event has been established. Current result: `KRX_AUTH_OR_SERVICE_ACCESS_PENDING`. It is not yet possible to answer that actual KRX dated responses solve the mapping problem, but the documented dated services provide a concrete next experiment. The access rejection does not establish that historical data is unavailable or that D1 is unprofitable. A price pilot is not qualified and no three-company price proposal is issued.
+
+The next external dependency is key activation and individual basics service access. Authentication rejection alone is insufficient grounds to abandon D1. A B ORB supply-only contingency is specified with historical-minute versus forward tick/quote distinctions, operating limits still to verify, explicit storage/message-rate assumptions, and unmeasured monetary/impact costs kept NULL. No B returns, parameters, subscriptions or new KIS authentication were tested.
+
+Actual local verification is recorded in `artifacts/df009/checks.json`, separately from market evidence: preserved 471-test regression, full pytest, Ruff/format, mypy, sdist/wheel, OMS/Alpha/joint replay, prior V2/V3/DF003–008 independent checks, private original-byte/secret audit and independent DF009 scope/401/NULL/arithmetic checks. Remote Python 3.11/3.12 results must be tied to the exact final pushed SHA, with private CI proof and final chat confirmation. No force push, merge or deployment is authorized.
+
+All 22 local verification commands passed. Full pytest: 486 PASS; separately selected prior regression: 471 PASS. Mypy checked 80 source files, and both distribution formats built successfully. Preservation rehashed 10,960 existing private files and 1,390 baseline tracked files, allowing only verifier/CI extensions; zero protected-byte changes or secret matches were found. The failed request and original executed sources are preserved, and the auth halt remains active.
+
+`ECONOMIC_EDGE_UNVERIFIED` and `LIVE_NOT_APPROVED` remain in force. New price requests, economic trials, KIS/DART authenticated requests, account queries, orders and cancels are zero.

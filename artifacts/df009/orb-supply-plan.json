@@ -1,0 +1,96 @@
+{
+  "status": "SUPPLY_FEASIBILITY_PLAN_ONLY",
+  "strategy_source": "02_알파_전략_및_레짐_명세.md",
+  "strategy_changed": false,
+  "official_sources": [
+    {
+      "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/examples_user/domestic_stock/domestic_stock_functions_ws.py",
+      "repository_commit": "2077773a69a428daf63e148182511f068cc45de3",
+      "sha256": "b282661c47287d5374a7b67256a91503e1b16b2dfeb40490a581a65e80918453",
+      "path": "examples_user/domestic_stock/domestic_stock_functions_ws.py",
+      "private_file": "kis-official-0.py"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/examples_llm/domestic_stock/inquire_time_dailychartprice/inquire_time_dailychartprice.py",
+      "repository_commit": "2077773a69a428daf63e148182511f068cc45de3",
+      "sha256": "3034b9f54dfcb632139f3cc309937a2b426dfe45c84521549c6ddba58babe237",
+      "path": "examples_llm/domestic_stock/inquire_time_dailychartprice/inquire_time_dailychartprice.py",
+      "private_file": "kis-official-1.py"
+    }
+  ],
+  "trade_channel": "H0STCNT0",
+  "quote_channel": "H0STASP0",
+  "account_notice_channels_excluded": [
+    "H0STCNI0",
+    "H0STCNI9"
+  ],
+  "historical_minutes": {
+    "api_id": "FHKST03010230",
+    "path": "/uapi/domestic-stock/v1/quotations/inquire-time-dailychartprice",
+    "documented_max_rows_per_call": 120,
+    "documented_max_history_years": 1,
+    "documented_environment": "REAL",
+    "actual_account_access_tested": false,
+    "price_calls_in_df009": 0
+  },
+  "forward_observation": {
+    "proposed_symbols": 10,
+    "proposed_sessions": 20,
+    "channels_per_symbol": 2,
+    "proposed_subscriptions": 20,
+    "subscription_limit_verified": null,
+    "official_quota_approval_required": true
+  },
+  "storage_assumptions": {
+    "session_seconds": 23400,
+    "bytes_per_message": 1024,
+    "compression_assumed": false,
+    "raw_and_normalized_copies": 2
+  },
+  "storage_scenarios": [
+    {
+      "assumed_messages_per_second_per_channel": 1,
+      "bytes_per_session": 479232000,
+      "bytes_20_sessions": 9584640000,
+      "bytes_20_sessions_two_copies": 19169280000
+    },
+    {
+      "assumed_messages_per_second_per_channel": 5,
+      "bytes_per_session": 2396160000,
+      "bytes_20_sessions": 47923200000,
+      "bytes_20_sessions_two_copies": 95846400000
+    },
+    {
+      "assumed_messages_per_second_per_channel": 20,
+      "bytes_per_session": 9584640000,
+      "bytes_20_sessions": 191692800000,
+      "bytes_20_sessions_two_copies": 383385600000
+    }
+  ],
+  "historical_request_scenario": {
+    "minutes_per_symbol_session_assumed": 390,
+    "minimum_calls_per_symbol_session": 4,
+    "ten_symbols_twenty_sessions_calls_before_retry": 800,
+    "overlap_and_empty_pages_extra": true,
+    "execution_authorized": false
+  },
+  "signal_timing": "Completed 5/15 minute opening range only after final contributing data receipt; preserve exchange and receive timestamps. No same-bar hindsight fills.",
+  "costs": {
+    "provider_access_cost": null,
+    "storage_cost": null,
+    "operator_hours": null,
+    "network_egress_cost": null,
+    "verified_execution_impact": null
+  },
+  "data_gaps": [
+    "Authoritative halt/VI state and resumption chronology",
+    "Historical order-book and tick depth not established",
+    "Correction/cancellation and sequence-gap detection",
+    "Disconnect and opening-auction coverage",
+    "Actual subscription/account entitlement and market data hours"
+  ],
+  "decision": "Do not abandon D1 on a generic 401. Resolve current KRX access first; B ORB remains contingency supply research, not a performance experiment.",
+  "new_authentication_calls": 0,
+  "new_subscriptions": 0,
+  "economic_trials": 0
+}
