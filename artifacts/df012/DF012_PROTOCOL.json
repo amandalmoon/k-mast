@@ -1,0 +1,303 @@
+{
+  "version": "DF012_V1_BEFORE_NEW_FIVE_EVENT_PRICES",
+  "baseline_sha": "f116d8bf73217a32a46bdef625b14dbf8fbf4c47",
+  "parent_proposal_sha256": "31439251b0ecb150b66c2c397386ae3f32cf85f25fb4ac9b836715a0efa230f3",
+  "frozen_sources": {
+    "artifacts/df011/DF011_PROTOCOL.json": "6b3fb5baae6b237c029e1a90fdd172f6cee6759240f617c050c8d317f0967eb9",
+    "artifacts/df011/control-eligibility-boundary.json": "525d9f000544e638fa28d9f4707d162fa4d7fe9035067ad837e6b68fe8fa3ce7",
+    "artifacts/df010/DF010_PROTOCOL.json": "8cc70e9a98c0b1794312080cb67a513cd038520b78e0e912564d434aea2f17b0",
+    "artifacts/df009r1/event-linkage.json": "d8b021df92658addd8ee9a3ad6f1ef1e7ff765d97935c8750aa5718531d2d7db",
+    "artifacts/df011/results.json": "750f25edca54d4545de54a7fcdef2816c44b019da5d9de97dbbc9502b6c9479b",
+    "src/kmast/research/event_replay.py": "67bfe8dbd9ef0ff413c5182cf60d3610493a5404d630d9b96f60a254046451f8",
+    "src/kmast/research/entitlements.py": "60f567da81d4d4562d079cf4f6ec15f1fd0dabb1a16a00c2e754b8cb06f6bd0d"
+  },
+  "targets": [
+    {
+      "basis": [
+        "RAW",
+        "ADJUSTED"
+      ],
+      "corp_code": "00164788",
+      "end": "2023-01-07",
+      "event_date": "2022-12-08",
+      "followup_sessions_after_deadline": 2,
+      "historical_short_code": "012330",
+      "receipt": "20221208000397",
+      "safe_relevant_correction_lineage_verified": true,
+      "same_corporate_revision_receipts": [],
+      "selection": "All remaining mapped events; no performance filtering",
+      "standard_code": "KR7012330007",
+      "start": "2022-10-09",
+      "then_market": "KOSPI",
+      "warmup_observed_sessions": 21
+    },
+    {
+      "basis": [
+        "RAW",
+        "ADJUSTED"
+      ],
+      "corp_code": "00129509",
+      "end": "2022-11-25",
+      "event_date": "2022-10-26",
+      "followup_sessions_after_deadline": 2,
+      "historical_short_code": "014130",
+      "receipt": "20221026000391",
+      "safe_relevant_correction_lineage_verified": true,
+      "same_corporate_revision_receipts": [],
+      "selection": "All remaining mapped events; no performance filtering",
+      "standard_code": "KR7014130009",
+      "start": "2022-08-27",
+      "then_market": "KOSPI",
+      "warmup_observed_sessions": 21
+    },
+    {
+      "basis": [
+        "RAW",
+        "ADJUSTED"
+      ],
+      "corp_code": "01201970",
+      "end": "2023-09-29",
+      "event_date": "2023-08-30",
+      "followup_sessions_after_deadline": 2,
+      "historical_short_code": "352770",
+      "receipt": "20230830001038",
+      "safe_relevant_correction_lineage_verified": true,
+      "same_corporate_revision_receipts": [],
+      "selection": "All remaining mapped events; no performance filtering",
+      "standard_code": "KR7352770002",
+      "start": "2023-07-01",
+      "then_market": "KOSDAQ",
+      "warmup_observed_sessions": 21
+    },
+    {
+      "basis": [
+        "RAW",
+        "ADJUSTED"
+      ],
+      "corp_code": "00875237",
+      "end": "2024-12-05",
+      "event_date": "2024-11-05",
+      "followup_sessions_after_deadline": 2,
+      "historical_short_code": "352700",
+      "receipt": "20241105000046",
+      "safe_relevant_correction_lineage_verified": true,
+      "same_corporate_revision_receipts": [],
+      "selection": "All remaining mapped events; no performance filtering",
+      "standard_code": "KR7352700009",
+      "start": "2024-09-06",
+      "then_market": "KOSDAQ",
+      "warmup_observed_sessions": 21
+    },
+    {
+      "basis": [
+        "RAW",
+        "ADJUSTED"
+      ],
+      "corp_code": "00187415",
+      "end": "2024-06-28",
+      "event_date": "2024-05-29",
+      "followup_sessions_after_deadline": 2,
+      "historical_short_code": "041960",
+      "receipt": "20240529000068",
+      "safe_relevant_correction_lineage_verified": true,
+      "same_corporate_revision_receipts": [
+        "20250326001053"
+      ],
+      "selection": "All remaining mapped events; no performance filtering",
+      "standard_code": "KR7041960006",
+      "start": "2024-03-30",
+      "then_market": "KOSDAQ",
+      "warmup_observed_sessions": 21
+    }
+  ],
+  "requests": [
+    {
+      "basis": "RAW",
+      "end": "2023-01-07",
+      "expected_pages": 1,
+      "operation": "daily",
+      "start": "2022-10-09",
+      "symbol": "012330"
+    },
+    {
+      "basis": "ADJUSTED",
+      "end": "2023-01-07",
+      "expected_pages": 1,
+      "operation": "daily",
+      "start": "2022-10-09",
+      "symbol": "012330"
+    },
+    {
+      "basis": "RAW",
+      "end": "2022-11-25",
+      "expected_pages": 1,
+      "operation": "daily",
+      "start": "2022-08-27",
+      "symbol": "014130"
+    },
+    {
+      "basis": "ADJUSTED",
+      "end": "2022-11-25",
+      "expected_pages": 1,
+      "operation": "daily",
+      "start": "2022-08-27",
+      "symbol": "014130"
+    },
+    {
+      "basis": "RAW",
+      "end": "2022-08-31",
+      "expected_pages": 1,
+      "operation": "index_daily",
+      "start": "2022-08-27",
+      "symbol": "0001"
+    },
+    {
+      "basis": "RAW",
+      "end": "2023-09-29",
+      "expected_pages": 1,
+      "operation": "daily",
+      "start": "2023-07-01",
+      "symbol": "352770"
+    },
+    {
+      "basis": "ADJUSTED",
+      "end": "2023-09-29",
+      "expected_pages": 1,
+      "operation": "daily",
+      "start": "2023-07-01",
+      "symbol": "352770"
+    },
+    {
+      "basis": "RAW",
+      "end": "2024-12-05",
+      "expected_pages": 1,
+      "operation": "daily",
+      "start": "2024-09-06",
+      "symbol": "352700"
+    },
+    {
+      "basis": "ADJUSTED",
+      "end": "2024-12-05",
+      "expected_pages": 1,
+      "operation": "daily",
+      "start": "2024-09-06",
+      "symbol": "352700"
+    },
+    {
+      "basis": "RAW",
+      "end": "2024-06-28",
+      "expected_pages": 1,
+      "operation": "daily",
+      "start": "2024-03-30",
+      "symbol": "041960"
+    },
+    {
+      "basis": "ADJUSTED",
+      "end": "2024-06-28",
+      "expected_pages": 1,
+      "operation": "daily",
+      "start": "2024-03-30",
+      "symbol": "041960"
+    }
+  ],
+  "approval": {
+    "execution_authorized": false,
+    "new_explicit_scope_required": true,
+    "prior_unused_budget_carried": false,
+    "environment": "PAPER_READ_ONLY",
+    "authentication_ceiling": 2,
+    "retry_inclusive_total_ceiling": 24,
+    "per_page_attempt_ceiling": 2,
+    "minimum_response_completion_wait_seconds": "3.10",
+    "stock_path": "/uapi/domestic-stock/v1/quotations/inquire-daily-itemchartprice",
+    "stock_tr": "FHKST03010100",
+    "index_path": "/uapi/domestic-stock/v1/quotations/inquire-daily-indexchartprice",
+    "index_tr": "FHKUP03500100",
+    "index_only": {
+      "symbol": "0001",
+      "start": "2022-08-27",
+      "end": "2022-08-31",
+      "basis": "RAW"
+    },
+    "forbidden": [
+      "LIVE authentication",
+      "accounts",
+      "orders",
+      "cancels",
+      "scope expansion"
+    ]
+  },
+  "cache": "Recheck exact dates/symbol/basis and row/raw hashes; reuse verified index slices; only missing approved pages may be queried",
+  "qualification": {
+    "identity": "Reuse all eight DF009R1 links and safe bounded correction lineage; no present-day survivor join",
+    "warmup_sessions": 21,
+    "session": "Observed common stock/index days plus preserved official special-opening exclusions; no synthetic weekday data or KRX basics-as-session",
+    "prices": "Unique complete positive OHLCV/turnover; separate RAW/ADJUSTED and source lineage; missing sessions, conflicting revisions or nonconstant factors without resolved action lineage HOLD",
+    "actions": "Any nondefault provider action/split/modification/revaluation indicator in selected window requires exact code and issuer evidence; unresolved material rights/quantity changes HOLD even if RAW/ADJUSTED ratio=1",
+    "time": "Date-only receipt =>08:00 first verified eligible later session; modeled open+1 second, never same-day announcement gain or later correction backfill",
+    "unknown": "Full action/halt/listing/correction history and actual publication seconds remain NULL unless supported",
+    "partial": "Replay each passing event independently, keep held events and reasons in denominator"
+  },
+  "replay": {
+    "engine": "Unchanged frozen DF006 event_replay/ReferencePortfolio/Ledger",
+    "models": [
+      "CASH",
+      "D1",
+      "BUY_HOLD",
+      "TREND"
+    ],
+    "capital_krw": "10000000",
+    "absolute_target": "0.25",
+    "holding": "5 calendar days from decision, not five observed sessions",
+    "exit": "Frozen prior-close stop/correction invalidation and next eligible deadline open",
+    "scenarios": {
+      "BASE": [
+        "3",
+        "20",
+        "5",
+        "1"
+      ],
+      "STRESS": [
+        "10",
+        "30",
+        "20",
+        "1"
+      ],
+      "PARTIAL": [
+        "3",
+        "20",
+        "5",
+        "0.5"
+      ]
+    },
+    "cost_fields": [
+      "fee_bps",
+      "sell_tax_bps",
+      "slippage_bps",
+      "fill_fraction"
+    ],
+    "opex_per_observed_day": "100",
+    "execution": "RAW open assumed only, previous-close limit and previous-volume capacity unchanged; no terminal forced fills",
+    "cost_status": "Research scenarios, not verified historical tariffs; embedded slippage once",
+    "action_pnl": "Unresolved actions excluded from qualified results, no speculative cash/tax added"
+  },
+  "preservation": {
+    "DF010_131290": "HOLD; no new issuer evidence planned; DF011 modeled 61/61/30 shares and 30500/30500/15000 gross rights remain unchanged",
+    "DF011_entitlement_module": "Byte preserved; new actions can only use separately versioned sidecars with official evidence",
+    "risk": "Preserve target-vs-mark drift, old residuals/reduction failures and central-risk nonexecution"
+  },
+  "scaling": {
+    "minimum_events": 30,
+    "minimum_firms": 10,
+    "minimum_entry_dates": 20,
+    "minimum_declining_market_events": 5,
+    "minimum_matched_fraction": "0.80",
+    "controls_per_event": 3,
+    "control_contract": "Preserve DF011 preregistration and predecision selection/postevent audit clarification; no rematching using future events/returns",
+    "research_units": "620 title candidates are not qualified events or independent experiments",
+    "measure": "Report observed identity/price/action/technical attrition, extra corporate/security/doc/date/page requirements and bounds; unmeasured conversion, elapsed labor, vendor monetary prices and full-event unit cost remain NULL",
+    "stop": "No confirmatory inference until all minimums and PIT/controls/execution/cost evidence gates; no threshold relaxation or population conversion extrapolation from selected eight"
+  },
+  "economic_status": "ECONOMIC_EDGE_UNVERIFIED",
+  "live_status": "LIVE_NOT_APPROVED"
+}
