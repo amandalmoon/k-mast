@@ -1,0 +1,15 @@
+# DF012 closure
+
+**DF012_PARTIAL_EVENT_QUALIFICATION / ECONOMIC_EDGE_UNVERIFIED / LIVE_NOT_APPROVED**
+
+Approved PAPER collection acquired all eleven planned quote pages with one authentication, twelve total attempts and no retries. Four of five fixed events pass bounded price/session/action qualification: 012330, 014130, 352700 and 041960. 352770 remains HOLD because warmup crosses unresolved rights/action adjustment evidence. Its original noncash acquisition method is separately disclosed without changing the frozen D1 rule or replacing the case.
+
+Four frozen D1 replays are reproducible. BASE net results are -91,163.00, +477.54, -16,318.17 and -21,043.15 KRW respectively, each identical to same-entry BUY_HOLD. The positive case has only 0.156% mean stock exposure. 352700 retains 15 shares in BASE; partial-fill residuals and risk-reduction failures remain visible. These observations provide no event-specific economic support or risk-matched adoption basis.
+
+There are now six selected technical cases among eight historically identified events, but **zero complete research-eligible units and zero valid matched non-event control sets**. To judge D1 economically, at least thirty complete units, ten companies, twenty dates, five ex-ante bear contexts and 80% valid fixed three-control matching are still necessary, together with PIT universes, complete action/halt evidence and comparable risk/execution/cost contracts. The 620-title census is not a pool of 620 qualified economic experiments. Exact measured inventories, conditional lower bounds and unresolved costs are in `DF012_ECONOMIC_SCALING_FEASIBILITY.md` and public JSON; unsupported conversion rates and per-complete-unit costs stay NULL.
+
+The original specifications, DF001–011 evidence, 131290 HOLD, entitlement sidecars, D1 engine and control contract remain preserved. No strategy optimization, economic support promotion, live allocation, accounts, orders, cancellations, LIVE authentication, deployment or merge was performed. D1 remains a research candidate; obtain complete counterfactual evidence before considering adoption. No additional collection is authorized by the remaining DF012 budget.
+
+Verification is recorded in `artifacts/df012/checks.json`: 26 passing commands, 537 full-suite tests including the preserved 520-test regression, Ruff, format, mypy (86 source files), sdist/wheel, synthetic OMS/Alpha/joint replay and read-only independent V2/V3/DF003–011 checks, plus DF012 wire/accounting/lineage/preservation and secret scans. The preservation snapshot covers 11,515 prior private files; only verification orchestration and CI change among baseline tracked files. Synthetic safety tests are not market evidence. Detailed logs and raw observations remain Git-excluded; public aggregate results and hashes support inspection.
+
+The preregistration remote commit is `537814cf034ec25ec3c71a8386aa3ff24da74f9e`. Final implementation is pushed normally to `codex/df012-five-event-price-expansion`; exact final-SHA Python 3.11/3.12 CI evidence is verified after push and retained in the private final evidence namespace to avoid a self-referential commit hash.

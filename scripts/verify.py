@@ -33,6 +33,7 @@ def main() -> None:
             "df009r1",
             "df010",
             "df011",
+            "df012",
         ),
         default="km000",
     )
@@ -467,6 +468,37 @@ def main() -> None:
             ]
         checks["df011-preservation"] = ["-m", "scripts.audit_df011"]
         checks["df011-independent"] = ["scripts/check_df011_evidence.py", "--private"]
+    if args.milestone == "df012":
+        checks["regression520"] = ["-m", "pytest", "-q", "--ignore=tests/test_df012.py"]
+        for label, module, checker in (
+            ("oms", "kmast.execution.demo", "scripts/check_km002_evidence.py"),
+            ("alpha", "kmast.simulation.cli", "scripts/check_km003_evidence.py"),
+            ("joint", "kmast.portfolio.demo", None),
+        ):
+            output = "artifacts/df012/" + label + "-replay"
+            checks[label + "-replay"] = ["-m", module, "--output", output]
+            if checker:
+                checks[label + "-independent"] = [checker, output]
+        checks["v2-independent"] = ["scripts/check_data_first_evidence.py", "--private"]
+        checks["v3-independent"] = ["scripts/check_df002_evidence.py", "--private"]
+        for prior in (
+            "df003",
+            "df004",
+            "df005",
+            "df006",
+            "df007",
+            "df008",
+            "df009",
+            "df009r1",
+            "df010",
+            "df011",
+        ):
+            checks[prior + "-independent"] = [
+                "scripts/check_" + prior + "_evidence.py",
+                "--private",
+            ]
+        checks["df012-preservation"] = ["-m", "scripts.audit_df012"]
+        checks["df012-independent"] = ["scripts/check_df012_evidence.py", "--private"]
     results = []
     for name, args in checks.items():
         result = subprocess.run([sys.executable, *args], cwd=ROOT, capture_output=True)
@@ -483,6 +515,7 @@ def main() -> None:
                 "df009r1",
                 "df010",
                 "df011",
+                "df012",
             }:
                 private_logs = (
                     ROOT / "data/data-first-private-market-v1" / (evidence.name + "-check-logs")
@@ -503,6 +536,8 @@ def main() -> None:
                     private_logs = ROOT / "data/data-first-private-df010-check-logs"
                 if evidence.name == "df011":
                     private_logs = ROOT / "data/data-first-private-df011-check-logs"
+                if evidence.name == "df012":
+                    private_logs = ROOT / "data/data-first-private-df012-check-logs"
                 private_logs.mkdir(parents=True, exist_ok=True)
                 (private_logs / f"{name}.{stream}.log").write_bytes(payload)
                 payload = (

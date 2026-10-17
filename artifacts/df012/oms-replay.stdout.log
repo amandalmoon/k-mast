@@ -1,0 +1,140 @@
+{
+  "scenarios": [
+    {
+      "scenario": "A",
+      "seed": 20261016,
+      "scope": "SYNTHETIC_ONLY",
+      "input_hash": "bf4d4488c2cf9fe05327b7d5a506835b51ab631b8843f67ab97a8742effe43a9",
+      "output_hash": "d486ec569f660484f4ac8d7dd2dd8d5a08b29bc79b20522761b6578b0d730150",
+      "journal_head": "b5cf1827def2d32acafa01ff01ba5b9bfe1c2110938741acb75b797871a1b96f",
+      "quantity": 0,
+      "settled_cash": "10016",
+      "nav": "10016",
+      "orders": 2,
+      "reserved_buy_cash": "0",
+      "events": 26,
+      "status": "PASS",
+      "live_approved": false,
+      "reference": {
+        "sleeve_id": "MOCK_REFERENCE_CASH",
+        "fixed_capital_krw": "4000",
+        "reference_nav_krw": "4000",
+        "ledger_type": "REFERENCE"
+      }
+    },
+    {
+      "scenario": "B",
+      "seed": 20261016,
+      "scope": "SYNTHETIC_ONLY",
+      "input_hash": "b036e367b9b218cc26f62164fe8e667ab5bb851b666736f36f1a51c69486a8c8",
+      "output_hash": "9451b71fcb8a4d0c53572d2cd22c54816a4a4f9dabd9282f060d923ba7020dc7",
+      "journal_head": "750fa1fa0abe83768b49c0035dadc99bb6cd61b5093caf3797b4548f5c3e3dd6",
+      "quantity": 170,
+      "settled_cash": "7997.00",
+      "nav": "9996.00",
+      "orders": 2,
+      "reserved_buy_cash": "0",
+      "events": 19,
+      "status": "PASS",
+      "live_approved": false,
+      "reference": {
+        "sleeve_id": "MOCK_REFERENCE_CASH",
+        "fixed_capital_krw": "4000",
+        "reference_nav_krw": "4000",
+        "ledger_type": "REFERENCE"
+      }
+    },
+    {
+      "scenario": "C",
+      "seed": 20261016,
+      "scope": "SYNTHETIC_ONLY",
+      "input_hash": "e72d7d9fc3589567a1736b14a4b2d62e8432d8946ddc1dd7f3fd9cf2f2849821",
+      "output_hash": "635fd17c719a09a8d57643fc797140347384d3d1baacbe6555a6f9131bb31baa",
+      "journal_head": "a0ec844f7af57dd379ed5aadec762d372d923a162238fa78eeaa26fcf6e3d5ea",
+      "quantity": 4,
+      "settled_cash": "10000",
+      "nav": "9999",
+      "orders": 1,
+      "reserved_buy_cash": "64",
+      "events": 13,
+      "status": "PASS",
+      "live_approved": false,
+      "reference": {
+        "sleeve_id": "MOCK_REFERENCE_CASH",
+        "fixed_capital_krw": "4000",
+        "reference_nav_krw": "4000",
+        "ledger_type": "REFERENCE"
+      }
+    },
+    {
+      "scenario": "D",
+      "seed": 20261016,
+      "scope": "SYNTHETIC_ONLY",
+      "input_hash": "5d0ac324b104d0f71167e62a824b1e96d011d646317c6c12afd50a81da56f68b",
+      "output_hash": "0ec6fb04013d1c78f0b6a2bb9a015783802f930cea8fa128aa9ef1976ed84167",
+      "journal_head": "955702be7bcce02a1e88daf36db3123f67d2af44bba402da851ba6d4d4f0c443",
+      "quantity": 0,
+      "settled_cash": "10000",
+      "nav": "10000",
+      "orders": 1,
+      "reserved_buy_cash": "6005.00",
+      "events": 12,
+      "status": "PASS",
+      "live_approved": false,
+      "reference": {
+        "sleeve_id": "MOCK_REFERENCE_CASH",
+        "fixed_capital_krw": "4000",
+        "reference_nav_krw": "4000",
+        "ledger_type": "REFERENCE"
+      }
+    },
+    {
+      "scenario": "E",
+      "seed": 20261016,
+      "scope": "SYNTHETIC_ONLY",
+      "input_hash": "2b3dfb08a61717b786e30e4c56848b0bd77dcfe6de4ba77b09906a8c34d2b827",
+      "output_hash": "142edd833873f097c48dc6a266dd6992206eab12b5eef07b0a53dd416b4e006a",
+      "journal_head": "1b3a6826237c88bb0ed40b69ecabda28462045ce1faadfd475d8eae8366f6ee7",
+      "quantity": 50,
+      "settled_cash": "10000",
+      "nav": "10500",
+      "orders": 0,
+      "reserved_buy_cash": "0",
+      "events": 11,
+      "status": "PASS",
+      "live_approved": false,
+      "reference": {
+        "sleeve_id": "MOCK_REFERENCE_CASH",
+        "fixed_capital_krw": "4000",
+        "reference_nav_krw": "4000",
+        "ledger_type": "REFERENCE"
+      }
+    },
+    {
+      "scenario": "F",
+      "seed": 20261016,
+      "scope": "SYNTHETIC_ONLY",
+      "input_hash": "51342a1005d87510061fe8a8862770f340d9ee40c354a0a92e54456ccf11ef2e",
+      "output_hash": "65bdd5df2a18f9e968dc164b0144817e9ac6fdd20fe889081e97fce57bb63464",
+      "journal_head": "931073c2cc89f75d3abc0d986d73c0703c6fd3d94884d7a8e63de2518a24a344",
+      "quantity": 100,
+      "settled_cash": "8999",
+      "nav": "9499",
+      "orders": 2,
+      "reserved_buy_cash": "0",
+      "events": 23,
+      "status": "PASS",
+      "live_approved": false,
+      "reference": {
+        "sleeve_id": "MOCK_REFERENCE_CASH",
+        "fixed_capital_krw": "4000",
+        "reference_nav_krw": "4000",
+        "ledger_type": "REFERENCE"
+      }
+    }
+  ],
+  "status": "KM002_LEDGER_OMS_MOCK_READY",
+  "data_status": "KM001_REAL_DATA_HOLD",
+  "economic_status": "ECONOMIC_EDGE_UNVERIFIED",
+  "live_status": "LIVE_NOT_APPROVED"
+}
