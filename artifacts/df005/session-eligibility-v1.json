@@ -1,0 +1,17 @@
+{
+  "version": "DF005_SESSION_ELIGIBILITY_V1_BEFORE_PRICE_REPLAYS",
+  "parent_protocol": "DF005_V1_BEFORE_NEW_DOMESTIC_RESULTS",
+  "mode": "EXCLUDE_SPECIAL_OPEN_DAYS_FROM_09H_EXECUTION_AND_ELIGIBLE_HOLDING_COUNTS",
+  "original_kernel_and_controller_bytes_unchanged": true,
+  "implementation": "Explicit per-run function namespaces with declared derived eligibility set; no mutation of original module globals. Prices/marks remain present, no source observations deleted. Frozen A0/A1/T rules otherwise unchanged. Report difference from original calendar as an execution eligibility version.",
+  "dates": [
+    {"date": "2022-11-17", "source": "https://money2.daishin.com/E5/MBoard/PType_Basic/Mobile_Notice/DM_Basic_Read.aspx?boardseq=114&m=3817&seq=2547", "reason": "CSAT_10H_OPEN"},
+    {"date": "2023-01-02", "source": "https://www.myasset.com/myasset/customer/notice/CU_0201000_P2.cmd?SEQ=202212231557180000000004", "reason": "YEAR_OPEN_10H"},
+    {"date": "2023-11-16", "source": "https://www.samsungpop.com/ux/kor/customer/notice/notice/noticeViewContent.do?MenuSeqNo=20302", "reason": "CSAT_10H_OPEN"},
+    {"date": "2024-01-02", "source": "https://www.samsungpop.com/ux/kor/customer/notice/notice/noticeViewContent.do?MenuSeqNo=20474", "reason": "YEAR_OPEN_10H"},
+    {"date": "2024-11-14", "source": "https://home.tossinvest.com/ko/post?category=52&id=10600&type=notice", "reason": "CSAT_10H_OPEN"},
+    {"date": "2025-01-02", "source": "https://kind.krx.co.kr/external/2024/12/17/000106/20241217000237/99303.htm", "reason": "YEAR_OPEN_10H"}
+  ],
+  "limitations": "Six independently sourced scheduled exceptions, not proof of a complete PIT trading/halt calendar. Unrecognized exceptional opens remain a limitation; no actual 09:00 tick is claimed.",
+  "outcome_based_selection": false
+}
