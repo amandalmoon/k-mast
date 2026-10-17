@@ -1,0 +1,13 @@
+{
+  "version": "DF011_PREDECISION_SELECTION_POST_EVENT_AUDIT_CLARIFICATION_V1",
+  "parent_protocol_commit": "40636bc",
+  "parent_protocol_changed": false,
+  "actual_control_selections_executed": 0,
+  "new_expansion_price_outcomes_inspected": 0,
+  "preselection": "Only contemporaneously verified non-event history and features available strictly before decision may rank or exclude candidates",
+  "fixed_set": "Freeze the selected three identifiers before opening outcomes or post-decision contamination",
+  "post_decision_census": "Audit the frozen +5-day contamination window afterwards; unknown/contamination makes the fixed set unmatched for confirmatory analysis",
+  "replacements": "Forbidden after post-decision audit, even when other candidates are available",
+  "reason": "Clarify the preregistered contamination audit boundary; future announcements cannot improve control selection",
+  "selection_thresholds_changed": false
+}
