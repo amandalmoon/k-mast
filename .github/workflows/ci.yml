@@ -35,6 +35,7 @@ jobs:
       - run: python scripts/check_df005_evidence.py
       - run: python scripts/check_df006_evidence.py
       - run: python scripts/check_df007_evidence.py
+      - run: python scripts/check_df008_evidence.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:

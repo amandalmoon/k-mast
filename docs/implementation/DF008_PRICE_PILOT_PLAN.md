@@ -1,0 +1,11 @@
+# DF008 subsequent price pilot decision
+
+No price pilot is proposed for execution: the frozen B mapping minimum is not met. No KIS request, account operation, order, cancel, LIVE authentication, deployment or economic replay belongs to DF008.
+
+The next useful dependency is an inspectable official historical mapping between corporate ID, six-digit stock code and effective dates, together with then-listed market, listing/delisting, suspension and corporate-action history. Obtain that evidence for the already selected corporations before considering more indiscriminate document downloads. Repairing the eight malformed XML files can be an explicitly versioned offline follow-up, retaining original bytes and separate repaired-output flags; it does not establish stock-code mapping by itself.
+
+If a future independently approved stage satisfies B, select at most three qualifying companies by the already frozen original rank. Before opening prices, register exact receipt/code intervals, original/correction chronology, RAW and adjusted series, index/session/action inputs, and a bounded read-only acquisition budget. Publication dates alone do not supply exact historical timestamps. Use no later correction in an earlier signal. Preserve the original D1 rule and all prior A0/A1/EWY results.
+
+Remaining original documents without a successful ZIP cache are 558: 620 minus the 60 new originals minus the two previously consumed controls. There are also 101 unqueried potential corrections (130 minus 29). A hypothetical request to fetch those 659 new targets would cost 659 first attempts or at most 1,318 attempts with one retry each, plus response time and at least 3.10 seconds between responses and subsequent requests. The five definitively unavailable corrections and eight malformed returned documents remain separate unresolved costs, not presumed recoverable by retry. This arithmetic is not a new request approval or recommendation to run it. At the pilot's observed zero strict mappings, cost per price-linkable event and total time to convert all 620 cannot be estimated.
+
+If historical identity cannot be repaired through an identifiable official source, assess B ORB intraday data supply as a separate preregistered data-feasibility task. Do not start B optimization or economics merely because the event path is blocked.

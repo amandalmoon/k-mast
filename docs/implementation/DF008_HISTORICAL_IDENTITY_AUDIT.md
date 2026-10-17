@@ -1,0 +1,13 @@
+# DF008 historical identity audit
+
+Five qualification states are independent. The original sample yielded 54 matching eight-digit `COMPANY-NAME/@AREGCIK` corporate IDs. This verifies document-to-corporation identity, not a six-digit historical stock code, historical listing, trading status, or a price join.
+
+An additional offline inspection searched all 76 parseable original/correction documents for explicit stock-code tags and the labels 종목코드/주식코드, including spaced variants. It found zero. Eight malformed XML documents remain unknown; this is not proof that no useful evidence could ever be recovered from them. Current list metadata, a current master and an eight-digit corporate ID are not substituted for contemporaneous stock-code evidence. The historical stock-code, listing, delisting, suspension and publication-time fields remain NULL wherever evidence is missing. No current-master backfill was performed.
+
+Correction relationships were assessed separately after acquisition, using the original body’s explicitly labeled initial-submission date and a unique same-corporation, same-date original among all 620 cached D1 original-title records. Fourteen of the 29 selected potential corrections resolved under this rule; five point to selected originals and nine to other originals. A same-corporation match alone is never a parent link. Unavailable/malformed documents, missing labeled dates and ambiguous originals remain unresolved. No explicit parent-receipt hyperlink was found. The full applicability denominator is unresolved, so the official linkage rate is NULL; 14/29 is merely verified coverage of selected potential corrections, not an 80% linkage PASS.
+
+These are identity relations only. The correction’s exact publication time remains NULL. Later correction content never modifies an earlier original information set. No entry time, session, past code, corporate action, halt or price was manufactured from those links.
+
+The 60-original design has 15 observations per partial/full calendar year, seven BEAR observations and eight UNKNOWN-market observations. It uses unequal, recorded stratum selection fractions; corporate repeats and shared markets further limit independence. Its 54/60 parser conversion is a sample statistic, not an iid estimate of market-wide price-linkable events. The overall conversion rate for all 620 candidates is NULL.
+
+Decision: `C_DEPENDENCY_BLOCK` / `DF008_HISTORICAL_IDENTITY_BLOCKED`. A requires at least 12 mappings from eight companies; B requires five from three with then-listed market and safe correction boundaries. Observed verified mappings are zero. Document and corporate conversion alone cannot satisfy either gate. This is a data/identity result, not evidence that D1 makes or loses money.
