@@ -1,0 +1,11 @@
+{
+  "excluded_receipt": "20221226000280",
+  "symbol": "131290",
+  "prequalification_reference_files": 12,
+  "qualified_reference_files": 24,
+  "excluded_from_final_qualified_summary": true,
+  "reason": "In-window provider action flag without resolved action lineage",
+  "prequalification_results_sha256": "678abbb234d443655cd9159c16a0144fa49f027151b1355fb51653f5dff6ac9a",
+  "preserved_privately_not_erased": true,
+  "negative_or_positive_pnl_not_a_selection_criterion": true
+}
