@@ -29,6 +29,7 @@ jobs:
       - run: python -m kmast.research.cli --output artifacts/km005-ci-no-data
       - run: python scripts/check_km005_evidence.py --report artifacts/km005-ci-no-data/qualification.json
       - run: python scripts/check_data_first_evidence.py
+      - run: python scripts/check_df002_evidence.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:

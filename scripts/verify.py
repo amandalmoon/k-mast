@@ -13,7 +13,17 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--milestone",
-        choices=("km000", "km001", "km002", "km003", "km004", "km005", "km005r1", "data-first"),
+        choices=(
+            "km000",
+            "km001",
+            "km002",
+            "km003",
+            "km004",
+            "km005",
+            "km005r1",
+            "data-first",
+            "df002",
+        ),
         default="km000",
     )
     args = parser.parse_args()
@@ -203,11 +213,50 @@ def main() -> None:
             "artifacts/km004/joint-v1",
         ]
         checks["independent-exploration"] = ["scripts/check_data_first_evidence.py"]
+    if args.milestone == "df002":
+        checks["regression312"] = ["-m", "pytest", "-q", "--ignore=tests/test_df002.py"]
+        checks["causal-new"] = ["-m", "pytest", "-q", "tests/test_df002.py"]
+        checks["oms-replay"] = [
+            "-m",
+            "kmast.execution.demo",
+            "--output",
+            "artifacts/df002/oms-replay",
+        ]
+        checks["oms-independent"] = [
+            "scripts/check_km002_evidence.py",
+            "artifacts/df002/oms-replay",
+        ]
+        checks["alpha-replay"] = [
+            "-m",
+            "kmast.simulation.cli",
+            "--output",
+            "artifacts/df002/alpha-replay",
+        ]
+        checks["alpha-independent"] = [
+            "scripts/check_km003_evidence.py",
+            "artifacts/df002/alpha-replay",
+        ]
+        checks["joint-replay"] = [
+            "-m",
+            "kmast.portfolio.demo",
+            "--output",
+            "artifacts/df002/joint-replay",
+        ]
+        checks["previous-exploratory"] = ["scripts/check_data_first_evidence.py", "--private"]
+        checks["v3-independent"] = ["scripts/check_df002_evidence.py", "--private"]
     results = []
     for name, args in checks.items():
         result = subprocess.run([sys.executable, *args], cwd=ROOT, capture_output=True)
-        (evidence / f"{name}.stdout.log").write_bytes(result.stdout)
-        (evidence / f"{name}.stderr.log").write_bytes(result.stderr)
+        for stream, payload in (("stdout", result.stdout), ("stderr", result.stderr)):
+            if evidence.name == "df002":
+                private_logs = ROOT / "data/data-first-private-market-v1/df002-check-logs"
+                private_logs.mkdir(exist_ok=True)
+                (private_logs / f"{name}.{stream}.log").write_bytes(payload)
+                payload = (
+                    "\n".join(line.rstrip() for line in payload.decode("utf-8").splitlines())
+                    + ("\n" if payload else "")
+                ).encode("utf-8")
+            (evidence / f"{name}.{stream}.log").write_bytes(payload)
         results.append(
             {
                 "name": name,

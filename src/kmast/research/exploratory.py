@@ -88,6 +88,7 @@ def candidate_a(
         [
             context.model_dump(mode="json"),
             config.model_dump(mode="json"),
+            position.model_dump(mode="json") if position else None,
             revision,
             "EXPLORATORY_SAMPLED_ELIGIBILITY",
         ]
@@ -130,7 +131,7 @@ def replay(
     rows: tuple[Observation, ...],
     index: tuple[Observation, ...],
     policy: ExplorationPolicy,
-    mode: Literal["ALPHA_A", "BUY_HOLD", "HOLD_25", "CASH"],
+    mode: Literal["ALPHA_A", "BUY_HOLD", "HOLD_25", "CASH", "TREND_25"],
 ) -> dict[str, Any]:
     stock = {row.exchange_date: row for row in rows}
     benchmark = {row.exchange_date: row for row in index}
@@ -165,7 +166,6 @@ def replay(
     first_evaluation = config.lookback + 1
     opening_nav = policy.capital
     ref.value(boundary(dates[first_evaluation - 1], 23, 59))
-    source_version = content_hash([r.record_id for r in rows])
     for offset in range(first_evaluation, len(dates)):
         day, prior_day = dates[offset], dates[offset - 1]
         current, prior = stock[day], stock[prior_day]
@@ -179,6 +179,10 @@ def replay(
         indices = tuple(
             daily_bar(benchmark[d], boundary(dates[i + 1], 8))
             for i, d in enumerate(dates[window_start:offset], start=window_start)
+        )
+        # Separate full acquisition manifest from the actually visible decision inputs.
+        source_version = content_hash(
+            [[b.model_dump(mode="json") for b in panel] for panel in (bars, indices)]
         )
         ref.mark(symbol, prior.close, decision_at)
         quantity = ref.quantity(symbol)
@@ -204,7 +208,7 @@ def replay(
             scope="REAL_UNVERIFIED",
         )
         signal = candidate_a(context, symbol, config, position, offset)
-        if mode != "ALPHA_A":
+        if mode not in {"ALPHA_A", "TREND_25"}:
             target = (
                 (D(1) / (1 + policy.fee_bps / 10000) if mode == "BUY_HOLD" else D(".25"))
                 if mode != "CASH"
@@ -219,6 +223,18 @@ def replay(
                 signal.model_dump()
                 | {"snapshot": signal.snapshot.model_dump() | {"intents": (intent,)}}
             )
+        if mode == "TREND_25":
+            # Pre-registered comparator: previous close >= preceding 20-close mean;
+            # constant 25% target, no breakout/RS/turnover/deadline/stop optimization.
+            trend = bars[-1].close >= sum((b.close for b in bars[:-1]), D(0)) / config.lookback
+            intent = SignalIntent.model_validate(
+                signal.snapshot.intents[0].model_dump()
+                | {"target_weight": D(".25") if trend else D(0)}
+            )
+            signal = AlphaResult.model_validate(
+                signal.model_dump()
+                | {"snapshot": signal.snapshot.model_dump() | {"intents": (intent,)}}
+            )
         target = signal.snapshot.intents[0].target_weight
         if target > 0:
             positive += 1
@@ -227,9 +243,40 @@ def replay(
         can_submit = day not in SPECIAL_NO_EXECUTION and not (buying and offset < block_until)
         if abs(target * ref.nav / prior.close - quantity) < 1:
             can_submit = False
-        if mode != "ALPHA_A" and started:
+        if mode not in {"ALPHA_A", "TREND_25"} and started:
             can_submit = False
         before = len(ref.state.executions)
+        order_before = len(ref.state.orders)
+        pre_cash, pre_nav = ref.state.cash, ref.nav
+        feature_active, feature_weight, _, _ = features(context, config, symbol)
+        rs = bars[-1].close / bars[0].close - indices[-1].close / indices[0].close
+        diagnostic_filters = dict(
+            breakout=bars[-1].close > max(b.high for b in bars[:-1]),
+            relative_strength=rs >= config.min_relative_strength,
+            turnover=min(b.turnover for b in bars) >= config.min_turnover,
+            feature_active=feature_active,
+            uncapped_volatility_weight=str(
+                config.volatility_budget
+                / max(
+                    sum(
+                        (
+                            max(b.high - b.low, abs(b.high - a.close), abs(b.low - a.close))
+                            for a, b in zip(bars[:-1], bars[1:], strict=True)
+                        ),
+                        D(0),
+                    )
+                    / config.lookback
+                    / bars[-1].close,
+                    D(".0001"),
+                )
+            ),
+            capped_feature_weight=str(feature_weight),
+            deadline_due=bool(position and position.exit_deadline <= decision_at),
+            stop_due=bool(
+                position and prior.close <= position.entry_price * (1 - config.stop_fraction)
+            ),
+        )
+        capacity = 0
         if can_submit:
             ref.submit(signal, {symbol: limit})
             remaining = sum(
@@ -248,7 +295,9 @@ def replay(
                 bid=current.open,
                 ask=current.open,
                 available_quantity=capacity,
-                executable=current.open > 0 and bool(current.volume),
+                # Final day volume is unavailable at 09:00:01. This is an assumed
+                # opening-price anchor, not an observed executable market Tick.
+                executable=True,
                 origin="REAL_UNVERIFIED",
             )
             ref.match(event, event.at)
@@ -270,8 +319,34 @@ def replay(
                 input_last_date=str(prior_day),
                 target_weight=str(target),
                 reason=signal.reasons[0][1],
+                intent=signal.snapshot.intents[0].model_dump(mode="json"),
+                lineage=dict(
+                    input_hash=source_version,
+                    stock_record_ids=[b.identity for b in bars],
+                    index_record_ids=[b.identity for b in indices],
+                    last_available_at=bars[-1].available_at.isoformat(),
+                    scenario_availability="DERIVED_NOT_OBSERVED_HISTORICAL_TIMESTAMP",
+                ),
+                filters=diagnostic_filters,
+                opening_model="ASSUMED_OPEN_ANCHOR_NO_QUOTE_TRADE_OR_HALT_PROOF",
+                opening_confidence="UNVERIFIED",
+                prior_volume_capacity=capacity,
+                pre_quantity=quantity,
+                post_quantity=ref.quantity(symbol),
+                pre_nav=str(pre_nav),
+                pre_cash=str(pre_cash),
+                orders=[o.model_dump(mode="json") for o in ref.state.orders[order_before:]],
+                executions=[
+                    list(e) for e in ref.state.model_dump(mode="json")["executions"][before:]
+                ],
                 submitted=can_submit,
                 blocked_reason="SPECIAL_SESSION_OR_UNSETTLED_CASH" if not can_submit else None,
+                submission_constraints=dict(
+                    special_session=day in SPECIAL_NO_EXECUTION,
+                    unsettled_cash=buying and offset < block_until,
+                    below_one_share=abs(target * pre_nav / prior.close - quantity) < 1,
+                    passive_started=mode not in {"ALPHA_A", "TREND_25"} and started,
+                ),
             )
         )
         observations.append(
@@ -279,6 +354,13 @@ def replay(
                 day=str(day),
                 open=str(current.open),
                 close=str(current.close),
+                prior_close=str(prior.close),
+                index_close=str(benchmark[day].close),
+                index_prior_close=str(benchmark[prior_day].close),
+                quantity=ref.quantity(symbol),
+                cumulative_costs=str(ref.state.costs),
+                cumulative_turnover=str(ref.state.turnover),
+                realized_gross=str(ref.state.realized),
                 valuation=valuation.model_dump(mode="json"),
             )
         )
@@ -319,4 +401,5 @@ def replay(
         oos_status="NOT_EXECUTED",
         economic_status="ECONOMIC_EDGE_UNVERIFIED",
         live_status="LIVE_NOT_APPROVED",
+        engine_revision="V3_CAUSAL_INPUT_LINEAGE_OPEN_ANCHOR",
     )

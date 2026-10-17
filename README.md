@@ -152,3 +152,11 @@ Alpha A candidate-v1과 기존 장부·OMS 계약을 유지한 채 이용권한,
 별도 `EXPLORATORY_REAL_DATA` 결과를 제공한다. `ECONOMIC_EDGE_UNVERIFIED` 상태다.
 [실제 결과·가정·재현 명령](docs/implementation/DATA_FIRST_EXPLORATORY_REPORT.md)을 참고한다.
 `python scripts/verify.py --milestone data-first`는 인증 없이 312개 테스트와 기존 재생을 검증한다.
+
+## DF-002 인과성·손익 감사
+
+V2 72개를 보존·재현하고 시점별 입력 계보와 개장 체결 가정을 수정한 V3를 별도 생성했다.
+평균 실제 노출·현금·비용·부분체결·실현/미실현 및 기준선을 비교했다.
+[DF-002 종료 보고서](docs/implementation/DF002_CLOSURE_REPORT.md)를 참고한다.
+`python scripts/verify.py --milestone df002`는 저장된 비공개 자료를 이용한 독립 회계검사를 포함한다.
+추가 인증·수집·주문 없이 실행하며 경제적 우위와 LIVE는 미승인이다.

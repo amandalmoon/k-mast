@@ -1,0 +1,13 @@
+{
+  "baseline": {
+    "baseline312.stderr.log": {
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "publication": "UTF8_LF_TRAILING_WHITESPACE_NORMALIZED"
+    },
+    "baseline312.stdout.log": {
+      "raw_sha256": "f81a1302981a0b21566bd16368b68ce421cbcdc8bbcbf4477bdde06a3286fce9",
+      "publication": "UTF8_LF_TRAILING_WHITESPACE_NORMALIZED"
+    }
+  },
+  "verification_logs": "PUBLIC_NORMALIZED_PRIVATE_ORIGINAL_BYTES"
+}

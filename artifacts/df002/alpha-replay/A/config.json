@@ -1,0 +1,1 @@
+{"event_mechanism":"EARNINGS_SEASONAL","live_capital_weight":0,"lookback":20,"max_holding":"P5D","max_spread":"0.005","max_weight":"0.25","min_relative_strength":"0","min_rvol":"1.2","min_turnover":"1000","order_lifetime":"PT1M","quote_age":"PT10S","range_minutes":5,"reversion_gap":"0.01","stop_fraction":"0.05","strategy":"A","version":"candidate-v1","volatility_budget":"0.01"}
