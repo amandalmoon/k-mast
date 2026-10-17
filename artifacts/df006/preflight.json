@@ -1,0 +1,20 @@
+{
+  "stage": "PROTOCOL_AND_OFFLINE_PIT_CONTRACTS_ONLY",
+  "starting_sha": "cc016ac7d86807eae0553e186ec25ad9ed194707",
+  "remote_protocol_sha": "60900915a3e65dd5f03e9b4f21a792d2fa0ace76",
+  "baseline_pytest_passed": 413,
+  "current_pytest_passed": 423,
+  "ruff": "PASS",
+  "format": "PASS",
+  "mypy_src": "PASS_72_SOURCE_FILES",
+  "sdist_wheel": "PASS",
+  "collection_authorized": true,
+  "collection_authorization": "Human approved exact proposed OpenDART list.json/document.xml scope, credential-bearing requests<=600, completion gap>=3.05 seconds; no KIS reuse",
+  "dart_key_available_in_known_config_or_environment": false,
+  "authenticated_requests": 0,
+  "new_events_observed": null,
+  "new_event_economics_executed": false,
+  "economic_status": "ECONOMIC_EDGE_UNVERIFIED",
+  "live_status": "LIVE_NOT_APPROVED",
+  "milestone_complete": false
+}
