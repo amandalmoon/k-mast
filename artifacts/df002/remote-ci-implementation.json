@@ -1,0 +1,242 @@
+{
+  "head_sha": "ac395296d3dfc2add28209607fbe8fe552c7fa71",
+  "run_id": 38995855244,
+  "url": "https://github.com/amandalmoon/k-mast/actions/runs/38995855244",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 117288146622,
+      "log_excerpts": [
+        "2026-10-17T02:40:57.8013326Z Success: no issues found in 65 source files",
+        "2026-10-17T02:41:04.6075666Z 331 passed in 6.35s",
+        "2026-10-17T02:41:05.9713127Z Successfully built kmast-1.2.0.tar.gz and kmast-1.2.0-py3-none-any.whl",
+        "2026-10-17T02:41:09.3035216Z DF002 independent 90-replay accounting, 72 V2 proofs, lineage and scope: PASS"
+      ],
+      "name": "offline-contracts (3.12)",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install -r requirements-dev.lock",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install --no-deps --no-build-isolation -e .",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m ruff check .",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m ruff format --check .",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m mypy src",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pytest -q --junitxml=artifacts/junit.xml",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m build --no-isolation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.demo",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.data.cli fixture --output artifacts/km001-ci-fixture",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.execution.demo --output artifacts/km002-ci-scenarios",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_km002_evidence.py artifacts/km002-ci-scenarios",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.simulation.cli --output artifacts/km003-ci-functional",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_km003_evidence.py artifacts/km003-ci-functional",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.portfolio.demo --output artifacts/km004-ci-joint",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.portfolio.demo --output artifacts/km004-ci-joint",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.research.cli --output artifacts/km005-ci-no-data",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_km005_evidence.py --report artifacts/km005-ci-no-data/qualification.json",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_data_first_evidence.py",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_df002_evidence.py",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 117288146763,
+      "log_excerpts": [
+        "2026-10-17T02:41:01.6902295Z Success: no issues found in 65 source files",
+        "2026-10-17T02:41:08.3108051Z 331 passed in 6.03s",
+        "2026-10-17T02:41:09.5798797Z Successfully built kmast-1.2.0.tar.gz and kmast-1.2.0-py3-none-any.whl",
+        "2026-10-17T02:41:12.7782045Z DF002 independent 90-replay accounting, 72 V2 proofs, lineage and scope: PASS"
+      ],
+      "name": "offline-contracts (3.11)",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install -r requirements-dev.lock",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install --no-deps --no-build-isolation -e .",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m ruff check .",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m ruff format --check .",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m mypy src",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pytest -q --junitxml=artifacts/junit.xml",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m build --no-isolation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.demo",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.data.cli fixture --output artifacts/km001-ci-fixture",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.execution.demo --output artifacts/km002-ci-scenarios",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_km002_evidence.py artifacts/km002-ci-scenarios",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.simulation.cli --output artifacts/km003-ci-functional",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_km003_evidence.py artifacts/km003-ci-functional",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.portfolio.demo --output artifacts/km004-ci-joint",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.portfolio.demo --output artifacts/km004-ci-joint",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.research.cli --output artifacts/km005-ci-no-data",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_km005_evidence.py --report artifacts/km005-ci-no-data/qualification.json",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_data_first_evidence.py",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_df002_evidence.py",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ]
+}

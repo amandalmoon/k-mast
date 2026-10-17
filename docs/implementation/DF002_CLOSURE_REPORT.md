@@ -34,6 +34,8 @@ git diff --check
 
 로컬 실제 검증은 **331 PASS = 기존 312 + 신규 19, 실패·건너뜀 0**이다. Ruff·format·mypy(65개 소스)·sdist/wheel·기존 OMS/Reference/공동계좌 재생·V2 보존 재검사·V3 독립 회계가 모두 통과했다. 공개 로그는 UTF-8/LF 및 줄 끝 공백만 정리했고 원 subprocess 바이트는 비공개 검증 폴더에 보존한다. 새 실데이터 요청 없이 완료했다.
 
+구현 SHA `ac395296d3dfc2add28209607fbe8fe552c7fa71`의 [GitHub Actions](https://github.com/amandalmoon/k-mast/actions/runs/38995855244)는 Python 3.11·3.12 모두 성공했다. 두 로그에서 각각 331 passed, mypy 65개 소스 통과, sdist/wheel 생성과 DF002 독립 회계 PASS를 확인했다. 정확한 SHA·작업·단계·로그 발췌는 `artifacts/df002/remote-ci-implementation.json`에 보존한다.
+
 [인과성 감사](DF002_CAUSAL_AUDIT.md), [손익 원인 분해](DF002_ALPHA_PROFIT_ATTRIBUTION.md)를 함께 읽는다. 기본 시나리오와 비용·부분체결은 변경하지 않았다. 과거 사양을 수정하지 않는 별도 후보 가설은 추후 사전 등록 마일스톤에서만 검증한다.
 
 추가 데이터 요청은 이번에 하지 않는다. 향후 실제 개장 체결 검증에는 과거 시가 경매·호가·체결·거래정지 자료, 총수익 검증에는 기업행사·배당 이력, 업종 조정에는 PIT 업종 분류·업종지수가 필요하다. 제공 가능 기간과 API가 확인되지 않아 기간·요청량·권한을 임의 가정하지 않는다. 캐시에는 해당 증거가 없으며 새 인증 수집은 별도 범위를 제시한 뒤 승인받아야 한다.

@@ -177,6 +177,7 @@
     "artifacts/df002/pytest.stdout.log": "bc37a0f3021cbdfa725782735aa774c029d6f4b79b408cb07f500783f03a3848",
     "artifacts/df002/regression312.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "artifacts/df002/regression312.stdout.log": "c11790b59d8567e71ab388e09ac7069bb0400b2d5e5a95d53baccc5c7d588380",
+    "artifacts/df002/remote-ci-implementation.json": "8be3509fa8ea2a7e95ace1de09f2dd6261031efaee9227b063e704025300f6e2",
     "artifacts/df002/results.json": "24a6ad1ac7ce4e4342b45826450b5f1dc7d9fd0709fb0436daec8421760d1588",
     "artifacts/df002/ruff.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "artifacts/df002/ruff.stdout.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
@@ -244,7 +245,7 @@
     "artifacts/df002/oms-replay/F/manifest.json": "03fca4ba738763410d721e3f1d0eb527b942baff2dda609408f884396e33766d",
     "docs/implementation/DF002_ALPHA_PROFIT_ATTRIBUTION.md": "1125881bff460c88a0ad5f92642658242a647164dcb8477ad625ba3f3afa63e1",
     "docs/implementation/DF002_CAUSAL_AUDIT.md": "c25bf7cf8d0203db7118d7bbddc72e898a9398abfe5de239801486a057eefa08",
-    "docs/implementation/DF002_CLOSURE_REPORT.md": "1fa001ceee53da8f9b396276bafc832e6350d606586b66fb88a9f5793c87b3b7",
+    "docs/implementation/DF002_CLOSURE_REPORT.md": "cac3fefc1f98f23ba60a138e3fab10fd48de53109b6dea98044fe03f0d5658f5",
     "README.md": "e32be20fcb0e5f920e008f1b25242f249d90ff18e5db7b218307835e1738c644",
     ".github/workflows/ci.yml": "a30633f2fe11d16e73d2006210ab9455469f3562b6bd5c6ff8f2eb6467f83830"
   },
