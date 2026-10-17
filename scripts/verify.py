@@ -13,7 +13,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--milestone",
-        choices=("km000", "km001", "km002", "km003", "km004", "km005", "km005r1"),
+        choices=("km000", "km001", "km002", "km003", "km004", "km005", "km005r1", "data-first"),
         default="km000",
     )
     args = parser.parse_args()
@@ -181,6 +181,28 @@ def main() -> None:
             "--report",
             "artifacts/km005r1/offline/qualification.json",
         ]
+    if args.milestone == "data-first":
+        checks["regression296"] = ["-m", "pytest", "-q", "--ignore=tests/test_data_first.py"]
+        checks["new-exploratory-contracts"] = ["-m", "pytest", "-q", "tests/test_data_first.py"]
+        checks["km002-replay"] = [
+            "-m",
+            "kmast.execution.demo",
+            "--output",
+            "artifacts/km002/scenarios-v2",
+        ]
+        checks["km003-replay"] = [
+            "-m",
+            "kmast.simulation.cli",
+            "--output",
+            "artifacts/km003/functional-v1",
+        ]
+        checks["km004-replay"] = [
+            "-m",
+            "kmast.portfolio.demo",
+            "--output",
+            "artifacts/km004/joint-v1",
+        ]
+        checks["independent-exploration"] = ["scripts/check_data_first_evidence.py"]
     results = []
     for name, args in checks.items():
         result = subprocess.run([sys.executable, *args], cwd=ROOT, capture_output=True)

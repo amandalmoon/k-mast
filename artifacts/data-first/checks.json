@@ -1,0 +1,140 @@
+[
+  {
+    "name": "pytest",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "-q",
+      "--junitxml=artifacts/data-first/junit.xml"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "ruff",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "ruff",
+      "check",
+      "."
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "format",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "ruff",
+      "format",
+      "--check",
+      "."
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "mypy",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "mypy",
+      "src"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "build",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "build",
+      "--no-isolation"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "demo",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "kmast.demo"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "regression296",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "-q",
+      "--ignore=tests/test_data_first.py"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "new-exploratory-contracts",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_data_first.py"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "km002-replay",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "kmast.execution.demo",
+      "--output",
+      "artifacts/km002/scenarios-v2"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "km003-replay",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "kmast.simulation.cli",
+      "--output",
+      "artifacts/km003/functional-v1"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "km004-replay",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "-m",
+      "kmast.portfolio.demo",
+      "--output",
+      "artifacts/km004/joint-v1"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "independent-exploration",
+    "command": [
+      "C:\\Users\\User\\Desktop\\k-mast\\.venv\\Scripts\\python.exe",
+      "scripts/check_data_first_evidence.py"
+    ],
+    "exit_code": 0,
+    "status": "PASS"
+  }
+]

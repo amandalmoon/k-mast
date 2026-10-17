@@ -1,0 +1,5 @@
+{
+  "economic_scenarios_compared": 18,
+  "all_aggregate_metrics_equal": true,
+  "change": "retain exactly previous 21 feature bars; cache source version hash; no strategy parameter change"
+}

@@ -145,3 +145,10 @@ Alpha A candidate-v1과 기존 장부·OMS 계약을 유지한 채 이용권한,
 두 명령은 인증·시세 조회 없이 실행되며 자료가 없으면 명시적인 HOLD와 null 성과지표를 반환한다.
 [데이터·권한 조사와 보완 경로](docs/implementation/KM005_DATA_QUALIFICATION.md)를 참고한다.
 완료된 작업의 정상 push는 사용자 상시 승인 범위다. 실전과 KM-006은 활성화하지 않는다.
+
+## Data-first 실제 가격 탐색
+
+승인된 읽기 전용 수집과 Alpha A 탐색 재생을 완료했다. 기존 적격성 게이트를 유지하며
+별도 `EXPLORATORY_REAL_DATA` 결과를 제공한다. `ECONOMIC_EDGE_UNVERIFIED` 상태다.
+[실제 결과·가정·재현 명령](docs/implementation/DATA_FIRST_EXPLORATORY_REPORT.md)을 참고한다.
+`python scripts/verify.py --milestone data-first`는 인증 없이 312개 테스트와 기존 재생을 검증한다.
