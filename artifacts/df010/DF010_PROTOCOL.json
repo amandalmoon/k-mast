@@ -1,0 +1,135 @@
+{
+  "version": "DF010_V1_BEFORE_NEW_PRICE_RESULTS",
+  "baseline_sha": "c986a68ab8e4989610df076f392ea0556906b02e",
+  "targets": [
+    {
+      "corp_code": "00372226",
+      "end": "2023-01-25",
+      "frozen_rank": "00bd2d904f1d6e3e37732827cacd79879f40555ed2bd52666646fc998410e54b",
+      "receipt": "20221226000280",
+      "start": "2022-10-27",
+      "symbol": "131290",
+      "then_market": "KOSDAQ"
+    },
+    {
+      "corp_code": "00195229",
+      "end": "2025-04-13",
+      "frozen_rank": "03bddb41cf622158fbf73d6c6b581193d591a5b2eeaa9cf0bf240be5425f9c5b",
+      "receipt": "20250314001638",
+      "start": "2025-01-13",
+      "symbol": "081660",
+      "then_market": "KOSPI"
+    },
+    {
+      "corp_code": "00121932",
+      "end": "2025-05-09",
+      "frozen_rank": "05b7272ea3329a83de8887ed86a2f1a145b3db06b68be7694a714feda540beb7",
+      "receipt": "20250409002291",
+      "start": "2025-02-08",
+      "symbol": "002840",
+      "then_market": "KOSPI"
+    }
+  ],
+  "source_proposal_sha256": "db09a6e1a8bee1889107fc87d75b47def573ece5f2594e68df063df365d8ae8a",
+  "frozen_sources": {
+    "artifacts/df006/DF006_PROTOCOL.json": "2371955fdcc6ba43e1301d7de878e5ef39db63cac8b4566a30d22b672db500d0",
+    "artifacts/df009r1/event-linkage.json": "d8b021df92658addd8ee9a3ad6f1ef1e7ff765d97935c8750aa5718531d2d7db",
+    "artifacts/df005/session-eligibility-v1.json": "6017d9a34a59602b72af2d30dca62ac18c245364467b634c46b2519e3fbb9cc9",
+    "src/kmast/research/event_replay.py": "67bfe8dbd9ef0ff413c5182cf60d3610493a5404d630d9b96f60a254046451f8"
+  },
+  "event_definition": "Frozen DF006 original direct treasury-share acquisition decision; no reoptimization or correction backfill",
+  "identity": "DF009R1 contemporaneous corporate/security linkage; not proof of later holding tradability",
+  "availability": "Publication seconds UNKNOWN. 08:00 decision on first verified regular eligible session strictly after official receipt date ends; modeled open plus one second. Never receipt-day gains.",
+  "replay": {
+    "target_weight": "0.25",
+    "capital_krw": "10000000",
+    "holding": "5 calendar days from first decision; next eligible open on or after deadline",
+    "stop": "Previous close <= executed entry * 0.95; frozen correction invalidation",
+    "models": [
+      "CASH",
+      "D1",
+      "BUY_HOLD",
+      "TREND"
+    ],
+    "scenarios": {
+      "BASE": [
+        "3",
+        "20",
+        "5",
+        "1"
+      ],
+      "STRESS": [
+        "10",
+        "30",
+        "20",
+        "1"
+      ],
+      "PARTIAL": [
+        "3",
+        "20",
+        "5",
+        "0.5"
+      ]
+    },
+    "scenario_fields": [
+      "fee_bps",
+      "sell_tax_bps",
+      "slippage_bps",
+      "fill_fraction"
+    ],
+    "opex_krw_per_day": "100",
+    "cash_interest": "0",
+    "engine": "Unchanged event_replay / ReferencePortfolio / Ledger; independent accounts",
+    "execution": "RAW open counterfactual only; previous close limits, prior volume capacity; no forced completion",
+    "costs": "Research assumptions, not verified historical tariffs; slippage embedded once"
+  },
+  "qualification": {
+    "warmup_observed_sessions": 21,
+    "sessions": "Observed stock/index intersection plus preserved official exceptional-session evidence; never KRX basics dates or synthetic weekdays",
+    "price_basis": "Separate RAW and ADJUSTED; constant ratio check on complete replay window; unknown action discontinuity HOLD, never adjusted-price execution",
+    "missing": "Missing OHLCV, zero volume, conflicting revisions, missing warmup/entry/exit, unresolved material correction or action => affected event HOLD",
+    "unknown_histories": [
+      "full corporate actions",
+      "full trading halts",
+      "full listing lifecycle",
+      "publication seconds"
+    ],
+    "partial": "Replay independently qualifying events; count technical subset separately from full research eligibility"
+  },
+  "collection": {
+    "approval_required": true,
+    "execution_authorized": false,
+    "environment": "PAPER_READ_ONLY",
+    "stock_path": "/uapi/domestic-stock/v1/quotations/inquire-daily-itemchartprice",
+    "stock_tr": "FHKST03010100",
+    "index_path": "/uapi/domestic-stock/v1/quotations/inquire-daily-indexchartprice",
+    "index_tr": "FHKUP03500100",
+    "indices": {
+      "KOSPI": "0001",
+      "KOSDAQ": "1001"
+    },
+    "authentication_ceiling": 2,
+    "total_retry_inclusive_ceiling": 20,
+    "wait_after_response_seconds": 3.1,
+    "expected_stock_pages": 6,
+    "expected_index_pages": 3,
+    "cache": "Exact symbol/date/basis and verified hashes only; no duplicate calls",
+    "budget": "Persistent reservation before I/O, failures counted, no refund after crash",
+    "raw": "Immutable private response bytes, SHA256, normalized row lineage, atomic writes and process lock",
+    "forbidden": [
+      "LIVE authentication",
+      "accounts",
+      "orders",
+      "cancellations",
+      "scope expansion"
+    ]
+  },
+  "decision": {
+    "economic": "ECONOMIC_EDGE_UNVERIFIED",
+    "live": "LIVE_NOT_APPROVED",
+    "three_cases": "Technical vertical pilot only; no statistical/OOS/market-wide claim",
+    "equal_trend": "Identical D1 and TREND trades/PnL imply no observed event-specific incremental value",
+    "risk": "Report actual mark weight, target cap, unfilled reductions, residuals and central-risk nonexecution separately; preserve old PARTIAL 41 shares / 3 days"
+  },
+  "preservation": "All DF001-009R1 sources, results and private stores unchanged"
+}
