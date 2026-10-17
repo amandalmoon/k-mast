@@ -1,0 +1,14 @@
+{
+  "authorization": "User explicitly replied: 위 전체 범위 허용",
+  "environment": "PAPER",
+  "symbols": "Exact50 in sealed DF005_PROTOCOL.json plus indices0001,1001",
+  "start": "2022-09-01",
+  "end": "2025-10-16",
+  "endpoints": {"inquire-daily-itemchartprice": "FHKST03010100", "inquire-daily-indexchartprice": "FHKUP03500100"},
+  "max_requests_including_failures_and_auth": 900,
+  "max_authentication": 2,
+  "minimum_wait_after_response_seconds": 3.05,
+  "actual_request_budget_is_not_renewable_on_resume": true,
+  "prior_DF004_auth_approval_reused": false,
+  "orders_cancels_accounts_LIVE": false
+}

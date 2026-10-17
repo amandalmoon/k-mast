@@ -25,6 +25,7 @@ def main() -> None:
             "df002",
             "df003",
             "df004",
+            "df005",
         ),
         default="km000",
     )
@@ -294,15 +295,34 @@ def main() -> None:
         checks["df003-independent"] = ["scripts/check_df003_evidence.py", "--private"]
         checks["ewy-independent"] = ["scripts/check_df004_evidence.py", "--private"]
         checks["preservation-secret-audit"] = ["-m", "scripts.audit_df004"]
+    if args.milestone == "df005":
+        checks["regression386"] = ["-m", "pytest", "-q", "--ignore=tests/test_df005.py"]
+        for label, module, checker in (
+            ("oms", "kmast.execution.demo", "scripts/check_km002_evidence.py"),
+            ("alpha", "kmast.simulation.cli", "scripts/check_km003_evidence.py"),
+            ("joint", "kmast.portfolio.demo", None),
+        ):
+            output = "artifacts/df005/" + label + "-replay"
+            checks[label + "-replay"] = ["-m", module, "--output", output]
+            if checker:
+                checks[label + "-independent"] = [checker, output]
+        checks["v2-independent"] = ["scripts/check_data_first_evidence.py", "--private"]
+        checks["v3-independent"] = ["scripts/check_df002_evidence.py", "--private"]
+        checks["df003-independent"] = ["scripts/check_df003_evidence.py", "--private"]
+        checks["df004-independent"] = ["scripts/check_df004_evidence.py", "--private"]
+        checks["panel-independent"] = ["scripts/check_df005_evidence.py", "--private"]
+        checks["lineage-preservation-secrets"] = ["-m", "scripts.audit_df005"]
     results = []
     for name, args in checks.items():
         result = subprocess.run([sys.executable, *args], cwd=ROOT, capture_output=True)
         for stream, payload in (("stdout", result.stdout), ("stderr", result.stderr)):
-            if evidence.name in {"df002", "df003", "df004"}:
+            if evidence.name in {"df002", "df003", "df004", "df005"}:
                 private_logs = (
                     ROOT / "data/data-first-private-market-v1" / (evidence.name + "-check-logs")
                 )
-                private_logs.mkdir(exist_ok=True)
+                if evidence.name == "df005":
+                    private_logs = ROOT / "data/data-first-private-df005-check-logs"
+                private_logs.mkdir(parents=True, exist_ok=True)
                 (private_logs / f"{name}.{stream}.log").write_bytes(payload)
                 payload = (
                     "\n".join(line.rstrip() for line in payload.decode("utf-8").splitlines())

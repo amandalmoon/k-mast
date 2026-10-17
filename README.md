@@ -177,3 +177,11 @@ DF004 price-only exploration: 251 observed EWY sessions, 217 common Korean dates
 corporate-action limitations remain. No strategy or trading approval changed.
 See [DF004 closure](docs/implementation/DF004_CLOSURE_REPORT.md) and
 [evaluation](docs/implementation/DF004_EWY_SIGNAL_EVALUATION.md).
+
+## DF005 domestic historical validation
+
+50 new symbols reviewed; 49 returned real prices for 2022-09-01..2025-10-16.
+Strict lineage screening leaves 42 symbols, 118 annual windows and 1,770 independent
+references. A0/A1/T remain `EXPLORATORY_ONLY`; A1 replacement evidence did not
+reproduce in the locked 16-symbol/242-date sample. `ECONOMIC_EDGE_UNVERIFIED` and
+`LIVE_NOT_APPROVED` remain. See [DF005 closure](docs/implementation/DF005_CLOSURE_REPORT.md).

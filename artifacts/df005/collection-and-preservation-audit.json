@@ -1,0 +1,486 @@
+{
+  "account_queries": 0,
+  "actual_cancels": 0,
+  "actual_orders": 0,
+  "auth_response_bytes_withheld": 1,
+  "authentication": 1,
+  "corporate_action_history": false,
+  "delisting_history": false,
+  "derivative_only_nullable_sector_lookup": true,
+  "eligibility_only_tightened_to_zero": true,
+  "execution_functions_unchanged": true,
+  "halt_event_history": false,
+  "intentional_changes": [
+    ".github/workflows/ci.yml",
+    "README.md",
+    "scripts/verify.py"
+  ],
+  "live_authentication": 0,
+  "minimum_response_complete_to_request_seconds": 3.05803,
+  "normalized_page_rows": 72960,
+  "pit_universe": false,
+  "preserved": true,
+  "private_files": 970,
+  "protected_files": 1878,
+  "qualified_cache_exact_matches": 1770,
+  "requests": 803,
+  "secret_leaks": 0,
+  "secret_scan_files": 1034,
+  "stocks_with_observations": 49,
+  "symbols": [
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "014790"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "014440"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "007160"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "035000"
+    },
+    {
+      "adjusted_dates": 228,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 228,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2024-11-06",
+      "symbol": "475560"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "002620"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "023150"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "034020"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "000020"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "088350"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "145720"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "213500"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "015590"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "011420"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "041650"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "100250"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "039570"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "033530"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "329180"
+    },
+    {
+      "adjusted_dates": 567,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 567,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2023-06-16",
+      "symbol": "460850"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "006340"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "025560"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "073240"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "010770"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kospi",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "011300"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "237750"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "182400"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "323280"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "052260"
+    },
+    {
+      "adjusted_dates": 697,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 697,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-12-06",
+      "symbol": "419530"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "153490"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "027710"
+    },
+    {
+      "adjusted_dates": 294,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 294,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2024-07-26",
+      "symbol": "481890"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "089010"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "361390"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "040300"
+    },
+    {
+      "adjusted_dates": 138,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 138,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2025-03-24",
+      "symbol": "462860"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "221840"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "043610"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "064240"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "063570"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "031510"
+    },
+    {
+      "adjusted_dates": 0,
+      "end": null,
+      "market": "kosdaq",
+      "raw_dates": 0,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": null,
+      "symbol": "494120"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "263020"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "153460"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "225530"
+    },
+    {
+      "adjusted_dates": 714,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 714,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-11-11",
+      "symbol": "383930"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "032190"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "137400"
+    },
+    {
+      "adjusted_dates": 761,
+      "end": "2025-10-16",
+      "market": "kosdaq",
+      "raw_dates": 761,
+      "selection": "CURRENT_SURVIVOR_STOCK_HEURISTIC_NOT_PIT",
+      "start": "2022-09-01",
+      "symbol": "277070"
+    }
+  ],
+  "unique_index_rows": 1522,
+  "unique_stock_adjusted_rows": 35361,
+  "unique_stock_raw_rows": 35361,
+  "wire_market_responses_retained": 802
+}

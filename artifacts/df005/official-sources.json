@@ -1,0 +1,26 @@
+[
+  {
+    "path": "examples_llm/domestic_stock/inquire_daily_itemchartprice/inquire_daily_itemchartprice.py",
+    "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/examples_llm/domestic_stock/inquire_daily_itemchartprice/inquire_daily_itemchartprice.py",
+    "sha256": "429f45248678d60a67990da1760af5965597201a3f9b790fb27a34e1fcfb2c06",
+    "usage": "REFERENCE_ONLY_NOT_IMPORTED_OR_EXECUTED"
+  },
+  {
+    "path": "examples_llm/domestic_stock/inquire_daily_indexchartprice/inquire_daily_indexchartprice.py",
+    "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/examples_llm/domestic_stock/inquire_daily_indexchartprice/inquire_daily_indexchartprice.py",
+    "sha256": "eac2a5b896782acd1fe64f5634feb455ed05559238098705f3a1cc5a40364afd",
+    "usage": "REFERENCE_ONLY_NOT_IMPORTED_OR_EXECUTED"
+  },
+  {
+    "path": "stocks_info/kis_kospi_code_mst.py",
+    "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/stocks_info/kis_kospi_code_mst.py",
+    "sha256": "135ed22451832935f3d962d1997a05726aaec84cc9d1472ff40ea24685edd0d4",
+    "usage": "REFERENCE_ONLY_NOT_IMPORTED_OR_EXECUTED"
+  },
+  {
+    "path": "stocks_info/kis_kosdaq_code_mst.py",
+    "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/stocks_info/kis_kosdaq_code_mst.py",
+    "sha256": "fcacb0f401c745bf1810c731a1c533d16ff6af83729ca0771faab876cd0e56bc",
+    "usage": "REFERENCE_ONLY_NOT_IMPORTED_OR_EXECUTED"
+  }
+]

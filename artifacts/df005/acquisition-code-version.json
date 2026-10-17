@@ -1,0 +1,6 @@
+{
+  "executed_source_sha256": "b0623032def193bcc921cf390e8066bef42d78545065b7bb19b55fc6564e5c45",
+  "post_collection_change": "Recover a completed response journal if a process stops before atomic budget replacement; offline test only, no new authentication",
+  "final_source_sha256": "f4a8de0704091aa7e2fbd1663f3d3e3cff31ae4217489d0b15f7d41ba2cbc71a",
+  "final_io": "fsync+atomic immutable hardlink publication for primary bytes, canonical/events and derived DataStore cache; journal-before-budget interruption recovery; offline tested, no reauthentication"
+}
