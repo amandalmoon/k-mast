@@ -95,11 +95,14 @@ def invalidated_at(
     eligible_decisions: tuple[datetime, ...],
 ) -> bool:
     """A later linked correction cannot erase the original historical decision."""
+    if now.tzinfo is None or now.utcoffset() is None:
+        raise ValueError("AWARE_DECISION_REQUIRED")
     return any(
         correction.parent_receipt == original.receipt
         and correction.corp_code == original.corp_code
         and correction.stock_code == original.stock_code
         and correction.correction_kind != "NONE"
+        and correction.receipt_date < now.astimezone(KST).date()
         and decision_boundary(correction, eligible_decisions) <= now
         for correction in corrections
     )
