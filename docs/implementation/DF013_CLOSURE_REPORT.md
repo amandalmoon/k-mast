@@ -1,0 +1,15 @@
+# DF013 closure report
+
+**D1_COUNTERFACTUAL_DATA_DEPENDENCY_PENDING / B_ORB_OFFLINE_INFRASTRUCTURE_VERIFIED / ECONOMIC_EDGE_UNVERIFIED / LIVE_NOT_APPROVED**
+
+The six fixed technical D1 cases were audited offline. Two have exact entry-date KRX snapshots; four have only earlier snapshots. Aligned prior20 prices cover 136/150 selected survivor-panel symbol/event slots, but zero complete historical corporate/feature-availability/tradability/contamination dossiers and zero matched three-control sets exist. No new D1 documents/prices or economic experiment were run. Exact complete acquisition/operating costs remain NULL. Four missing exact-date KRX query identities are only a partial metadata lower bound.
+
+Official KIS schemas and demo branches were inspected without executing upstream code or using credentials. The independent offline parser/archive distinguishes source/receipt/monotonic time, retains ten-level quotes and original status codes, and locks unknown states. Synthetic range/VWAP, causal quote alignment, RVOL-not-ready and defect/restart/secret/authentication checks are implemented. Synthetic data is not market evidence. Actual access, quota, latency, message rates, provider cost and multi-session history remain unmeasured.
+
+A conditional two-symbol/four-channel PAPER proposal is recorded for 073240 and 462860, desired 2026-10-19 08:50–09:25 KST, approval <=1, connections <=2, reconnect <=1, raw <=1 GiB and total store <=3 GiB. Current security/calendar/entitlement/quota confirmation and explicit user execution approval remain prerequisites. No authentication or streaming was performed or scheduled. No automatic LIVE fallback exists.
+
+Prioritize preparing that small B supply pilot once prerequisites are resolved; defer broad new D1 acquisition. This does not discard D1, adopt B, or claim a quantified information-value/profit advantage. The semantic MARKET_PURCHASE_D1_V2 proposal is separate and unvalidated. The original strategies, 131290 rights/HOLD, 352770 action/noncash warning, 352700 BASE residual 15 shares and all prior partial-fill failures remain untouched.
+
+The protocol was committed and pushed first at `6e779a140441e2d16731b48310efecd77d991a4a`, against baseline `1f6ef645a4f72152363110538088f0061bafbeb2`. `artifacts/df013/checks.json` records full pytest, preserved 537-test regression, Ruff/format, strict mypy, sdist/wheel, OMS/Alpha/joint replay, read-only V2/V3/DF003–012 evidence checks and new source/count/causality/preservation/secret checks. Detailed synthetic frames, raw source snapshots and original private data remain Git-excluded. Exact final-SHA Python 3.11/3.12 CI is checked after normal push and retained privately to avoid a self-referential commit.
+
+Final local evidence: 573 tests, including the unchanged 537-test regression and 36 new synthetic/input-boundary tests; 31 passing verification commands; strict mypy over 88 source files. Preservation covers 11,772 pre-existing private files and all baseline tracked files except the explicitly extended verification runner/CI. Secret matches are zero. These code checks do not establish economic edge or real streaming quality.
