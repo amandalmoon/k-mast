@@ -1,0 +1,12 @@
+{
+  "parent_protocol": "DF005_V1_BEFORE_NEW_DOMESTIC_RESULTS",
+  "qualification": "Literal nonconstant RAW/ADJUSTED factor requires corporate-action lineage; threshold is ZERO, not0.001",
+  "implementation_deviation": "Preliminary window_inputs V2 tolerated factor span<=0.001 without registered rounding evidence. Nine windows are therefore quarantined equally across all candidates/costs, rather than waiving the protocol.",
+  "quarantined_windows": [["011300",1],["011300",2],["015590",1],["015590",2],["100250",1],["100250",2],["100250",3],["323280",1],["323280",2]],
+  "reason": "STRICT_NONCONSTANT_FACTOR_LINEAGE_HOLD",
+  "return_based_selection": false,
+  "performance_aggregates_inspected_before_this_gate": false,
+  "preservation": "All preliminary V2 reference files remain private and immutable. Qualified results exclude135 references from9 windows using only input factor-span metadata. Other replay arithmetic/candidate rules are unchanged.",
+  "economic_status": "ECONOMIC_EDGE_UNVERIFIED",
+  "live_status": "LIVE_NOT_APPROVED"
+}
