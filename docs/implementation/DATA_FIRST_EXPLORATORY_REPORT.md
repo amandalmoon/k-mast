@@ -61,3 +61,5 @@ RAW 일봉 1,464행, 지수 488행, 삼성전자 수정 일봉 244행, 현재가
 ## 검증
 
 기존 296개와 신규 16개를 합한 pytest 312개가 통과했다. Ruff, 포맷, mypy, build, 기존 KM-002/003/004 장부·OMS 재생과 독립 Decimal 회계 검사도 통과했다. 72개 비공개 장부의 현금+보유 평가, 수수료 합계, 신호 인과관계를 재검사했다. 21봉 계산 최적화 전후 18개 경제성 집계는 모두 동일하다. 원본 사양·기존 전략·위험·OMS 계약은 유지한다.
+
+구현 커밋 `20a7e1ceb264555e3cb6a1927a93c3966b175092`의 [GitHub Actions](https://github.com/amandalmoon/k-mast/actions/runs/38989633353)는 Python 3.11·3.12 모두 성공했다. 양쪽 작업 로그에서 각각 312 passed, mypy 64개 소스 통과, sdist/wheel 생성과 독립 회계 검사 PASS를 확인했다. `artifacts/data-first/remote-ci-implementation.json`에 정확한 SHA와 작업·단계 결과를 보관한다.

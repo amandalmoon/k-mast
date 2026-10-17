@@ -48,6 +48,7 @@
     "artifacts/data-first/pytest.stdout.log": "1086b8ef2b4af583fab2538a20c25bc80466c9ab48a2379c447788a11624d2b5",
     "artifacts/data-first/regression296.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "artifacts/data-first/regression296.stdout.log": "05d2fc940d350bec771404ab0a6db2ccc698464175f7584591364ff242a01fc3",
+    "artifacts/data-first/remote-ci-implementation.json": "1533462204bbd049c105b221b5dafb603a0c0a4e8239feef7439d3a40fb5f307",
     "artifacts/data-first/ruff.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "artifacts/data-first/ruff.stdout.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
     "artifacts/data-first/upstream-review.json": "297731e1380611eef9027c235162486b2a0b3b0245582aacc9540acd8106e778",
@@ -172,6 +173,6 @@
     "tests/test_km005r1.py": "b7966753b35e2aa374360bdf89f197cde40783db267d083ee8f4e1230e5f271a",
     "tests/test_study.py": "fa03b5d6f453596ccc18ed84a4ae6cb853bb6a20db34e907109fb061aafe3084",
     "README.md": "f3f52a52a14e76ee15ac60e63603144ce9a6c63096108d58ccc888c389ff82b0",
-    "docs/implementation/DATA_FIRST_EXPLORATORY_REPORT.md": "ead3813ba1f9e44a4080c962308329400f2d286a4d158c89ff9efc6fe3aa121f"
+    "docs/implementation/DATA_FIRST_EXPLORATORY_REPORT.md": "0522271b5b4cd726a492c152ac86f00b27ae4311d84e21e1fff51031d2ade8a2"
   }
 }
