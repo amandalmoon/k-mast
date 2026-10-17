@@ -35,6 +35,8 @@ git diff --check
 
 로컬 최종 증거는 **354 PASS = 기존 331 + 신규 23, 실패·건너뜀 0**이다. Ruff·format·mypy(67개 소스)·sdist/wheel·기존 OMS/Reference/공동계좌 재생·V2/V3/216개 독립 회계 검사가 모두 통과했다. CASH·단순 보유·초기 25% 보유·단순 추세 대비 손익과 노출·MDD 차이는 `benchmark-deltas.json`에 216개 별도 기록했다. 이는 추가 전략 실험이 아닌 동일 결과의 산술 비교다.
 
+구현 SHA `bf69787d20fc2c74cfb2c3d3a983f7cdd4183fa3`의 [GitHub Actions](https://github.com/amandalmoon/k-mast/actions/runs/38998105134)는 Python 3.11·3.12 모두 성공했다. 양쪽에서 각각 354 passed, mypy 67개 소스, sdist/wheel, DF003 독립 집계 회계·분류 검사 PASS를 확인했다. 정확한 SHA·작업·단계·로그 발췌는 `artifacts/df003/remote-ci-implementation.json`에 보존한다.
+
 ## 한계와 후속 경계
 
 이전부터 소비한 현재 생존 표본 6개·1년, 일봉, 미검증 기업행사·배당·과거 세션 공개시각, 시가 anchor와 미보정 체결비율이라는 한계가 있다. 종가 MDD와 베타는 실제 장중 손실 한도나 중앙 위험 승인이 아니다. 원 데이터 flag와 취득시각을 보존하며 확인적 G1/OOS·G2/G3로 승격하지 않는다.

@@ -1,0 +1,250 @@
+{
+  "head_sha": "bf69787d20fc2c74cfb2c3d3a983f7cdd4183fa3",
+  "run_id": 38998105134,
+  "url": "https://github.com/amandalmoon/k-mast/actions/runs/38998105134",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 117295022348,
+      "log_excerpts": [
+        "2026-10-17T03:16:05.2508994Z Success: no issues found in 67 source files",
+        "2026-10-17T03:16:14.3107070Z 354 passed in 7.64s",
+        "2026-10-17T03:16:15.3342329Z Successfully built kmast-1.2.0.tar.gz and kmast-1.2.0-py3-none-any.whl",
+        "2026-10-17T03:16:18.2083144Z DF003 independent 216-reference accounting, protocol, 18 A0 matches and safety: PASS"
+      ],
+      "name": "offline-contracts (3.11)",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install -r requirements-dev.lock",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install --no-deps --no-build-isolation -e .",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m ruff check .",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m ruff format --check .",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m mypy src",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pytest -q --junitxml=artifacts/junit.xml",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m build --no-isolation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.demo",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.data.cli fixture --output artifacts/km001-ci-fixture",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.execution.demo --output artifacts/km002-ci-scenarios",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_km002_evidence.py artifacts/km002-ci-scenarios",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.simulation.cli --output artifacts/km003-ci-functional",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_km003_evidence.py artifacts/km003-ci-functional",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.portfolio.demo --output artifacts/km004-ci-joint",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.portfolio.demo --output artifacts/km004-ci-joint",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.research.cli --output artifacts/km005-ci-no-data",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_km005_evidence.py --report artifacts/km005-ci-no-data/qualification.json",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_data_first_evidence.py",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_df002_evidence.py",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_df003_evidence.py",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 117295022615,
+      "log_excerpts": [
+        "2026-10-17T03:16:08.7006252Z Success: no issues found in 67 source files",
+        "2026-10-17T03:16:19.7579939Z 354 passed in 10.45s",
+        "2026-10-17T03:16:20.8224623Z Successfully built kmast-1.2.0.tar.gz and kmast-1.2.0-py3-none-any.whl",
+        "2026-10-17T03:16:24.7593451Z DF003 independent 216-reference accounting, protocol, 18 A0 matches and safety: PASS"
+      ],
+      "name": "offline-contracts (3.12)",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install -r requirements-dev.lock",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install --no-deps --no-build-isolation -e .",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m ruff check .",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m ruff format --check .",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m mypy src",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pytest -q --junitxml=artifacts/junit.xml",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m build --no-isolation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.demo",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.data.cli fixture --output artifacts/km001-ci-fixture",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.execution.demo --output artifacts/km002-ci-scenarios",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_km002_evidence.py artifacts/km002-ci-scenarios",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.simulation.cli --output artifacts/km003-ci-functional",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_km003_evidence.py artifacts/km003-ci-functional",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.portfolio.demo --output artifacts/km004-ci-joint",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.portfolio.demo --output artifacts/km004-ci-joint",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m kmast.research.cli --output artifacts/km005-ci-no-data",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_km005_evidence.py --report artifacts/km005-ci-no-data/qualification.json",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_data_first_evidence.py",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_df002_evidence.py",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_df003_evidence.py",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ]
+}
