@@ -1,0 +1,210 @@
+{
+  "version": "DF011_V1_BEFORE_NEW_ACTION_DOCUMENT_CONTENT_OR_UNCOLLECTED_PRICES",
+  "baseline_sha": "faba0e3024a8940280832e6c1bc7ce39bcf87af8",
+  "source_sha256": {
+    "artifacts/df009r1/event-linkage.json": "d8b021df92658addd8ee9a3ad6f1ef1e7ff765d97935c8750aa5718531d2d7db",
+    "artifacts/df010/DF010_PROTOCOL.json": "8cc70e9a98c0b1794312080cb67a513cd038520b78e0e912564d434aea2f17b0",
+    "artifacts/df010/results.json": "687cf2239acc1d9b277267f3fdc75a30a01a19dc55f21438f717bbe3c920013d",
+    "src/kmast/research/event_replay.py": "67bfe8dbd9ef0ff413c5182cf60d3610493a5404d630d9b96f60a254046451f8",
+    "src/kmast/alpha/reference.py": "65f079f6117e94721d2b3f2cdd5daca14a20d4c5e4766a50d9468750a7e3767b"
+  },
+  "PREVIOUSLY_OBSERVED_EVIDENCE": {
+    "131290": {
+      "receipt": "20221226000280",
+      "candidate_entry": "2022-12-27",
+      "provider_flag_date": "2022-12-28",
+      "flng_cls_code": "02",
+      "raw_adjusted_close_ratio": "1",
+      "status": "HOLD; preliminary price-only diagnostics excluded"
+    },
+    "081660_BASE_net": "180753.58",
+    "002840_BASE_net": "10951.50",
+    "full_research_eligible_events": 0
+  },
+  "evidence_priority": [
+    "Exact KIS daily-field official response specification",
+    "Issuer-specific original KRX/KIND/DART declarations, corrections and final resolutions",
+    "Official settlement/calendar/shareholder entitlement rules",
+    "Official issuer payment completion or verifiable payment evidence",
+    "Secondary sources discovery only; never sufficient alone"
+  ],
+  "entitlement_requirements": [
+    "historical corporate/security and share-class linkage",
+    "ex-date, record-date and last entitled purchase date with applicable settlement/calendar evidence",
+    "executed quantities settled in time; residual positions distinct",
+    "official final cash per share, resolution date, payment date and correction lineage",
+    "other in-window actions/halts explicitly scoped; incomplete history remains pending"
+  ],
+  "information_contract": {
+    "signal": "Frozen DF006 D1; later declared dividend amount/payment/correction never enters decisions",
+    "retrospective": "Separate evidence-backed total-return ledger; later acquired facts labeled ex-post, not historical signal knowledge",
+    "cash": "Receivable distinct from spendable cash; no cash before verified payment date and evidence of payment",
+    "tax": "Investor-specific actual tax unknown => TAX_TREATMENT_PENDING and actual net total return NULL; labeled research scenarios do not verify tax",
+    "basis": "RAW only for price-plus-cash accounting; reject adjusted-plus-dividend double counting",
+    "immutability": "No modification to old Ledger, D1 engine, prior results or rejected preliminary 131290 diagnostics"
+  },
+  "states": [
+    "PRICE_ONLY_PNL",
+    "ENTITLEMENT_PENDING",
+    "DIVIDEND_RECEIVABLE_VERIFIED",
+    "CASH_PAYMENT_VERIFIED",
+    "TAX_TREATMENT_PENDING",
+    "TOTAL_RETURN_VERIFIED"
+  ],
+  "promotion": "Only evidence-complete bounded V2 replay; unknown material actions/rights/settlement => HOLD. Positive PnL is never promotion criterion. Full research eligibility stays separate.",
+  "expansion_targets": [
+    {
+      "receipt": "20221208000397",
+      "corp_code": "00164788",
+      "historical_short_code": "012330",
+      "standard_code": "KR7012330007",
+      "then_market": "KOSPI",
+      "event_date": "2022-12-08",
+      "safe_relevant_correction_lineage_verified": true,
+      "same_corporate_revision_receipts": [],
+      "start": "2022-10-09",
+      "end": "2023-01-07",
+      "warmup_observed_sessions": 21,
+      "followup_sessions_after_deadline": 2,
+      "selection": "All remaining mapped events; no performance filtering",
+      "basis": [
+        "RAW",
+        "ADJUSTED"
+      ]
+    },
+    {
+      "receipt": "20221026000391",
+      "corp_code": "00129509",
+      "historical_short_code": "014130",
+      "standard_code": "KR7014130009",
+      "then_market": "KOSPI",
+      "event_date": "2022-10-26",
+      "safe_relevant_correction_lineage_verified": true,
+      "same_corporate_revision_receipts": [],
+      "start": "2022-08-27",
+      "end": "2022-11-25",
+      "warmup_observed_sessions": 21,
+      "followup_sessions_after_deadline": 2,
+      "selection": "All remaining mapped events; no performance filtering",
+      "basis": [
+        "RAW",
+        "ADJUSTED"
+      ]
+    },
+    {
+      "receipt": "20230830001038",
+      "corp_code": "01201970",
+      "historical_short_code": "352770",
+      "standard_code": "KR7352770002",
+      "then_market": "KOSDAQ",
+      "event_date": "2023-08-30",
+      "safe_relevant_correction_lineage_verified": true,
+      "same_corporate_revision_receipts": [],
+      "start": "2023-07-01",
+      "end": "2023-09-29",
+      "warmup_observed_sessions": 21,
+      "followup_sessions_after_deadline": 2,
+      "selection": "All remaining mapped events; no performance filtering",
+      "basis": [
+        "RAW",
+        "ADJUSTED"
+      ]
+    },
+    {
+      "receipt": "20241105000046",
+      "corp_code": "00875237",
+      "historical_short_code": "352700",
+      "standard_code": "KR7352700009",
+      "then_market": "KOSDAQ",
+      "event_date": "2024-11-05",
+      "safe_relevant_correction_lineage_verified": true,
+      "same_corporate_revision_receipts": [],
+      "start": "2024-09-06",
+      "end": "2024-12-05",
+      "warmup_observed_sessions": 21,
+      "followup_sessions_after_deadline": 2,
+      "selection": "All remaining mapped events; no performance filtering",
+      "basis": [
+        "RAW",
+        "ADJUSTED"
+      ]
+    },
+    {
+      "receipt": "20240529000068",
+      "corp_code": "00187415",
+      "historical_short_code": "041960",
+      "standard_code": "KR7041960006",
+      "then_market": "KOSDAQ",
+      "event_date": "2024-05-29",
+      "safe_relevant_correction_lineage_verified": true,
+      "same_corporate_revision_receipts": [
+        "20250326001053"
+      ],
+      "start": "2024-03-30",
+      "end": "2024-06-28",
+      "warmup_observed_sessions": 21,
+      "followup_sessions_after_deadline": 2,
+      "selection": "All remaining mapped events; no performance filtering",
+      "basis": [
+        "RAW",
+        "ADJUSTED"
+      ]
+    }
+  ],
+  "price_plan": {
+    "execution_authorized": false,
+    "new_separate_approval_required": true,
+    "unused_DF010_budget_carried": false,
+    "stock_path": "/uapi/domestic-stock/v1/quotations/inquire-daily-itemchartprice",
+    "stock_tr": "FHKST03010100",
+    "index_path": "/uapi/domestic-stock/v1/quotations/inquire-daily-indexchartprice",
+    "index_tr": "FHKUP03500100",
+    "indices": {
+      "KOSPI": "0001",
+      "KOSDAQ": "1001"
+    },
+    "expected_before_cache_stock_pages": 10,
+    "expected_before_cache_index_pages": 5,
+    "maximum_authentication": 2,
+    "retry_inclusive_ceiling_formula": "2 auth + 2 attempts per uncovered planned page; freeze exact cache-adjusted plan before approval",
+    "minimum_response_completion_wait_seconds": "3.10",
+    "storage": "Git-excluded private store; no raw market data or detailed trades public",
+    "operations_forbidden": [
+      "LIVE authentication",
+      "accounts",
+      "orders",
+      "cancellations",
+      "scope transfer"
+    ]
+  },
+  "event_controls": {
+    "treatment": "Direct buyback decision, first eligible post-publication session, frozen D1 targets/exit/costs",
+    "candidate_universe": "PIT eligible same-market securities; no present-day survivor replacement",
+    "controls_per_event": 3,
+    "cutoff": "All matching features available strictly before decision; observation and acquisition evidence required",
+    "features": [
+      "same market date",
+      "log trailing20 observed-session median KRW turnover",
+      "prior20-session price return",
+      "prior20-session realized daily-return volatility"
+    ],
+    "selection": "Same market; no event exposure; pre-feature standardized Euclidean distance using cross-sectional pre-treatment median/MAD (zero MAD drops feature); nearest three, deterministic receipt+standard-code hash tie-break. No match => unmatched, never replace after outcomes.",
+    "non_event": "Complete relevant disclosure census in preregistered exclusion window [-30,+5 calendar days]; future event classification is an ex-post contamination audit, never a signal; no complete census => UNKNOWN and not admissible",
+    "industry": "Only if contemporaneous PIT industry evidence exists; otherwise NULL, no current-sector proxy",
+    "capital_cost_risk": "Same capital, calendar holding, execution capacity, fees/tax/slippage, expense and risk constraints; report exposure differences, no post-hoc scaling",
+    "attribution": [
+      "raw treatment/control difference",
+      "market direction diagnostic",
+      "pre-trend/volatility balance",
+      "liquidity and cost differences",
+      "capital occupancy differences"
+    ],
+    "interpretation": "Matched observational association; no strict causal claim when confounding remains",
+    "statistics": "No tests below frozen DF006 minimum 30 events, 10 firms, 20 entry dates, 5 declining-market events and 80% admissible matched controls; account for firm/date/market dependence and multiplicity",
+    "falsification": "Nonpositive net incremental return versus preselected controls or no positive STRESS increment fails support; no threshold/selection relaxation after results",
+    "execution": "DESIGN_ONLY; not a new optimization trial"
+  },
+  "risk": "Preserve DF010 actual weights, residuals and unfulfilled reductions; central risk not executed, 25% target is not LIVE approval",
+  "economic_status": "ECONOMIC_EDGE_UNVERIFIED",
+  "live_status": "LIVE_NOT_APPROVED"
+}
