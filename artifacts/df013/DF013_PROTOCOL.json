@@ -1,0 +1,117 @@
+{
+  "milestone": "DF013",
+  "baseline_sha": "1f6ef645a4f72152363110538088f0061bafbeb2",
+  "events": [
+    {
+      "receipt": "20250314001638",
+      "symbol": "081660",
+      "entry_date": "2025-03-17",
+      "then_market": "KOSPI"
+    },
+    {
+      "receipt": "20250409002291",
+      "symbol": "002840",
+      "entry_date": "2025-04-10",
+      "then_market": "KOSPI"
+    },
+    {
+      "receipt": "20221208000397",
+      "symbol": "012330",
+      "entry_date": "2022-12-09",
+      "then_market": "KOSPI"
+    },
+    {
+      "receipt": "20221026000391",
+      "symbol": "014130",
+      "entry_date": "2022-10-27",
+      "then_market": "KOSPI"
+    },
+    {
+      "receipt": "20241105000046",
+      "symbol": "352700",
+      "entry_date": "2024-11-06",
+      "then_market": "KOSDAQ"
+    },
+    {
+      "receipt": "20240529000068",
+      "symbol": "041960",
+      "entry_date": "2024-05-30",
+      "then_market": "KOSDAQ"
+    }
+  ],
+  "source_hashes": {
+    "src/kmast/research/event_controls.py": "5c397a32c691ad27532f28c4f0d6ba31f34be551388ea8c80fc4e1775d13c0b1",
+    "artifacts/df009/orb-supply-plan.json": "54b67b8ea51847f818b5ccd5e8004db83e08521cbdd094e628239aea3f634878",
+    "artifacts/df010/results.json": "687cf2239acc1d9b277267f3fdc75a30a01a19dc55f21438f717bbe3c920013d",
+    "artifacts/df012/results.json": "945736774f0839914649a28a24301bbe3d205e8550100bf86ecc8867e112cfea",
+    "02_알파_전략_및_레짐_명세.md": "81e9e58e9ca56a75a02ae5b68e693635334cefc8f210df2f659f16378b5a0673"
+  },
+  "track_a": {
+    "new_downloads": 0,
+    "scope": "Six fixed technical cases; cached DF005/007/009R1 only",
+    "pit_policy": "Exact decision-date KRX snapshot required; older verified identities separately diagnostic; no names-only joining",
+    "features": "20 matched observed prior sessions: median turnover, prior return, realized volatility; historical availability proof required",
+    "controls": 3,
+    "matching": "Frozen DF011 distance and receipt/security hash tie; never match with incomplete inputs; never inspect post-entry returns",
+    "contamination": "Decision-time original/correction coverage and fixed-set future audit; unknown remains unmatched; no future rematching",
+    "counts": "Report independent stages and their intersection; zero observed cache coverage is not proof unavailable from provider"
+  },
+  "track_b": {
+    "channels": [
+      "H0STCNT0",
+      "H0STASP0"
+    ],
+    "account_channels_forbidden": true,
+    "environment": "PAPER only; official entitlement and quota evidence assessed separately from actual access",
+    "network_authentication_authorized": false,
+    "streaming_authorized": false,
+    "trade_fields": [
+      "STCK_SHRN_ISCD",
+      "STCK_CNTG_HOUR",
+      "STCK_PRPR",
+      "CNTG_VOL",
+      "ACML_VOL",
+      "ACML_TR_PBMN",
+      "NEW_MKOP_CLS_CODE",
+      "TRHT_YN",
+      "HOUR_CLS_CODE"
+    ],
+    "quote_fields": [
+      "MKSC_SHRN_ISCD",
+      "BSOP_HOUR",
+      "HOUR_CLS_CODE",
+      "ASKP1..10",
+      "BIDP1..10",
+      "ASKP_RSQN1..10",
+      "BIDP_RSQN1..10"
+    ],
+    "timestamps": "Exchange seconds retained separately from UTC receipt/monotonic sequence; no invented exchange date or subsecond sequence",
+    "auction_policy": "Exclude opening auction and unknown sessions from continuous-session range/VWAP; cumulative fields diagnostic only",
+    "corrections": "Unavailable correction/cancel lineage UNKNOWN; detected correction or cumulative regression invalidates metrics",
+    "range_policy": "Half-open [official regular open,open+5/15m); finalize only after receipt watermark and no observed defects; no claim of undetectable completeness",
+    "rvol": "20 prior clean same-exchange/elapsed-time sessions required; no history => RVOL_NOT_READY",
+    "fills": "No simulated immediate signal-price fills; later-received, nonstale same-session quote evaluated separately, never guaranteed fill",
+    "quality": "Retain duplicates; reject order inversion, counter regression, stale/crossed quotes; disconnect/gap taints range; VI/halt UNKNOWN unless official evidence",
+    "pilot_selection": "DF005 cached 50-stock universe, last20 RAW observations through 2025-10-16, >=1e9 KRW median turnover, minimum SHA256(DF013:market:code); current validity separate prerequisite",
+    "pilot_proposal": {
+      "symbols_per_market": 1,
+      "channels_per_symbol": 2,
+      "desired_day": "2026-10-19",
+      "kst_window": "08:50:00-09:25:00",
+      "requires_regular_session_confirmation": true,
+      "auth_max": 1,
+      "connection_max": 2,
+      "reconnect_max": 1,
+      "subscription_messages_max": 8,
+      "unsubscribe_messages_max": 4,
+      "raw_bytes_cap": 1073741824,
+      "total_store_bytes_cap": 3221225472,
+      "execution_authorized": false
+    },
+    "cost_policy": "Measured bytes/messages/latency/rate/fees/labor remain NULL without actual collection; caps are limits not measured forecasts",
+    "continue_gate": "Offline infrastructure may pass; pilot supply ready requires official scope plus explicit authentication/streaming approval; unavailable PAPER never falls back to LIVE"
+  },
+  "semantic_contract": "Separate proposed MARKET_PURCHASE_D1_V2 subtype; no old D1 modification or new economic test",
+  "economics": "ECONOMIC_EDGE_UNVERIFIED",
+  "live": "LIVE_NOT_APPROVED"
+}
