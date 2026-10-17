@@ -1,0 +1,20 @@
+{
+  "upstream_sha": "2077773a69a428daf63e148182511f068cc45de3",
+  "files": [
+    {
+      "path": "backtester/kis_backtest/providers/kis/data.py",
+      "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/backtester/kis_backtest/providers/kis/data.py",
+      "sha256": "4565d4436077f5941b248cd0df995574cdb2a338c95b2abb90043b0260176aec"
+    },
+    {
+      "path": "examples_llm/overseas_stock/dailyprice/dailyprice.py",
+      "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/examples_llm/overseas_stock/dailyprice/dailyprice.py",
+      "sha256": "50715eb04f7b7556b7656ef82492e7295e83d5842dcb64a7f78ab61919e5fcf6"
+    },
+    {
+      "path": "backtester/kis_backtest/providers/kis/constants.py",
+      "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/backtester/kis_backtest/providers/kis/constants.py",
+      "sha256": "986cc68c92e889321361ab4e64266749650e4c3f8b8e37f7ee2d9fe9444d2811"
+    }
+  ]
+}

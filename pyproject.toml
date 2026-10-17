@@ -7,7 +7,7 @@ name = "kmast"
 version = "1.2.0"
 description = "K-MAST v1.2 read-only data acquisition; orders disabled"
 requires-python = ">=3.11"
-dependencies = ["pydantic==2.12.3", "PyYAML==6.0.3", "pyarrow==21.0.0", "websockets==15.0.1"]
+dependencies = ["pydantic==2.12.3", "PyYAML==6.0.3", "pyarrow==21.0.0", "websockets==15.0.1", "tzdata==2026.5"]
 
 [project.optional-dependencies]
 dev = ["pytest==8.4.2", "ruff==0.14.1", "mypy==1.18.2", "types-PyYAML==6.0.12.20250915", "build==1.3.0"]

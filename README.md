@@ -168,3 +168,12 @@ V2 72개를 보존·재현하고 시점별 입력 계보와 개장 체결 가정
 [DF-003 종료 보고서](docs/implementation/DF003_CLOSURE_REPORT.md)를 참고한다.
 `python scripts/verify.py --milestone df003`는 저장된 자료와 기존 331개 회귀시험을 검증한다.
 모든 새 후보는 REVISE이며 실제 실행·경제성·LIVE는 미승인이다. EWY는 데이터 계약만 준비했다.
+
+## DF004 EWY research
+
+DF004 price-only exploration: 251 observed EWY sessions, 217 common Korean dates,
+96 independent references. `EWY_EXPLORATORY_SIGNAL_NOT_SUPPORTED`;
+`ECONOMIC_EDGE_UNVERIFIED` / `LIVE_NOT_APPROVED`. Publication, execution and
+corporate-action limitations remain. No strategy or trading approval changed.
+See [DF004 closure](docs/implementation/DF004_CLOSURE_REPORT.md) and
+[evaluation](docs/implementation/DF004_EWY_SIGNAL_EVALUATION.md).

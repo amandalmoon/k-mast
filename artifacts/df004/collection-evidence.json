@@ -1,0 +1,126 @@
+{
+  "actual_auth": 2,
+  "actual_requests": 9,
+  "approval": {
+    "end": "2026-10-16",
+    "environment": "PAPER",
+    "max_auth": 2,
+    "max_requests": 12,
+    "minimum_seconds": 3,
+    "start": "2025-10-17",
+    "symbol": "EWY"
+  },
+  "events": [
+    {
+      "http_status": 200,
+      "kind": "AUTH",
+      "received_at": "2026-10-17T03:37:44.786272+00:00",
+      "request_time": "2026-10-17T03:37:44.667347+00:00",
+      "sequence": 1
+    },
+    {
+      "cursor": "20261016",
+      "exchange_code": "AMS",
+      "http_status": 200,
+      "kind": "EWY_DAILY",
+      "modp": "0",
+      "outcome": "OBSERVED_ROWS",
+      "received_at": "2026-10-17T03:37:47.764837+00:00",
+      "request_time": "2026-10-17T03:37:47.672088+00:00",
+      "rows": 100,
+      "sequence": 2,
+      "sha256": "13affb62618e4a2dc9685869f0d84f868b9282e88b6c83814be8cdea0083cde3",
+      "storage": "SANITIZED_PRICE_FIELDS_NOT_WIRE_BYTES"
+    },
+    {
+      "cursor": "20261016",
+      "exchange_code": "AMS",
+      "http_status": 200,
+      "kind": "EWY_DAILY",
+      "modp": "1",
+      "outcome": "OBSERVED_ROWS",
+      "received_at": "2026-10-17T03:37:50.759209+00:00",
+      "request_time": "2026-10-17T03:37:50.669470+00:00",
+      "rows": 100,
+      "sequence": 3,
+      "sha256": "13affb62618e4a2dc9685869f0d84f868b9282e88b6c83814be8cdea0083cde3",
+      "storage": "SANITIZED_PRICE_FIELDS_NOT_WIRE_BYTES"
+    },
+    {
+      "cursor": "20260526",
+      "exchange_code": "AMS",
+      "http_status": 200,
+      "kind": "EWY_DAILY",
+      "modp": "0",
+      "outcome": "OBSERVED_ROWS",
+      "received_at": "2026-10-17T03:37:53.773359+00:00",
+      "request_time": "2026-10-17T03:37:53.671008+00:00",
+      "rows": 100,
+      "sequence": 4,
+      "sha256": "5523c6147315f086019abc85b7977c8fa1d0d0971afefe5cd8689f1a88da177b",
+      "storage": "SANITIZED_PRICE_FIELDS_NOT_WIRE_BYTES"
+    },
+    {
+      "cursor": "20251230",
+      "exchange_code": "AMS",
+      "http_status": 200,
+      "kind": "EWY_DAILY",
+      "modp": "0",
+      "outcome": "OBSERVED_ROWS",
+      "received_at": "2026-10-17T03:37:56.777541+00:00",
+      "request_time": "2026-10-17T03:37:56.673513+00:00",
+      "rows": 100,
+      "sequence": 5,
+      "sha256": "de6e46f960912b2d41a6d3b790b81fbe47ca45e02b3cf52895495b1f6fbe2dc0",
+      "storage": "SANITIZED_PRICE_FIELDS_NOT_WIRE_BYTES"
+    },
+    {
+      "cursor": "20261016",
+      "exchange_code": "NYS",
+      "http_status": 200,
+      "kind": "EWY_DAILY",
+      "modp": "0",
+      "outcome": "NO_USABLE_ROWS",
+      "received_at": "2026-10-17T03:37:59.733381+00:00",
+      "request_time": "2026-10-17T03:37:59.673282+00:00",
+      "rows": 0,
+      "sequence": 6,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "storage": "SANITIZED_PRICE_FIELDS_NOT_WIRE_BYTES"
+    },
+    {
+      "cursor": "20261016",
+      "exchange_code": "NYS",
+      "http_status": 200,
+      "kind": "EWY_DAILY",
+      "modp": "1",
+      "outcome": "NO_USABLE_ROWS",
+      "received_at": "2026-10-17T03:38:03.550737+00:00",
+      "request_time": "2026-10-17T03:38:02.670948+00:00",
+      "rows": 0,
+      "sequence": 7,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "storage": "SANITIZED_PRICE_FIELDS_NOT_WIRE_BYTES"
+    },
+    {
+      "http_status": 200,
+      "kind": "AUTH",
+      "received_at": "2026-10-17T03:39:51.048424+00:00",
+      "request_time": "2026-10-17T03:39:50.942493+00:00",
+      "sequence": 8
+    },
+    {
+      "outcome": "IO_OR_RESPONSE_FAILED",
+      "sequence": 9
+    }
+  ],
+  "note": "First acquisition retained price-field hashes; supplemental raw page metadata write failed locally. Cached251price rows remain usable for qualified exploration. Original spacing deviation recorded separately.",
+  "wire_artifacts": [
+    {
+      "bytes": 23459,
+      "historical_publication_proven": false,
+      "receipt_metadata_complete": false,
+      "sha256": "08d72dddbdd5df67f241abc2382a3cb07de9be5581c22715eee6caa7d6d82843"
+    }
+  ]
+}

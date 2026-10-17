@@ -1,0 +1,30 @@
+[
+  {
+    "name": "stooq-ewy.csv",
+    "url": "https://stooq.com/q/d/l/?s=ewy.us&d1=20251017&d2=20261016&i=d",
+    "bytes": 796,
+    "sha256": "561fb2ead31705dce455904a20620c5c8bb34aabee24707db47a696189aef2a4",
+    "outcome": "NO_USABLE_OHLC_CSV"
+  },
+  {
+    "name": "overseas-functions.py",
+    "url": "https://raw.githubusercontent.com/koreainvestment/open-trading-api/2077773a69a428daf63e148182511f068cc45de3/examples_user/overseas_stock/overseas_stock_functions.py",
+    "bytes": 241544,
+    "sha256": "3d81b7f0eafcf4313b4dd798824ab265f006a02bb91f4b96f57d2472ef2c5957",
+    "outcome": "RETRIEVED"
+  },
+  {
+    "name": "nyse-calendar.pdf",
+    "url": "https://s2.q4cdn.com/154085107/files/doc_news/NYSE-Group-Announces-2025-2026-and-2027-Holiday-and-Early-Closings-Calendar-2024.pdf",
+    "bytes": 130505,
+    "sha256": "6d719aaaf827c909f362725293c8e932f1b879687e4705eeb8a16f7201fe3355",
+    "outcome": "RETRIEVED"
+  },
+  {
+    "name": "nyse-hours.html",
+    "url": "https://www.nyse.com/trade/hours-calendars",
+    "bytes": 109229,
+    "sha256": "79602f7be5a8f1d39c2b1cac4dd02c4c07f18cf9f92d70602834069154719bad",
+    "outcome": "RETRIEVED"
+  }
+]

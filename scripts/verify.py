@@ -24,6 +24,7 @@ def main() -> None:
             "data-first",
             "df002",
             "df003",
+            "df004",
         ),
         default="km000",
     )
@@ -277,11 +278,27 @@ def main() -> None:
         checks["v2-independent"] = ["scripts/check_data_first_evidence.py", "--private"]
         checks["v3-independent"] = ["scripts/check_df002_evidence.py", "--private"]
         checks["hypothesis-independent"] = ["scripts/check_df003_evidence.py", "--private"]
+    if args.milestone == "df004":
+        checks["regression354"] = ["-m", "pytest", "-q", "--ignore=tests/test_df004.py"]
+        for label, module, checker in (
+            ("oms", "kmast.execution.demo", "scripts/check_km002_evidence.py"),
+            ("alpha", "kmast.simulation.cli", "scripts/check_km003_evidence.py"),
+            ("joint", "kmast.portfolio.demo", None),
+        ):
+            output = "artifacts/df004/" + label + "-replay"
+            checks[label + "-replay"] = ["-m", module, "--output", output]
+            if checker:
+                checks[label + "-independent"] = [checker, output]
+        checks["v2-independent"] = ["scripts/check_data_first_evidence.py", "--private"]
+        checks["v3-independent"] = ["scripts/check_df002_evidence.py", "--private"]
+        checks["df003-independent"] = ["scripts/check_df003_evidence.py", "--private"]
+        checks["ewy-independent"] = ["scripts/check_df004_evidence.py", "--private"]
+        checks["preservation-secret-audit"] = ["-m", "scripts.audit_df004"]
     results = []
     for name, args in checks.items():
         result = subprocess.run([sys.executable, *args], cwd=ROOT, capture_output=True)
         for stream, payload in (("stdout", result.stdout), ("stderr", result.stderr)):
-            if evidence.name in {"df002", "df003"}:
+            if evidence.name in {"df002", "df003", "df004"}:
                 private_logs = (
                     ROOT / "data/data-first-private-market-v1" / (evidence.name + "-check-logs")
                 )
