@@ -1,0 +1,17 @@
+{
+  "sha": "2421129aae6157eaadac13bc0093348a1b3892f2",
+  "run_id": 39113102362,
+  "conclusion": "success",
+  "jobs": [
+    {
+      "name": "offline-contracts (3.12)",
+      "id": 117633204426,
+      "conclusion": "success"
+    },
+    {
+      "name": "offline-contracts (3.11)",
+      "id": 117633204577,
+      "conclusion": "success"
+    }
+  ]
+}

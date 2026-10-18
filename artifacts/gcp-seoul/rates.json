@@ -1,0 +1,19 @@
+{
+  "currency": "USD",
+  "as_of_kst": "2026-10-18",
+  "region": "asia-northeast3",
+  "e2_small_hour": "0.02149143",
+  "e2_medium_hour": "0.04298286",
+  "pd_standard_gib_month": "0.052",
+  "pd_balanced_gib_month": "0.13",
+  "snapshot_standard_gib_month": "0.064",
+  "external_ipv4_in_use_hour": "0.005",
+  "external_ipv4_unused_seoul_hour": "0.015",
+  "nat_vm_hour": "0.0014",
+  "nat_gib_both_directions": "0.045",
+  "premium_egress_korea_gib": "0.19",
+  "secret_version_location_month": "0.06",
+  "secret_access_per_10000": "0.03",
+  "logging_gib": "0.50",
+  "custom_monitoring_mib": "0.2580"
+}

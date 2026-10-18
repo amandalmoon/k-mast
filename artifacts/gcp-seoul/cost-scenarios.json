@@ -1,0 +1,364 @@
+{
+  "region": "asia-northeast3",
+  "currency": "USD",
+  "pricing_date_kst": "2026-10-18",
+  "basis": "730h average month; 176h is a planning assumption, not collection approval",
+  "assumptions": {
+    "inbound_gib": 10,
+    "outbound_to_korea_gib": 1,
+    "retained_snapshot_gib_month": 5,
+    "secret_versions_one_location": 2,
+    "secret_accesses": 1000,
+    "logs_gib": 1,
+    "custom_metrics_mib": 10,
+    "nat_ip_retained_hours": 730,
+    "account_free_allowance_availability": "UNKNOWN",
+    "actual_trial_eligibility_and_remaining_credit": "UNKNOWN"
+  },
+  "unknown_costs": [
+    "taxes_and_billing_currency_fx",
+    "operator_patch_recovery_hours_and_wage",
+    "actual_traffic_snapshot_growth_log_metric_volume",
+    "optional_paid_support_and_external_notification_delivery",
+    "account_discounts_and_other_workload_allowance_consumption",
+    "unplanned_rebuild_or_incident_usage"
+  ],
+  "scenarios": [
+    {
+      "machine": "e2-small",
+      "schedule": "24x7",
+      "vm_hours": 730,
+      "disk_gib": 20,
+      "network": "ephemeral_ipv4",
+      "components_usd": {
+        "vm": "15.68874390",
+        "disk": "2.60",
+        "ip": "3.650",
+        "nat_gateway_processing": "0",
+        "snapshot": "0.320",
+        "internet_egress": "0.19",
+        "shared_services_without_free_allowance": "3.2030"
+      },
+      "monthly_if_shared_free_allowances_available_usd": "22.44874390",
+      "monthly_if_shared_free_allowances_exhausted_usd": "25.65174390",
+      "trial_cash_if_eligible_credit_covers_entire_usage_usd": "0",
+      "actual_cash_usd": null,
+      "total_cost_of_ownership_usd": null
+    },
+    {
+      "machine": "e2-small",
+      "schedule": "24x7",
+      "vm_hours": 730,
+      "disk_gib": 20,
+      "network": "private_vm_nat",
+      "components_usd": {
+        "vm": "15.68874390",
+        "disk": "2.60",
+        "ip": "3.650",
+        "nat_gateway_processing": "1.5170",
+        "snapshot": "0.320",
+        "internet_egress": "0.19",
+        "shared_services_without_free_allowance": "3.2030"
+      },
+      "monthly_if_shared_free_allowances_available_usd": "23.96574390",
+      "monthly_if_shared_free_allowances_exhausted_usd": "27.16874390",
+      "trial_cash_if_eligible_credit_covers_entire_usage_usd": "0",
+      "actual_cash_usd": null,
+      "total_cost_of_ownership_usd": null
+    },
+    {
+      "machine": "e2-small",
+      "schedule": "24x7",
+      "vm_hours": 730,
+      "disk_gib": 30,
+      "network": "ephemeral_ipv4",
+      "components_usd": {
+        "vm": "15.68874390",
+        "disk": "3.90",
+        "ip": "3.650",
+        "nat_gateway_processing": "0",
+        "snapshot": "0.320",
+        "internet_egress": "0.19",
+        "shared_services_without_free_allowance": "3.2030"
+      },
+      "monthly_if_shared_free_allowances_available_usd": "23.74874390",
+      "monthly_if_shared_free_allowances_exhausted_usd": "26.95174390",
+      "trial_cash_if_eligible_credit_covers_entire_usage_usd": "0",
+      "actual_cash_usd": null,
+      "total_cost_of_ownership_usd": null
+    },
+    {
+      "machine": "e2-small",
+      "schedule": "24x7",
+      "vm_hours": 730,
+      "disk_gib": 30,
+      "network": "private_vm_nat",
+      "components_usd": {
+        "vm": "15.68874390",
+        "disk": "3.90",
+        "ip": "3.650",
+        "nat_gateway_processing": "1.5170",
+        "snapshot": "0.320",
+        "internet_egress": "0.19",
+        "shared_services_without_free_allowance": "3.2030"
+      },
+      "monthly_if_shared_free_allowances_available_usd": "25.26574390",
+      "monthly_if_shared_free_allowances_exhausted_usd": "28.46874390",
+      "trial_cash_if_eligible_credit_covers_entire_usage_usd": "0",
+      "actual_cash_usd": null,
+      "total_cost_of_ownership_usd": null
+    },
+    {
+      "machine": "e2-small",
+      "schedule": "22_sessions_x_8h",
+      "vm_hours": 176,
+      "disk_gib": 20,
+      "network": "ephemeral_ipv4",
+      "components_usd": {
+        "vm": "3.78249168",
+        "disk": "2.60",
+        "ip": "0.880",
+        "nat_gateway_processing": "0",
+        "snapshot": "0.320",
+        "internet_egress": "0.19",
+        "shared_services_without_free_allowance": "3.2030"
+      },
+      "monthly_if_shared_free_allowances_available_usd": "7.77249168",
+      "monthly_if_shared_free_allowances_exhausted_usd": "10.97549168",
+      "trial_cash_if_eligible_credit_covers_entire_usage_usd": "0",
+      "actual_cash_usd": null,
+      "total_cost_of_ownership_usd": null
+    },
+    {
+      "machine": "e2-small",
+      "schedule": "22_sessions_x_8h",
+      "vm_hours": 176,
+      "disk_gib": 20,
+      "network": "private_vm_nat",
+      "components_usd": {
+        "vm": "3.78249168",
+        "disk": "2.60",
+        "ip": "3.650",
+        "nat_gateway_processing": "0.7414",
+        "snapshot": "0.320",
+        "internet_egress": "0.19",
+        "shared_services_without_free_allowance": "3.2030"
+      },
+      "monthly_if_shared_free_allowances_available_usd": "11.28389168",
+      "monthly_if_shared_free_allowances_exhausted_usd": "14.48689168",
+      "trial_cash_if_eligible_credit_covers_entire_usage_usd": "0",
+      "actual_cash_usd": null,
+      "total_cost_of_ownership_usd": null
+    },
+    {
+      "machine": "e2-small",
+      "schedule": "22_sessions_x_8h",
+      "vm_hours": 176,
+      "disk_gib": 30,
+      "network": "ephemeral_ipv4",
+      "components_usd": {
+        "vm": "3.78249168",
+        "disk": "3.90",
+        "ip": "0.880",
+        "nat_gateway_processing": "0",
+        "snapshot": "0.320",
+        "internet_egress": "0.19",
+        "shared_services_without_free_allowance": "3.2030"
+      },
+      "monthly_if_shared_free_allowances_available_usd": "9.07249168",
+      "monthly_if_shared_free_allowances_exhausted_usd": "12.27549168",
+      "trial_cash_if_eligible_credit_covers_entire_usage_usd": "0",
+      "actual_cash_usd": null,
+      "total_cost_of_ownership_usd": null
+    },
+    {
+      "machine": "e2-small",
+      "schedule": "22_sessions_x_8h",
+      "vm_hours": 176,
+      "disk_gib": 30,
+      "network": "private_vm_nat",
+      "components_usd": {
+        "vm": "3.78249168",
+        "disk": "3.90",
+        "ip": "3.650",
+        "nat_gateway_processing": "0.7414",
+        "snapshot": "0.320",
+        "internet_egress": "0.19",
+        "shared_services_without_free_allowance": "3.2030"
+      },
+      "monthly_if_shared_free_allowances_available_usd": "12.58389168",
+      "monthly_if_shared_free_allowances_exhausted_usd": "15.78689168",
+      "trial_cash_if_eligible_credit_covers_entire_usage_usd": "0",
+      "actual_cash_usd": null,
+      "total_cost_of_ownership_usd": null
+    },
+    {
+      "machine": "e2-medium",
+      "schedule": "24x7",
+      "vm_hours": 730,
+      "disk_gib": 20,
+      "network": "ephemeral_ipv4",
+      "components_usd": {
+        "vm": "31.37748780",
+        "disk": "2.60",
+        "ip": "3.650",
+        "nat_gateway_processing": "0",
+        "snapshot": "0.320",
+        "internet_egress": "0.19",
+        "shared_services_without_free_allowance": "3.2030"
+      },
+      "monthly_if_shared_free_allowances_available_usd": "38.13748780",
+      "monthly_if_shared_free_allowances_exhausted_usd": "41.34048780",
+      "trial_cash_if_eligible_credit_covers_entire_usage_usd": "0",
+      "actual_cash_usd": null,
+      "total_cost_of_ownership_usd": null
+    },
+    {
+      "machine": "e2-medium",
+      "schedule": "24x7",
+      "vm_hours": 730,
+      "disk_gib": 20,
+      "network": "private_vm_nat",
+      "components_usd": {
+        "vm": "31.37748780",
+        "disk": "2.60",
+        "ip": "3.650",
+        "nat_gateway_processing": "1.5170",
+        "snapshot": "0.320",
+        "internet_egress": "0.19",
+        "shared_services_without_free_allowance": "3.2030"
+      },
+      "monthly_if_shared_free_allowances_available_usd": "39.65448780",
+      "monthly_if_shared_free_allowances_exhausted_usd": "42.85748780",
+      "trial_cash_if_eligible_credit_covers_entire_usage_usd": "0",
+      "actual_cash_usd": null,
+      "total_cost_of_ownership_usd": null
+    },
+    {
+      "machine": "e2-medium",
+      "schedule": "24x7",
+      "vm_hours": 730,
+      "disk_gib": 30,
+      "network": "ephemeral_ipv4",
+      "components_usd": {
+        "vm": "31.37748780",
+        "disk": "3.90",
+        "ip": "3.650",
+        "nat_gateway_processing": "0",
+        "snapshot": "0.320",
+        "internet_egress": "0.19",
+        "shared_services_without_free_allowance": "3.2030"
+      },
+      "monthly_if_shared_free_allowances_available_usd": "39.43748780",
+      "monthly_if_shared_free_allowances_exhausted_usd": "42.64048780",
+      "trial_cash_if_eligible_credit_covers_entire_usage_usd": "0",
+      "actual_cash_usd": null,
+      "total_cost_of_ownership_usd": null
+    },
+    {
+      "machine": "e2-medium",
+      "schedule": "24x7",
+      "vm_hours": 730,
+      "disk_gib": 30,
+      "network": "private_vm_nat",
+      "components_usd": {
+        "vm": "31.37748780",
+        "disk": "3.90",
+        "ip": "3.650",
+        "nat_gateway_processing": "1.5170",
+        "snapshot": "0.320",
+        "internet_egress": "0.19",
+        "shared_services_without_free_allowance": "3.2030"
+      },
+      "monthly_if_shared_free_allowances_available_usd": "40.95448780",
+      "monthly_if_shared_free_allowances_exhausted_usd": "44.15748780",
+      "trial_cash_if_eligible_credit_covers_entire_usage_usd": "0",
+      "actual_cash_usd": null,
+      "total_cost_of_ownership_usd": null
+    },
+    {
+      "machine": "e2-medium",
+      "schedule": "22_sessions_x_8h",
+      "vm_hours": 176,
+      "disk_gib": 20,
+      "network": "ephemeral_ipv4",
+      "components_usd": {
+        "vm": "7.56498336",
+        "disk": "2.60",
+        "ip": "0.880",
+        "nat_gateway_processing": "0",
+        "snapshot": "0.320",
+        "internet_egress": "0.19",
+        "shared_services_without_free_allowance": "3.2030"
+      },
+      "monthly_if_shared_free_allowances_available_usd": "11.55498336",
+      "monthly_if_shared_free_allowances_exhausted_usd": "14.75798336",
+      "trial_cash_if_eligible_credit_covers_entire_usage_usd": "0",
+      "actual_cash_usd": null,
+      "total_cost_of_ownership_usd": null
+    },
+    {
+      "machine": "e2-medium",
+      "schedule": "22_sessions_x_8h",
+      "vm_hours": 176,
+      "disk_gib": 20,
+      "network": "private_vm_nat",
+      "components_usd": {
+        "vm": "7.56498336",
+        "disk": "2.60",
+        "ip": "3.650",
+        "nat_gateway_processing": "0.7414",
+        "snapshot": "0.320",
+        "internet_egress": "0.19",
+        "shared_services_without_free_allowance": "3.2030"
+      },
+      "monthly_if_shared_free_allowances_available_usd": "15.06638336",
+      "monthly_if_shared_free_allowances_exhausted_usd": "18.26938336",
+      "trial_cash_if_eligible_credit_covers_entire_usage_usd": "0",
+      "actual_cash_usd": null,
+      "total_cost_of_ownership_usd": null
+    },
+    {
+      "machine": "e2-medium",
+      "schedule": "22_sessions_x_8h",
+      "vm_hours": 176,
+      "disk_gib": 30,
+      "network": "ephemeral_ipv4",
+      "components_usd": {
+        "vm": "7.56498336",
+        "disk": "3.90",
+        "ip": "0.880",
+        "nat_gateway_processing": "0",
+        "snapshot": "0.320",
+        "internet_egress": "0.19",
+        "shared_services_without_free_allowance": "3.2030"
+      },
+      "monthly_if_shared_free_allowances_available_usd": "12.85498336",
+      "monthly_if_shared_free_allowances_exhausted_usd": "16.05798336",
+      "trial_cash_if_eligible_credit_covers_entire_usage_usd": "0",
+      "actual_cash_usd": null,
+      "total_cost_of_ownership_usd": null
+    },
+    {
+      "machine": "e2-medium",
+      "schedule": "22_sessions_x_8h",
+      "vm_hours": 176,
+      "disk_gib": 30,
+      "network": "private_vm_nat",
+      "components_usd": {
+        "vm": "7.56498336",
+        "disk": "3.90",
+        "ip": "3.650",
+        "nat_gateway_processing": "0.7414",
+        "snapshot": "0.320",
+        "internet_egress": "0.19",
+        "shared_services_without_free_allowance": "3.2030"
+      },
+      "monthly_if_shared_free_allowances_available_usd": "16.36638336",
+      "monthly_if_shared_free_allowances_exhausted_usd": "19.56938336",
+      "trial_cash_if_eligible_credit_covers_entire_usage_usd": "0",
+      "actual_cash_usd": null,
+      "total_cost_of_ownership_usd": null
+    }
+  ]
+}

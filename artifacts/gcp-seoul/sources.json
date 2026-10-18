@@ -1,0 +1,90 @@
+[
+  {
+    "url": "https://api.github.com/repos/amandalmoon/k-mast/git/ref/heads/codex/df017r1-paper-preflight",
+    "http_status": 200,
+    "sha256": "76f7c00d8ba427a7f5c738609b441bf91503c564caf9739f0bec55c55fef01a6",
+    "bytes": 420,
+    "retrieved_at": "2026-10-18T11:40:46.606643+00:00"
+  },
+  {
+    "url": "https://api.github.com/repos/amandalmoon/k-mast/actions/runs/39113102362",
+    "http_status": 200,
+    "sha256": "b0be369920c30512a2d8011303f82ee93897f4254f431838a646499cc05c3e29",
+    "bytes": 12102,
+    "retrieved_at": "2026-10-18T11:40:46.946244+00:00"
+  },
+  {
+    "url": "https://api.github.com/repos/amandalmoon/k-mast/actions/runs/39113102362/jobs?per_page=100",
+    "http_status": 200,
+    "sha256": "9c4008ce1f45395f32a1890869b42f2a7772b3cf9609ae9ecae06dbce44df132",
+    "bytes": 17972,
+    "retrieved_at": "2026-10-18T11:40:47.751551+00:00"
+  },
+  {
+    "url": "https://cloud.google.com/compute/vm-instance-pricing",
+    "http_status": 200,
+    "sha256": "84090c906feff09a1ee73733d0c898fdc0e488eaa22cdada2a56b0db18c08a00",
+    "bytes": 2316305,
+    "retrieved_at": "2026-10-18T11:40:50.172952+00:00"
+  },
+  {
+    "url": "https://cloud.google.com/compute/disks-image-pricing",
+    "http_status": 200,
+    "sha256": "90e233c82fd8b1d2d112289c7f57047d1f83f69730d341e0484a9398f3d9fbed",
+    "bytes": 3939506,
+    "retrieved_at": "2026-10-18T11:40:52.795892+00:00"
+  },
+  {
+    "url": "https://cloud.google.com/vpc/network-pricing",
+    "http_status": 200,
+    "sha256": "0fd9f059bb461d7d2ab94741f535f02612f389410b95133635578251979b15ba",
+    "bytes": 3846918,
+    "retrieved_at": "2026-10-18T11:40:54.675398+00:00"
+  },
+  {
+    "url": "https://cloud.google.com/secret-manager/pricing",
+    "http_status": 200,
+    "sha256": "3acd202cfc7480e63dca7ff33369e73c0ecb1bd04085fc0aaabf4a1d3319f288",
+    "bytes": 2254587,
+    "retrieved_at": "2026-10-18T11:40:56.607176+00:00"
+  },
+  {
+    "url": "https://cloud.google.com/stackdriver/pricing",
+    "http_status": 200,
+    "sha256": "94da2b4323f3ece7aec96c6b4163a3b5ed924b6d0cc61df0d3b3594d48dd8c9a",
+    "bytes": 2349823,
+    "retrieved_at": "2026-10-18T11:40:58.876128+00:00"
+  },
+  {
+    "url": "https://cloud.google.com/free/docs/free-cloud-features",
+    "http_status": 200,
+    "sha256": "6d1e4bdb00e374cfed4dfe62b2308305f2cf9587c347a7d66522005da1dccfae",
+    "bytes": 182030,
+    "retrieved_at": "2026-10-18T11:41:00.019339+00:00"
+  },
+  {
+    "url": "https://docs.cloud.google.com/compute/docs/instances/time-synchronization/configure-ntp",
+    "http_status": 200,
+    "sha256": "2110e9758ea554a045e701f10f317e02f13bea4355d25d7225ebb32f92096714",
+    "bytes": 382122,
+    "retrieved_at": "2026-10-18T11:41:02.073204+00:00"
+  },
+  {
+    "url": "https://docs.cloud.google.com/compute/docs/instances/time-synchronization/configure-time-sync",
+    "http_status": 200,
+    "sha256": "fb8758fbf647cec8f3315984c0d1f15ae50e7b2f7bd9eb50ac668f4233e4f26d",
+    "bytes": 393538,
+    "retrieved_at": "2026-10-18T11:41:03.099826+00:00"
+  },
+  {
+    "url": "https://cloudpricingcalculator.appspot.com/static/data/pricelist.json",
+    "error_type": "HTTPError"
+  },
+  {
+    "url": "https://cloud.google.com/products/compute/pricing/general-purpose",
+    "sha256": "47561b253191eb63ba66667cb69d4fab484b6b413d9dc469c4a59a9405272f7f",
+    "bytes": 35838287,
+    "http_status": 200,
+    "extraction": "AF_initDataCallback JSON; explicit Seoul regional table, hourly on-demand default column; no page script execution"
+  }
+]

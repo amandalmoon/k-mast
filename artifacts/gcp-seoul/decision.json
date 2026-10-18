@@ -1,0 +1,34 @@
+{
+  "status": "GCP_HOST_NOT_JUSTIFIED",
+  "supporting_states": [
+    "GCP_CLOCK_VALIDATION_PENDING",
+    "GCP_SECURITY_REVIEW_PENDING"
+  ],
+  "design_only": true,
+  "spending_approved": false,
+  "resources_created": 0,
+  "gcp_authentication": 0,
+  "broker_authentication": 0,
+  "market_requests": 0,
+  "websocket_requests": 0,
+  "actual_clock_error_seconds": null,
+  "actual_latency_ms": null,
+  "actual_monthly_bill_usd": null,
+  "total_cost_of_ownership_usd": null,
+  "vm_boot_observed": false,
+  "protected_files": {
+    "src/kmast/data/https_bar_gate.py": "0976829749c5f8fde836b5bd36c47873c8318d7e0cc684c877d1297dfc1e1a0b",
+    "src/kmast/data/https_bar_collector.py": "c12c14c4215cfc6d7e20e74b47762c2b53cf54f87c46d20d000ce062b70b73eb",
+    "src/kmast/data/https_bar_store.py": "8957d73cf906995b3ab2e5f1818a941beba2e94f7dafb67d00595ed3014de647",
+    "src/kmast/data/https_bar_quality.py": "183741af00fd48f3d5834ebec0ab618c275b305868fa1c3afd8d36b48be3508e",
+    "scripts/collect_df017.py": "671ebe0e0ccb7fa2a4265f4ac35c3a88a2745a2040a93945b30612737c0e0a4f",
+    "artifacts/df016/PILOT_PROPOSAL.json": "f1e5a852caebcb383fc947e75136a2ae3f88b87bc91f2d728310e4a301304d0b"
+  },
+  "retained_statuses": [
+    "DF017R1_PREFLIGHT_INCOMPLETE",
+    "RVOL_NOT_READY",
+    "ECONOMIC_EDGE_UNVERIFIED",
+    "LIVE_NOT_APPROVED",
+    "B_ORB_STREAM_TRANSPORT_BLOCKED"
+  ]
+}

@@ -48,6 +48,8 @@ jobs:
       - run: python scripts/check_df017_evidence.py
       - run: python scripts/check_df017r1_evidence.py
       - run: python scripts/check_df017r2_evidence.py
+      - run: python scripts/report_gcp_seoul.py --check
+      - run: python scripts/check_gcp_seoul_evidence.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
