@@ -1,0 +1,15 @@
+# DF014 closure — approval pending
+
+**DF014_PILOT_PENDING_APPROVAL / ECONOMIC_EDGE_UNVERIFIED / LIVE_NOT_APPROVED**
+
+Stage 0 and the authorized offline implementation/verification are complete. The protocol was pushed separately at `d76a35ae5e43458412e8e57500ce1b5b63cfc3ce`, against baseline `d36f4c40706521686ddd486928c20640a61e7208`. It hash-references the unchanged DF013 proposal and freezes 073240/KOSPI, 462860/KOSDAQ, H0STCNT0/H0STASP0, 2026-10-19 08:50–09:25 KST and all original caps.
+
+The independent default-off PAPER collector, immutable persistent attempt budgets, acknowledgement/connection state, bounded receive queue, segmented FrameArchive, total-storage guards, timing/validation lineage, hash-only sensitive errors and safe teardown/restart checks are implemented. Actual authentication, connections, subscriptions, quotation frames, accounts, orders, cancellations and LIVE authentication are all zero. No execution was scheduled.
+
+The official PAPER WebSocket endpoint is confirmed as `ws://ops.koreainvestment.com:31000`; this is unencrypted and its approval-key transmission protection is unresolved. Current key entitlement, four subscriptions, preopen service availability, fee/terms scope, current instrument state and exact-day regular session are also not certified. DF013's proposal and old daily-price approvals are not streaming approval. Both a new exact human record and independent preflight/security evidence are required before authentication. If they remain absent, stay pending; do not connect or auto-reschedule.
+
+For both stocks, actual 5/15-minute range, eligible VWAP and subsequent-quote readiness are NULL; RVOL is not ready. The answer to whether actual PAPER data meets causal ORB research needs is **not yet measured**. No economic test or twenty-session expansion is performed. The synthetic unique-frame disk test improved from 21.55 to 77.68 frames/second with byte-identical preserved archives; this is engineering evidence, not actual feed throughput or real data quality.
+
+`artifacts/df014/checks.json` records full pytest, the unchanged 573-test regression, Ruff/format, strict mypy, sdist/wheel, OMS/Alpha/joint replay and read-only V2/V3/DF003–013 accounting checks, plus DF014 scope/storage/zero-auth/secret/preservation evidence. Original specifications and all previous results remain protected; detailed source bytes and synthetic/actual stores are Git-excluded. Public CI and local private-data audits are distinct. Exact final-SHA Python 3.11/3.12 CI is verified after normal commit/push, with proof retained privately to avoid a self-referential hash.
+
+Local evidence: **608 tests** (573 preserved + 35 new synthetic safety cases), **30 passing verification commands**, strict mypy over **90 source files**, and **13,685 pre-existing private files** byte-preserved. Secret matches are zero. Only the verification runner and CI are changed among baseline tracked files. A final source snapshot is retained privately; runtime refuses optimized Python modes that would disable assertions in the frozen archive audit.
