@@ -27,6 +27,7 @@ from kmast.data.paper_pilot import (
     authorize,
     window,
 )
+from kmast.data.paper_security import require_secure_transport
 from kmast.data.store import canonical, digest
 
 
@@ -56,6 +57,8 @@ def install_control_meter(protocol: Any, budget: Budget, now: Callable[[], datet
 
 
 def connect_paper(budget: Budget, now: Callable[[], datetime]) -> Any:
+    # DF015: deny even direct calls before constructing a library/socket object.
+    require_secure_transport(ENDPOINT, "PAPER", now())
     from websockets.sync.client import ClientConnection, connect
 
     class MeteredConnection(ClientConnection):
@@ -139,6 +142,9 @@ class PaperCollector:
     def guard(self) -> None:
         if self.config.endpoint != AUTH_URL.removesuffix("/oauth2/Approval"):
             raise PermissionError("EXACT_PAPER_AUTH_HOST_REQUIRED")
+        # Validate the actual fixed route before auth reservations and key access.
+        # Legacy DF014 paperwork below only checks scope and file integrity.
+        require_secure_transport(ENDPOINT, self.config.environment.value, self.now())
         authorize(
             self.approval,
             self.preflight,

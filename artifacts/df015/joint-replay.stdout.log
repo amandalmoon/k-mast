@@ -1,0 +1,15 @@
+{
+  "scope": "SYNTHETIC_ONLY_CONSERVATION_NOT_ALPHA",
+  "account_state_hash": "414cc83a353e2addc46670db20a1a79dc78ea3995d8f256876f2ab28d6ae68e5",
+  "account_nav": "10014.65",
+  "project_net_pnl": "4.65",
+  "account_net_pnl": "14.65",
+  "weighted_reference_net": "4.452",
+  "difference_due_to_integer_shared_account": "0.198",
+  "unknown_reserve_preserved": "164.96",
+  "daily_rows": 7,
+  "cash_baseline_net": "-15",
+  "actual_broker_orders": 0,
+  "economic_status": "ECONOMIC_EDGE_UNVERIFIED",
+  "live_status": "LIVE_NOT_APPROVED"
+}

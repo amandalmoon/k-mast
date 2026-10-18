@@ -146,6 +146,8 @@ def test_disabled_collector_never_constructs_auth_or_socket(tmp_path, monkeypatc
 
 
 def test_failed_auth_is_hash_only_and_never_refunded(tmp_path, monkeypatch):
+    # Historical isolated HTTP-response test; DF015 production interlock stays closed.
+    monkeypatch.setattr("kmast.data.paper_collector.require_secure_transport", lambda *a: None)
     c = collector(tmp_path, enabled=True)
     secret = c.config.app_key.get_secret_value()
     raw = json.dumps(dict(msg_cd="DENIED", echo=secret)).encode()
@@ -207,7 +209,9 @@ def test_library_control_frames_are_counted_before_send(tmp_path, monkeypatch):
     assert len(emitted) == 2 and Budget(tmp_path).used["CONTROL"] == 2
 
 
-def test_subscription_scope_and_caps_do_not_log_key(tmp_path):
+def test_subscription_scope_and_caps_do_not_log_key(tmp_path, monkeypatch):
+    # Only a synthetic socket is passed below; exercise the frozen budget layer.
+    monkeypatch.setattr("kmast.data.paper_collector.require_secure_transport", lambda *a: None)
     c = collector(tmp_path, enabled=True)
     c.token = "SYNTHETIC-SECRET-APPROVAL"
     socket = SimpleNamespace(send=lambda value: None)
@@ -221,6 +225,7 @@ def test_subscription_scope_and_caps_do_not_log_key(tmp_path):
 
 
 def test_two_failed_connections_use_one_auth_and_never_live(tmp_path, monkeypatch):
+    monkeypatch.setattr("kmast.data.paper_collector.require_secure_transport", lambda *a: None)
     import kmast.data.paper_collector as module
 
     c = collector(tmp_path, enabled=True)
@@ -319,6 +324,7 @@ def test_synthetic_storage_benchmark_is_not_market_rate(tmp_path):
 
 
 def test_successful_approval_is_memory_only(tmp_path, monkeypatch):
+    monkeypatch.setattr("kmast.data.paper_collector.require_secure_transport", lambda *a: None)
     c = collector(tmp_path, enabled=True)
     token = "SYNTHETIC-SUCCESS-APPROVAL-KEY"
 

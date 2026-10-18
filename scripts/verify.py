@@ -36,6 +36,7 @@ def main() -> None:
             "df012",
             "df013",
             "df014",
+            "df015",
         ),
         default="km000",
     )
@@ -572,6 +573,42 @@ def main() -> None:
         checks["df014-report"] = ["-m", "scripts.report_df014"]
         checks["df014-preservation"] = ["-m", "scripts.audit_df014"]
         checks["df014-independent"] = ["scripts/check_df014_evidence.py", "--private"]
+    if args.milestone == "df015":
+        checks["regression608"] = ["-m", "pytest", "-q", "--ignore=tests/test_df015.py"]
+        for label, module, checker in (
+            ("oms", "kmast.execution.demo", "scripts/check_km002_evidence.py"),
+            ("alpha", "kmast.simulation.cli", "scripts/check_km003_evidence.py"),
+            ("joint", "kmast.portfolio.demo", None),
+        ):
+            output = "artifacts/df015/" + label + "-replay"
+            checks[label + "-replay"] = ["-m", module, "--output", output]
+            if checker:
+                checks[label + "-independent"] = [checker, output]
+        checks["v2-independent"] = ["scripts/check_data_first_evidence.py", "--private"]
+        checks["v3-independent"] = ["scripts/check_df002_evidence.py", "--private"]
+        for prior in (
+            "df003",
+            "df004",
+            "df005",
+            "df006",
+            "df007",
+            "df008",
+            "df009",
+            "df009r1",
+            "df010",
+            "df011",
+            "df012",
+            "df013",
+            "df014",
+        ):
+            checks[prior + "-independent"] = [
+                "scripts/check_" + prior + "_evidence.py",
+                "--private",
+            ]
+        checks["df015-offline-stress"] = ["-m", "scripts.stress_df015"]
+        checks["df015-cached-report"] = ["-m", "scripts.report_df015"]
+        checks["df015-preservation"] = ["-m", "scripts.audit_df015"]
+        checks["df015-independent"] = ["scripts/check_df015_evidence.py", "--private"]
     results = []
     for name, args in checks.items():
         result = subprocess.run([sys.executable, *args], cwd=ROOT, capture_output=True)
@@ -591,6 +628,7 @@ def main() -> None:
                 "df012",
                 "df013",
                 "df014",
+                "df015",
             }:
                 private_logs = (
                     ROOT / "data/data-first-private-market-v1" / (evidence.name + "-check-logs")
@@ -617,6 +655,8 @@ def main() -> None:
                     private_logs = ROOT / "data/data-first-private-df013-check-logs"
                 if evidence.name == "df014":
                     private_logs = ROOT / "data/data-first-private-df014-check-logs"
+                if evidence.name == "df015":
+                    private_logs = ROOT / "data/data-first-private-df015-check-logs"
                 private_logs.mkdir(parents=True, exist_ok=True)
                 (private_logs / f"{name}.{stream}.log").write_bytes(payload)
                 payload = (

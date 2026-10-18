@@ -6,7 +6,8 @@ from pathlib import Path
 
 from kmast.data.panel_acquisition import atomic_json, process_lock
 from kmast.data.paper_collector import PaperCollector
-from kmast.data.paper_pilot import authorize
+from kmast.data.paper_pilot import ENDPOINT, authorize
+from kmast.data.paper_security import require_secure_transport
 from kmast.data.store import digest
 from scripts.read_kis_env import load_env
 
@@ -33,6 +34,8 @@ def main():
     try:
         from datetime import UTC, datetime
 
+        # DF015: no approval JSON can open an unprotected route. Before file/key I/O.
+        require_secure_transport(ENDPOINT, "PAPER", datetime.now(UTC))
         approval = json.loads(args.approval_record.read_bytes())
         preflight = json.loads(args.preflight_record.read_bytes())
         protocol_hash = digest(Path("artifacts/df014/DF014_PROTOCOL.json").read_bytes())
