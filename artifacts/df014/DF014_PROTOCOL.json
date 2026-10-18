@@ -1,0 +1,81 @@
+{
+  "milestone": "DF014",
+  "baseline_sha": "d36f4c40706521686ddd486928c20640a61e7208",
+  "parent_proposal_sha256": "9918a98f0779d65ac5ff7053986d0b48fe0a6b496c897af12ddefdc4531f5764",
+  "targets": [
+    {
+      "market": "KOSPI",
+      "symbol": "073240"
+    },
+    {
+      "market": "KOSDAQ",
+      "symbol": "462860"
+    }
+  ],
+  "channels": [
+    "H0STCNT0",
+    "H0STASP0"
+  ],
+  "day": "2026-10-19",
+  "timezone": "Asia/Seoul",
+  "start": "08:50:00",
+  "end": "09:25:00",
+  "environment": "PAPER",
+  "approval_url": "https://openapivts.koreainvestment.com:29443/oauth2/Approval",
+  "websocket": "ws://ops.koreainvestment.com:31000",
+  "caps": {
+    "auth_max": 1,
+    "connection_max": 2,
+    "reconnect_max": 1,
+    "subscription_messages_max": 8,
+    "unsubscribe_messages_max": 4,
+    "heartbeat_control_messages_max": 2400,
+    "total_outgoing_messages_max": 2412,
+    "raw_bytes_cap": 1073741824,
+    "total_store_bytes_cap": 3221225472
+  },
+  "execution_authorized": false,
+  "permission": "New human approval must enumerate exact targets/channels/day/window/PAPER/budgets and prohibit accounts/orders; CLI flag or old approvals never suffice",
+  "preflight": "Current security/market, exchange session, PAPER service and four-slot entitlement, subscription hours/terms/fees, endpoint and transport protection require hashed evidence; unknown blocks before auth",
+  "transport": "Official ws endpoint is unencrypted; no speculative wss/host fallback; protected transport evidence required, never a boolean risk waiver",
+  "time_policy": "Record UTC receive immediately, monotonic ns, post-parse validated availability, and finalized/quote times separately; unverified local clock prohibits network-latency claims",
+  "quality": {
+    "source_receipt_gap_seconds": [
+      0,
+      2
+    ],
+    "inactivity_hold_seconds": 5,
+    "quote_age_max_seconds": 1,
+    "range_boundary_guard_seconds": 2,
+    "first_regular_observation_exact_open_required": true,
+    "auction_excluded": true,
+    "unknown_state_blocks": true,
+    "correction_lineage_unknown_blocks": true,
+    "quote_date_requires_independent_calendar": true,
+    "rvol": "RVOL_NOT_READY"
+  },
+  "ranges": {
+    "5": [
+      "09:00:00",
+      "09:05:00"
+    ],
+    "15": [
+      "09:00:00",
+      "09:15:00"
+    ]
+  },
+  "storage": "Git-excluded data/data-first-private-df014-pilot; immutable raw/receipt lineage, segmented FrameArchive, total-file peak guard and persistent budgets",
+  "failure_policy": "Failed attempts charged before I/O; process lock; no token persistence/re-auth after restart; reconnect taints window; bounded queue overflow/unknown integrity/storage/window end stops; no reschedule",
+  "observed_metrics": "NULL until actual authorized collection; synthetic throughput reported separately",
+  "prohibited": [
+    "LIVE",
+    "accounts",
+    "orders",
+    "cancel orders",
+    "account notice channels",
+    "symbol/time/budget expansion",
+    "auto scheduling",
+    "old result changes",
+    "economic PnL trial"
+  ]
+}
