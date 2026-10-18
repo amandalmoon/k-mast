@@ -1,0 +1,1 @@
+{"actual_authentication_records":0,"baseline_sha":"892e7565f2000e98e9bb301833b7fbd4b6e5266d","files_scanned":433,"old_protocols_results_unchanged":true,"permitted_existing_changes":[".github/workflows/ci.yml","scripts/verify.py"],"protected_bytes_unchanged":true,"protected_private_files":22193,"protected_tracked_files":2591,"raw_private_data_git_excluded":true,"secret_matches":0}
