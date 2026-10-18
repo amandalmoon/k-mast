@@ -1,0 +1,20 @@
+{
+  "milestone": "DF016",
+  "baseline_sha": "cd39690d1fde4cc714b40494049d5b27bf5a3317",
+  "baseline_tests": 637,
+  "contract": "B_BAR_ORB_V1_SEPARATE_FROM_B_TICK_ORB",
+  "scope": "Public official HTTPS documentation and isolated offline parser; no authenticated KIS calls",
+  "sources": ["KIS official API reference and field definitions", "Pinned official open-trading-api samples", "Actual PAPER responses only after new exact human approval"],
+  "tr_ids": ["FHKST03010200", "FHPST01060000", "FHKST01010200"],
+  "causality": ["Exchange session open independently verified", "Provider bar label semantics verified before deriving end", "Completed half-open minute interval only", "HTTP request, response completion, validation completion and signal availability separate", "Signal availability no earlier than validation completion of every input", "Later quote request starts strictly after signal availability", "Snapshot is not fill or simultaneous trade evidence"],
+  "blockers": ["Incomplete or future bars", "Unknown timestamp start/end semantics", "Pre-first-trade or zero-volume ghost bars", "Missing/duplicate/corrected minute rows", "Unknown session/calendar/VI/halt/venue", "Unknown correction coverage", "Stale or future snapshots", "Missing independently acquired 20-session RVOL baseline"],
+  "research": "ORB5/15 range diagnostics and later closed-bar breakout candidate only; no tick-path, execution, profit, or full-market claims",
+  "rvol": "20 prior completed independently qualified same-clock sessions; unavailable history stays NULL and RVOL_NOT_READY",
+  "pilot_proposal": {"date": "2026-10-20", "timezone": "Asia/Seoul", "start": "08:55:00", "end_exclusive": "09:22:00", "symbols": ["073240", "462860"], "environment": "PAPER", "auth_token_max": 1, "websocket_approval_max": 0, "logical_price_queries_max": 22, "total_requests_including_failures_max": 45, "attempts_per_price_query_max": 2, "response_complete_wait_seconds_min": 3.10, "raw_bytes_cap": 134217728, "total_bytes_cap": 268435456, "execution_approved": false, "retention": "Private Git-excluded raw/normalized records only, max 30 days for proposed pilot, rights confirmation required before collection"},
+  "pilot_selection": "Exact HTTPS paths, query times, documented PAPER support and venue parameters will be frozen in a separate pilot proposal after official review, before human approval. Unsupported PAPER methods must be excluded; no LIVE fallback.",
+  "preservation": "All DF001-015 strategy/data/accounting/security results and source bytes retained; existing verify.py and CI integration only",
+  "validation": ["637 original tests retained", "Independent bar causal/security tests", "pytest/Ruff/format/strict mypy/build", "OMS/Alpha/joint replay", "V2/V3 and DF003-015 independent checks", "Private data and secret audit", "Exact final SHA Python 3.11/3.12 CI"],
+  "forbidden": ["WebSocket", "WebSocket approval key", "Authenticated KIS calls without exact fresh human approval", "Accounts", "Orders", "LIVE", "Deployment", "Automatic rescheduling", "Economic-edge promotion"],
+  "economics": "ECONOMIC_EDGE_UNVERIFIED",
+  "live": "LIVE_NOT_APPROVED"
+}
