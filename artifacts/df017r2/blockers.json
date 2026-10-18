@@ -1,0 +1,68 @@
+{
+  "baseline_sha": "2421129aae6157eaadac13bc0093348a1b3892f2",
+  "df017_sha": "9bff5ddef584cb1ad85b86b45e133d2b6376aee7",
+  "clock_status": "CLOCK_HOLD",
+  "provider_status": "PROVIDER_RIGHTS_PENDING",
+  "approval_status": "COLLECTION_APPROVAL_PENDING",
+  "collection_window_status": "NOT_YET_MISSED_AS_OF_2026_10_18",
+  "clock_synchronized_and_measured": false,
+  "clock_error_bound_seconds": null,
+  "measured_ntp_offsets_seconds": [
+    -0.3212511,
+    -0.322461,
+    -0.3205595,
+    -0.3199628,
+    -0.333709,
+    -0.3204636
+  ],
+  "source_metrics": null,
+  "orb_metrics": null,
+  "quote_metrics": null,
+  "provider_reply": null,
+  "inquiry_sent": false,
+  "registry_entries": 0,
+  "execution_counts": {
+    "rest_authentication": 0,
+    "market": 0,
+    "websocket": 0,
+    "accounts": 0,
+    "orders": 0,
+    "cancels": 0,
+    "live": 0,
+    "system_setting_changes": 0,
+    "resync_attempts": 0
+  },
+  "proposal_sha256": "f1e5a852caebcb383fc947e75136a2ae3f88b87bc91f2d728310e4a301304d0b",
+  "capability_proposal_sha256": "57214a7dcd4701ae3004ec99effdbfc15c063d3f465c36eba0da200810c25439",
+  "protected_files": {
+    "src/kmast/data/https_bar_gate.py": "0976829749c5f8fde836b5bd36c47873c8318d7e0cc684c877d1297dfc1e1a0b",
+    "src/kmast/data/https_bar_collector.py": "c12c14c4215cfc6d7e20e74b47762c2b53cf54f87c46d20d000ce062b70b73eb",
+    "src/kmast/data/https_bar_store.py": "8957d73cf906995b3ab2e5f1818a941beba2e94f7dafb67d00595ed3014de647",
+    "src/kmast/data/https_bar_quality.py": "183741af00fd48f3d5834ebec0ab618c275b305868fa1c3afd8d36b48be3508e",
+    "scripts/collect_df017.py": "671ebe0e0ccb7fa2a4265f4ac35c3a88a2745a2040a93945b30612737c0e0a4f",
+    "artifacts/df016/PILOT_PROPOSAL.json": "f1e5a852caebcb383fc947e75136a2ae3f88b87bc91f2d728310e4a301304d0b"
+  },
+  "retained_statuses": [
+    "RVOL_NOT_READY",
+    "ECONOMIC_EDGE_UNVERIFIED",
+    "LIVE_NOT_APPROVED",
+    "B_ORB_STREAM_TRANSPORT_BLOCKED"
+  ],
+  "external_ntp_commands": 2,
+  "external_ntp_requested_samples": 12,
+  "eligibility": {
+    "new_human_broker_approval": "ABSENT",
+    "official_account_service": "UNKNOWN",
+    "official_research_storage_rights": "UNKNOWN",
+    "exact_22_query_contract": "PRESERVED",
+    "dated_krx_calendar": "UNKNOWN",
+    "security_073240": "UNKNOWN",
+    "security_462860": "UNKNOWN",
+    "pc_clock_error": "CLOCK_HOLD",
+    "static_https_policy": "PRESERVED",
+    "runtime_tls_peer": "UNKNOWN",
+    "intraday_market_state": "UNKNOWN",
+    "bar_corrections": "UNKNOWN",
+    "independent_execution_review": "NOT_STARTED"
+  }
+}

@@ -1,0 +1,782 @@
+* Getting build dependencies for sdist...
+running egg_info
+writing src\kmast.egg-info\PKG-INFO
+writing dependency_links to src\kmast.egg-info\dependency_links.txt
+writing entry points to src\kmast.egg-info\entry_points.txt
+writing requirements to src\kmast.egg-info\requires.txt
+writing top-level names to src\kmast.egg-info\top_level.txt
+reading manifest file 'src\kmast.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'src\kmast.egg-info\SOURCES.txt'
+* Building sdist...
+running sdist
+running egg_info
+writing src\kmast.egg-info\PKG-INFO
+writing dependency_links to src\kmast.egg-info\dependency_links.txt
+writing entry points to src\kmast.egg-info\entry_points.txt
+writing requirements to src\kmast.egg-info\requires.txt
+writing top-level names to src\kmast.egg-info\top_level.txt
+reading manifest file 'src\kmast.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'src\kmast.egg-info\SOURCES.txt'
+running check
+creating kmast-1.2.0
+creating kmast-1.2.0\configs
+creating kmast-1.2.0\docs\implementation
+creating kmast-1.2.0\scripts
+creating kmast-1.2.0\src\kmast
+creating kmast-1.2.0\src\kmast.egg-info
+creating kmast-1.2.0\src\kmast\alpha
+creating kmast-1.2.0\src\kmast\brokers
+creating kmast-1.2.0\src\kmast\brokers\kis
+creating kmast-1.2.0\src\kmast\core
+creating kmast-1.2.0\src\kmast\data
+creating kmast-1.2.0\src\kmast\data\fixtures
+creating kmast-1.2.0\src\kmast\execution
+creating kmast-1.2.0\src\kmast\portfolio
+creating kmast-1.2.0\src\kmast\research
+creating kmast-1.2.0\src\kmast\simulation
+creating kmast-1.2.0\src\kmast\strategies
+creating kmast-1.2.0\tests
+copying files to kmast-1.2.0...
+copying .env.example -> kmast-1.2.0
+copying AGENTS.md -> kmast-1.2.0
+copying MANIFEST.in -> kmast-1.2.0
+copying README.md -> kmast-1.2.0
+copying pyproject.toml -> kmast-1.2.0
+copying requirements-dev.lock -> kmast-1.2.0
+copying configs\live.yaml -> kmast-1.2.0\configs
+copying configs\paper.yaml -> kmast-1.2.0\configs
+copying configs\research.yaml -> kmast-1.2.0\configs
+copying configs\shadow.yaml -> kmast-1.2.0\configs
+copying configs\study.yaml -> kmast-1.2.0\configs
+copying docs\implementation\API_ASSUMPTIONS.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\CONTRACT_STATUS.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DATA_AVAILABILITY_MATRIX.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DATA_FIRST_EXPLORATORY_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF002_ALPHA_PROFIT_ATTRIBUTION.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF002_CAUSAL_AUDIT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF002_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF003_ALPHA_ABLATION_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF003_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF003_EXECUTION_ROBUSTNESS.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF003_PROTOCOL.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF004_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF004_DATA_COLLECTION_AND_TIME_ALIGNMENT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF004_EWY_SIGNAL_EVALUATION.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF004_PROTOCOL.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF005_ALPHA_VALIDATION.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF005_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF005_DATA_PANEL_AND_LINEAGE.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF005_INTRADAY_EXECUTION_FOLLOWUP.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF005_PROTOCOL.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF006_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF006_EVENT_DATA_AND_PIT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF006_EVENT_ECONOMIC_EVALUATION.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF006_PROTOCOL.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF007_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF007_DATA_EXPANSION_FEASIBILITY.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF007_EVENT_UNIVERSE_CENSUS.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF007_PROTOCOL.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF007_RISK_CAP_AUDIT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF008_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF008_DOCUMENT_QUALIFICATION.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF008_HISTORICAL_IDENTITY_AUDIT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF008_PRICE_PILOT_PLAN.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF008_PROTOCOL.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF009_ACCESS_CONFIRMED_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF009_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF009_HISTORICAL_IDENTITY_RESULTS.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF009_KRX_SOURCE_ASSESSMENT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF009_NEXT_DATA_DECISION.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF009_PROTOCOL.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF010_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF010_D1_CAUSAL_REPLAY.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF010_EVENT_SESSION_QUALIFICATION.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF010_KIS_PRICE_COLLECTION.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF010_PROTOCOL.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF011_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF011_CORPORATE_ACTION_LINEAGE.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF011_ENTITLEMENT_ACCOUNTING.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF011_EVENT_CONTROL_DESIGN.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF011_PROTOCOL.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF011_SAMPLE_EXPANSION_PLAN.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF012_CAUSAL_REPLAY.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF012_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF012_ECONOMIC_SCALING_FEASIBILITY.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF012_EVENT_QUALIFICATION.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF012_PRICE_COLLECTION.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF012_PROTOCOL.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF013_B_ORB_DATA_CONTRACT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF013_B_ORB_SUPPLY_ASSESSMENT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF013_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF013_D1_COUNTERFACTUAL_READINESS.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF013_PROTOCOL.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF013_RESEARCH_DIRECTION_DECISION.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF014_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF014_NEXT_DATA_DECISION.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF014_OPENING_RANGE_QUALITY.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF014_PAPER_ACCESS_PREFLIGHT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF014_PROTOCOL.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF014_STREAM_COLLECTION_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF015_ALTERNATIVE_MARKET_DATA.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF015_B_ORB_NEXT_DECISION.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF015_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF015_KIS_TRANSPORT_SECURITY.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF015_PROTOCOL.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF015_RUNTIME_SECURITY_AUDIT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF016_API_FEASIBILITY.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF016_B_BAR_ORB_CONTRACT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF016_CAUSALITY_AUDIT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF016_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF016_PILOT_PROPOSAL.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF016_PROTOCOL.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF017R1_PREFLIGHT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF017R2_BLOCKER_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF017R2_CLOCK_PLAN.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF017R2_KIS_INQUIRY.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF017_BAR_SEMANTICS_AUDIT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF017_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF017_HTTPS_COLLECTION_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF017_NEXT_DATA_DECISION.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF017_ORB_OBSERVATION_QUALITY.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF017_PAPER_ACCESS_PREFLIGHT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\DF017_PROTOCOL.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\KIS_READONLY_CHECK.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\KM000_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\KM001_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\KM001_USAGE.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\KM002_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\KM002_USAGE.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\KM003_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\KM003_DATA_PLAN.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\KM003_USAGE.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\KM004_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\KM005R1_ACQUISITION_PLAN.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\KM005R1_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\KM005R1_DATA_RIGHTS_AND_SOURCE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\KM005_CLOSURE_REPORT.md -> kmast-1.2.0\docs\implementation
+copying docs\implementation\KM005_DATA_QUALIFICATION.md -> kmast-1.2.0\docs\implementation
+copying scripts\analyze_df002.py -> kmast-1.2.0\scripts
+copying scripts\analyze_df005.py -> kmast-1.2.0\scripts
+copying scripts\assess_df013_supply.py -> kmast-1.2.0\scripts
+copying scripts\assess_df016.py -> kmast-1.2.0\scripts
+copying scripts\audit_account_api.py -> kmast-1.2.0\scripts
+copying scripts\audit_data_first.py -> kmast-1.2.0\scripts
+copying scripts\audit_df002.py -> kmast-1.2.0\scripts
+copying scripts\audit_df003.py -> kmast-1.2.0\scripts
+copying scripts\audit_df004.py -> kmast-1.2.0\scripts
+copying scripts\audit_df005.py -> kmast-1.2.0\scripts
+copying scripts\audit_df006.py -> kmast-1.2.0\scripts
+copying scripts\audit_df007.py -> kmast-1.2.0\scripts
+copying scripts\audit_df008.py -> kmast-1.2.0\scripts
+copying scripts\audit_df009.py -> kmast-1.2.0\scripts
+copying scripts\audit_df009r1.py -> kmast-1.2.0\scripts
+copying scripts\audit_df010.py -> kmast-1.2.0\scripts
+copying scripts\audit_df011.py -> kmast-1.2.0\scripts
+copying scripts\audit_df012.py -> kmast-1.2.0\scripts
+copying scripts\audit_df013.py -> kmast-1.2.0\scripts
+copying scripts\audit_df014.py -> kmast-1.2.0\scripts
+copying scripts\audit_df015.py -> kmast-1.2.0\scripts
+copying scripts\audit_df016.py -> kmast-1.2.0\scripts
+copying scripts\audit_df017.py -> kmast-1.2.0\scripts
+copying scripts\audit_df017r1.py -> kmast-1.2.0\scripts
+copying scripts\audit_df017r2.py -> kmast-1.2.0\scripts
+copying scripts\audit_kis.py -> kmast-1.2.0\scripts
+copying scripts\audit_km001.py -> kmast-1.2.0\scripts
+copying scripts\audit_km002.py -> kmast-1.2.0\scripts
+copying scripts\audit_km003.py -> kmast-1.2.0\scripts
+copying scripts\audit_km003_sources.py -> kmast-1.2.0\scripts
+copying scripts\audit_km004.py -> kmast-1.2.0\scripts
+copying scripts\audit_km005.py -> kmast-1.2.0\scripts
+copying scripts\audit_km005r1.py -> kmast-1.2.0\scripts
+copying scripts\check_data_first_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_df002_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_df003_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_df004_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_df005_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_df006_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_df007_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_df008_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_df009_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_df009r1_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_df010_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_df011_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_df012_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_df013_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_df014_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_df015_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_df016_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_df017_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_df017r1_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_df017r2_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_km002_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_km003_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_km004_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_km005_evidence.py -> kmast-1.2.0\scripts
+copying scripts\check_remote_km005.py -> kmast-1.2.0\scripts
+copying scripts\collect_data_first.py -> kmast-1.2.0\scripts
+copying scripts\collect_df004_ewy.py -> kmast-1.2.0\scripts
+copying scripts\collect_df005.py -> kmast-1.2.0\scripts
+copying scripts\collect_df006.py -> kmast-1.2.0\scripts
+copying scripts\collect_df008.py -> kmast-1.2.0\scripts
+copying scripts\collect_df009.py -> kmast-1.2.0\scripts
+copying scripts\collect_df010.py -> kmast-1.2.0\scripts
+copying scripts\collect_df012.py -> kmast-1.2.0\scripts
+copying scripts\collect_df014.py -> kmast-1.2.0\scripts
+copying scripts\collect_df017.py -> kmast-1.2.0\scripts
+copying scripts\collect_km004.py -> kmast-1.2.0\scripts
+copying scripts\create_km001_fixture.py -> kmast-1.2.0\scripts
+copying scripts\derive_df003_benchmarks.py -> kmast-1.2.0\scripts
+copying scripts\diagnose_km004.py -> kmast-1.2.0\scripts
+copying scripts\evaluate_df006.py -> kmast-1.2.0\scripts
+copying scripts\evaluate_df008.py -> kmast-1.2.0\scripts
+copying scripts\evaluate_df009r1.py -> kmast-1.2.0\scripts
+copying scripts\evaluate_df010.py -> kmast-1.2.0\scripts
+copying scripts\evaluate_df011.py -> kmast-1.2.0\scripts
+copying scripts\evaluate_df012.py -> kmast-1.2.0\scripts
+copying scripts\evaluate_df013.py -> kmast-1.2.0\scripts
+copying scripts\finalize_df013.py -> kmast-1.2.0\scripts
+copying scripts\inspect_df008_identity.py -> kmast-1.2.0\scripts
+copying scripts\km003_baseline.py -> kmast-1.2.0\scripts
+copying scripts\km004_baseline.py -> kmast-1.2.0\scripts
+copying scripts\km005_preflight.py -> kmast-1.2.0\scripts
+copying scripts\km005r1_assess.py -> kmast-1.2.0\scripts
+copying scripts\km005r1_sources.py -> kmast-1.2.0\scripts
+copying scripts\plan_df009.py -> kmast-1.2.0\scripts
+copying scripts\preflight_df014.py -> kmast-1.2.0\scripts
+copying scripts\prepare_df008.py -> kmast-1.2.0\scripts
+copying scripts\prepare_df009.py -> kmast-1.2.0\scripts
+copying scripts\prepare_df010.py -> kmast-1.2.0\scripts
+copying scripts\prepare_df011.py -> kmast-1.2.0\scripts
+copying scripts\prepare_df012.py -> kmast-1.2.0\scripts
+copying scripts\read_kis_env.py -> kmast-1.2.0\scripts
+copying scripts\render_df002_tables.py -> kmast-1.2.0\scripts
+copying scripts\render_df003_tables.py -> kmast-1.2.0\scripts
+copying scripts\replay_df013.py -> kmast-1.2.0\scripts
+copying scripts\replay_df016.py -> kmast-1.2.0\scripts
+copying scripts\replay_df017.py -> kmast-1.2.0\scripts
+copying scripts\report_df004.py -> kmast-1.2.0\scripts
+copying scripts\report_df005.py -> kmast-1.2.0\scripts
+copying scripts\report_df014.py -> kmast-1.2.0\scripts
+copying scripts\report_df015.py -> kmast-1.2.0\scripts
+copying scripts\report_df017.py -> kmast-1.2.0\scripts
+copying scripts\resume_df009.py -> kmast-1.2.0\scripts
+copying scripts\review_data_first_upstream.py -> kmast-1.2.0\scripts
+copying scripts\risk_diagnostic_km004.py -> kmast-1.2.0\scripts
+copying scripts\run_data_first_exploration.py -> kmast-1.2.0\scripts
+copying scripts\run_df002.py -> kmast-1.2.0\scripts
+copying scripts\run_df003.py -> kmast-1.2.0\scripts
+copying scripts\run_df004.py -> kmast-1.2.0\scripts
+copying scripts\run_df005.py -> kmast-1.2.0\scripts
+copying scripts\run_df007.py -> kmast-1.2.0\scripts
+copying scripts\run_df009.py -> kmast-1.2.0\scripts
+copying scripts\scale_df012.py -> kmast-1.2.0\scripts
+copying scripts\setup_kis_readonly.py -> kmast-1.2.0\scripts
+copying scripts\stress_df015.py -> kmast-1.2.0\scripts
+copying scripts\verify.py -> kmast-1.2.0\scripts
+copying scripts\wheel_smoke.py -> kmast-1.2.0\scripts
+copying scripts\wheel_smoke_km002.py -> kmast-1.2.0\scripts
+copying scripts\wheel_smoke_km003.py -> kmast-1.2.0\scripts
+copying scripts\wheel_smoke_km004.py -> kmast-1.2.0\scripts
+copying src\kmast\__init__.py -> kmast-1.2.0\src\kmast
+copying src\kmast\demo.py -> kmast-1.2.0\src\kmast
+copying src\kmast.egg-info\PKG-INFO -> kmast-1.2.0\src\kmast.egg-info
+copying src\kmast.egg-info\SOURCES.txt -> kmast-1.2.0\src\kmast.egg-info
+copying src\kmast.egg-info\dependency_links.txt -> kmast-1.2.0\src\kmast.egg-info
+copying src\kmast.egg-info\entry_points.txt -> kmast-1.2.0\src\kmast.egg-info
+copying src\kmast.egg-info\requires.txt -> kmast-1.2.0\src\kmast.egg-info
+copying src\kmast.egg-info\top_level.txt -> kmast-1.2.0\src\kmast.egg-info
+copying src\kmast\alpha\__init__.py -> kmast-1.2.0\src\kmast\alpha
+copying src\kmast\alpha\fixtures.py -> kmast-1.2.0\src\kmast\alpha
+copying src\kmast\alpha\models.py -> kmast-1.2.0\src\kmast\alpha
+copying src\kmast\alpha\readiness.py -> kmast-1.2.0\src\kmast\alpha
+copying src\kmast\alpha\reference.py -> kmast-1.2.0\src\kmast\alpha
+copying src\kmast\alpha\rules.py -> kmast-1.2.0\src\kmast\alpha
+copying src\kmast\brokers\__init__.py -> kmast-1.2.0\src\kmast\brokers
+copying src\kmast\brokers\interfaces.py -> kmast-1.2.0\src\kmast\brokers
+copying src\kmast\brokers\kis\__init__.py -> kmast-1.2.0\src\kmast\brokers\kis
+copying src\kmast\brokers\kis\adapter.py -> kmast-1.2.0\src\kmast\brokers\kis
+copying src\kmast\brokers\kis\network.py -> kmast-1.2.0\src\kmast\brokers\kis
+copying src\kmast\brokers\kis\pagination.py -> kmast-1.2.0\src\kmast\brokers\kis
+copying src\kmast\brokers\kis\requests.py -> kmast-1.2.0\src\kmast\brokers\kis
+copying src\kmast\brokers\kis\stream.py -> kmast-1.2.0\src\kmast\brokers\kis
+copying src\kmast\brokers\kis\wire_contract.py -> kmast-1.2.0\src\kmast\brokers\kis
+copying src\kmast\brokers\kis\ws_columns.json -> kmast-1.2.0\src\kmast\brokers\kis
+copying src\kmast\core\__init__.py -> kmast-1.2.0\src\kmast\core
+copying src\kmast\core\base.py -> kmast-1.2.0\src\kmast\core
+copying src\kmast\core\clock.py -> kmast-1.2.0\src\kmast\core
+copying src\kmast\core\config.py -> kmast-1.2.0\src\kmast\core
+copying src\kmast\core\contracts.py -> kmast-1.2.0\src\kmast\core
+copying src\kmast\core\enums.py -> kmast-1.2.0\src\kmast\core
+copying src\kmast\core\events.py -> kmast-1.2.0\src\kmast\core
+copying src\kmast\core\study.py -> kmast-1.2.0\src\kmast\core
+copying src\kmast\data\__init__.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\bar_orb.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\cli.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\cross_source_identity.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\dart.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\document_acquisition.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\document_qualification.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\document_relations.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\five_event_acquisition.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\historical_security.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\historical_security_v2.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\https_bar_collector.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\https_bar_gate.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\https_bar_quality.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\https_bar_store.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\krx_acquisition.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\models.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\normalization.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\orb_observation.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\panel_acquisition.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\paper_collector.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\paper_pilot.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\paper_security.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\parsers.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\pilot_acquisition.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\pipeline.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\readiness.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\replay.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\research_spacing.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\sessions.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\store.py -> kmast-1.2.0\src\kmast\data
+copying src\kmast\data\fixtures\market.json -> kmast-1.2.0\src\kmast\data\fixtures
+copying src\kmast\execution\__init__.py -> kmast-1.2.0\src\kmast\execution
+copying src\kmast\execution\demo.py -> kmast-1.2.0\src\kmast\execution
+copying src\kmast\execution\engine.py -> kmast-1.2.0\src\kmast\execution
+copying src\kmast\execution\events.py -> kmast-1.2.0\src\kmast\execution
+copying src\kmast\execution\ledger.py -> kmast-1.2.0\src\kmast\execution
+copying src\kmast\execution\models.py -> kmast-1.2.0\src\kmast\execution
+copying src\kmast\execution\portfolio.py -> kmast-1.2.0\src\kmast\execution
+copying src\kmast\execution\readers.py -> kmast-1.2.0\src\kmast\execution
+copying src\kmast\execution\risk.py -> kmast-1.2.0\src\kmast\execution
+copying src\kmast\execution\store.py -> kmast-1.2.0\src\kmast\execution
+copying src\kmast\portfolio\__init__.py -> kmast-1.2.0\src\kmast\portfolio
+copying src\kmast\portfolio\allocation.py -> kmast-1.2.0\src\kmast\portfolio
+copying src\kmast\portfolio\data_gate.py -> kmast-1.2.0\src\kmast\portfolio
+copying src\kmast\portfolio\demo.py -> kmast-1.2.0\src\kmast\portfolio
+copying src\kmast\portfolio\rebalance.py -> kmast-1.2.0\src\kmast\portfolio
+copying src\kmast\research\__init__.py -> kmast-1.2.0\src\kmast\research
+copying src\kmast\research\attribution.py -> kmast-1.2.0\src\kmast\research
+copying src\kmast\research\cli.py -> kmast-1.2.0\src\kmast\research
+copying src\kmast\research\counterfactual_readiness.py -> kmast-1.2.0\src\kmast\research
+copying src\kmast\research\domestic_panel.py -> kmast-1.2.0\src\kmast\research
+copying src\kmast\research\economics.py -> kmast-1.2.0\src\kmast\research
+copying src\kmast\research\entitlements.py -> kmast-1.2.0\src\kmast\research
+copying src\kmast\research\event_census.py -> kmast-1.2.0\src\kmast\research
+copying src\kmast\research\event_controls.py -> kmast-1.2.0\src\kmast\research
+copying src\kmast\research\event_flow.py -> kmast-1.2.0\src\kmast\research
+copying src\kmast\research\event_replay.py -> kmast-1.2.0\src\kmast\research
+copying src\kmast\research\ewy.py -> kmast-1.2.0\src\kmast\research
+copying src\kmast\research\exploratory.py -> kmast-1.2.0\src\kmast\research
+copying src\kmast\research\holding_analysis.py -> kmast-1.2.0\src\kmast\research
+copying src\kmast\research\hypotheses.py -> kmast-1.2.0\src\kmast\research
+copying src\kmast\research\panel_attribution.py -> kmast-1.2.0\src\kmast\research
+copying src\kmast\research\publication.py -> kmast-1.2.0\src\kmast\research
+copying src\kmast\research\qualification.py -> kmast-1.2.0\src\kmast\research
+copying src\kmast\research\rights.py -> kmast-1.2.0\src\kmast\research
+copying src\kmast\research\validation.py -> kmast-1.2.0\src\kmast\research
+copying src\kmast\simulation\__init__.py -> kmast-1.2.0\src\kmast\simulation
+copying src\kmast\simulation\bridge.py -> kmast-1.2.0\src\kmast\simulation
+copying src\kmast\simulation\cli.py -> kmast-1.2.0\src\kmast\simulation
+copying src\kmast\strategies\__init__.py -> kmast-1.2.0\src\kmast\strategies
+copying src\kmast\strategies\interfaces.py -> kmast-1.2.0\src\kmast\strategies
+copying tests\__init__.py -> kmast-1.2.0\tests
+copying tests\conftest.py -> kmast-1.2.0\tests
+copying tests\km002_helpers.py -> kmast-1.2.0\tests
+copying tests\test_broker.py -> kmast-1.2.0\tests
+copying tests\test_contracts.py -> kmast-1.2.0\tests
+copying tests\test_data_first.py -> kmast-1.2.0\tests
+copying tests\test_df002.py -> kmast-1.2.0\tests
+copying tests\test_df003.py -> kmast-1.2.0\tests
+copying tests\test_df004.py -> kmast-1.2.0\tests
+copying tests\test_df005.py -> kmast-1.2.0\tests
+copying tests\test_df006.py -> kmast-1.2.0\tests
+copying tests\test_df007.py -> kmast-1.2.0\tests
+copying tests\test_df008.py -> kmast-1.2.0\tests
+copying tests\test_df009.py -> kmast-1.2.0\tests
+copying tests\test_df009_resume.py -> kmast-1.2.0\tests
+copying tests\test_df010.py -> kmast-1.2.0\tests
+copying tests\test_df011.py -> kmast-1.2.0\tests
+copying tests\test_df012.py -> kmast-1.2.0\tests
+copying tests\test_df013.py -> kmast-1.2.0\tests
+copying tests\test_df014.py -> kmast-1.2.0\tests
+copying tests\test_df015.py -> kmast-1.2.0\tests
+copying tests\test_df016.py -> kmast-1.2.0\tests
+copying tests\test_df017.py -> kmast-1.2.0\tests
+copying tests\test_kis_env.py -> kmast-1.2.0\tests
+copying tests\test_km001.py -> kmast-1.2.0\tests
+copying tests\test_km001_edges.py -> kmast-1.2.0\tests
+copying tests\test_km002.py -> kmast-1.2.0\tests
+copying tests\test_km002_edges.py -> kmast-1.2.0\tests
+copying tests\test_km003.py -> kmast-1.2.0\tests
+copying tests\test_km003_edges.py -> kmast-1.2.0\tests
+copying tests\test_km004.py -> kmast-1.2.0\tests
+copying tests\test_km004_edges.py -> kmast-1.2.0\tests
+copying tests\test_km005.py -> kmast-1.2.0\tests
+copying tests\test_km005r1.py -> kmast-1.2.0\tests
+copying tests\test_study.py -> kmast-1.2.0\tests
+copying src\kmast.egg-info\SOURCES.txt -> kmast-1.2.0\src\kmast.egg-info
+Writing kmast-1.2.0\setup.cfg
+Creating tar archive
+removing 'kmast-1.2.0' (and everything under it)
+* Building wheel from sdist
+* Getting build dependencies for wheel...
+running egg_info
+writing src\kmast.egg-info\PKG-INFO
+writing dependency_links to src\kmast.egg-info\dependency_links.txt
+writing entry points to src\kmast.egg-info\entry_points.txt
+writing requirements to src\kmast.egg-info\requires.txt
+writing top-level names to src\kmast.egg-info\top_level.txt
+reading manifest file 'src\kmast.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'src\kmast.egg-info\SOURCES.txt'
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build\lib\kmast
+copying src\kmast\demo.py -> build\lib\kmast
+copying src\kmast\__init__.py -> build\lib\kmast
+creating build\lib\kmast\alpha
+copying src\kmast\alpha\fixtures.py -> build\lib\kmast\alpha
+copying src\kmast\alpha\models.py -> build\lib\kmast\alpha
+copying src\kmast\alpha\readiness.py -> build\lib\kmast\alpha
+copying src\kmast\alpha\reference.py -> build\lib\kmast\alpha
+copying src\kmast\alpha\rules.py -> build\lib\kmast\alpha
+copying src\kmast\alpha\__init__.py -> build\lib\kmast\alpha
+creating build\lib\kmast\brokers
+copying src\kmast\brokers\interfaces.py -> build\lib\kmast\brokers
+copying src\kmast\brokers\__init__.py -> build\lib\kmast\brokers
+creating build\lib\kmast\core
+copying src\kmast\core\base.py -> build\lib\kmast\core
+copying src\kmast\core\clock.py -> build\lib\kmast\core
+copying src\kmast\core\config.py -> build\lib\kmast\core
+copying src\kmast\core\contracts.py -> build\lib\kmast\core
+copying src\kmast\core\enums.py -> build\lib\kmast\core
+copying src\kmast\core\events.py -> build\lib\kmast\core
+copying src\kmast\core\study.py -> build\lib\kmast\core
+copying src\kmast\core\__init__.py -> build\lib\kmast\core
+creating build\lib\kmast\data
+copying src\kmast\data\bar_orb.py -> build\lib\kmast\data
+copying src\kmast\data\cli.py -> build\lib\kmast\data
+copying src\kmast\data\cross_source_identity.py -> build\lib\kmast\data
+copying src\kmast\data\dart.py -> build\lib\kmast\data
+copying src\kmast\data\document_acquisition.py -> build\lib\kmast\data
+copying src\kmast\data\document_qualification.py -> build\lib\kmast\data
+copying src\kmast\data\document_relations.py -> build\lib\kmast\data
+copying src\kmast\data\five_event_acquisition.py -> build\lib\kmast\data
+copying src\kmast\data\historical_security.py -> build\lib\kmast\data
+copying src\kmast\data\historical_security_v2.py -> build\lib\kmast\data
+copying src\kmast\data\https_bar_collector.py -> build\lib\kmast\data
+copying src\kmast\data\https_bar_gate.py -> build\lib\kmast\data
+copying src\kmast\data\https_bar_quality.py -> build\lib\kmast\data
+copying src\kmast\data\https_bar_store.py -> build\lib\kmast\data
+copying src\kmast\data\krx_acquisition.py -> build\lib\kmast\data
+copying src\kmast\data\models.py -> build\lib\kmast\data
+copying src\kmast\data\normalization.py -> build\lib\kmast\data
+copying src\kmast\data\orb_observation.py -> build\lib\kmast\data
+copying src\kmast\data\panel_acquisition.py -> build\lib\kmast\data
+copying src\kmast\data\paper_collector.py -> build\lib\kmast\data
+copying src\kmast\data\paper_pilot.py -> build\lib\kmast\data
+copying src\kmast\data\paper_security.py -> build\lib\kmast\data
+copying src\kmast\data\parsers.py -> build\lib\kmast\data
+copying src\kmast\data\pilot_acquisition.py -> build\lib\kmast\data
+copying src\kmast\data\pipeline.py -> build\lib\kmast\data
+copying src\kmast\data\readiness.py -> build\lib\kmast\data
+copying src\kmast\data\replay.py -> build\lib\kmast\data
+copying src\kmast\data\research_spacing.py -> build\lib\kmast\data
+copying src\kmast\data\sessions.py -> build\lib\kmast\data
+copying src\kmast\data\store.py -> build\lib\kmast\data
+copying src\kmast\data\__init__.py -> build\lib\kmast\data
+creating build\lib\kmast\execution
+copying src\kmast\execution\demo.py -> build\lib\kmast\execution
+copying src\kmast\execution\engine.py -> build\lib\kmast\execution
+copying src\kmast\execution\events.py -> build\lib\kmast\execution
+copying src\kmast\execution\ledger.py -> build\lib\kmast\execution
+copying src\kmast\execution\models.py -> build\lib\kmast\execution
+copying src\kmast\execution\portfolio.py -> build\lib\kmast\execution
+copying src\kmast\execution\readers.py -> build\lib\kmast\execution
+copying src\kmast\execution\risk.py -> build\lib\kmast\execution
+copying src\kmast\execution\store.py -> build\lib\kmast\execution
+copying src\kmast\execution\__init__.py -> build\lib\kmast\execution
+creating build\lib\kmast\portfolio
+copying src\kmast\portfolio\allocation.py -> build\lib\kmast\portfolio
+copying src\kmast\portfolio\data_gate.py -> build\lib\kmast\portfolio
+copying src\kmast\portfolio\demo.py -> build\lib\kmast\portfolio
+copying src\kmast\portfolio\rebalance.py -> build\lib\kmast\portfolio
+copying src\kmast\portfolio\__init__.py -> build\lib\kmast\portfolio
+creating build\lib\kmast\research
+copying src\kmast\research\attribution.py -> build\lib\kmast\research
+copying src\kmast\research\cli.py -> build\lib\kmast\research
+copying src\kmast\research\counterfactual_readiness.py -> build\lib\kmast\research
+copying src\kmast\research\domestic_panel.py -> build\lib\kmast\research
+copying src\kmast\research\economics.py -> build\lib\kmast\research
+copying src\kmast\research\entitlements.py -> build\lib\kmast\research
+copying src\kmast\research\event_census.py -> build\lib\kmast\research
+copying src\kmast\research\event_controls.py -> build\lib\kmast\research
+copying src\kmast\research\event_flow.py -> build\lib\kmast\research
+copying src\kmast\research\event_replay.py -> build\lib\kmast\research
+copying src\kmast\research\ewy.py -> build\lib\kmast\research
+copying src\kmast\research\exploratory.py -> build\lib\kmast\research
+copying src\kmast\research\holding_analysis.py -> build\lib\kmast\research
+copying src\kmast\research\hypotheses.py -> build\lib\kmast\research
+copying src\kmast\research\panel_attribution.py -> build\lib\kmast\research
+copying src\kmast\research\publication.py -> build\lib\kmast\research
+copying src\kmast\research\qualification.py -> build\lib\kmast\research
+copying src\kmast\research\rights.py -> build\lib\kmast\research
+copying src\kmast\research\validation.py -> build\lib\kmast\research
+copying src\kmast\research\__init__.py -> build\lib\kmast\research
+creating build\lib\kmast\simulation
+copying src\kmast\simulation\bridge.py -> build\lib\kmast\simulation
+copying src\kmast\simulation\cli.py -> build\lib\kmast\simulation
+copying src\kmast\simulation\__init__.py -> build\lib\kmast\simulation
+creating build\lib\kmast\strategies
+copying src\kmast\strategies\interfaces.py -> build\lib\kmast\strategies
+copying src\kmast\strategies\__init__.py -> build\lib\kmast\strategies
+creating build\lib\kmast\brokers\kis
+copying src\kmast\brokers\kis\adapter.py -> build\lib\kmast\brokers\kis
+copying src\kmast\brokers\kis\network.py -> build\lib\kmast\brokers\kis
+copying src\kmast\brokers\kis\pagination.py -> build\lib\kmast\brokers\kis
+copying src\kmast\brokers\kis\requests.py -> build\lib\kmast\brokers\kis
+copying src\kmast\brokers\kis\stream.py -> build\lib\kmast\brokers\kis
+copying src\kmast\brokers\kis\wire_contract.py -> build\lib\kmast\brokers\kis
+copying src\kmast\brokers\kis\__init__.py -> build\lib\kmast\brokers\kis
+running egg_info
+writing src\kmast.egg-info\PKG-INFO
+writing dependency_links to src\kmast.egg-info\dependency_links.txt
+writing entry points to src\kmast.egg-info\entry_points.txt
+writing requirements to src\kmast.egg-info\requires.txt
+writing top-level names to src\kmast.egg-info\top_level.txt
+reading manifest file 'src\kmast.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'src\kmast.egg-info\SOURCES.txt'
+creating build\lib\kmast\data\fixtures
+copying src\kmast\data\fixtures\market.json -> build\lib\kmast\data\fixtures
+copying src\kmast\brokers\kis\ws_columns.json -> build\lib\kmast\brokers\kis
+installing to build\bdist.win-amd64\wheel
+running install
+running install_lib
+creating build\bdist.win-amd64\wheel
+creating build\bdist.win-amd64\wheel\kmast
+creating build\bdist.win-amd64\wheel\kmast\alpha
+copying build\lib\kmast\alpha\fixtures.py -> build\bdist.win-amd64\wheel\.\kmast\alpha
+copying build\lib\kmast\alpha\models.py -> build\bdist.win-amd64\wheel\.\kmast\alpha
+copying build\lib\kmast\alpha\readiness.py -> build\bdist.win-amd64\wheel\.\kmast\alpha
+copying build\lib\kmast\alpha\reference.py -> build\bdist.win-amd64\wheel\.\kmast\alpha
+copying build\lib\kmast\alpha\rules.py -> build\bdist.win-amd64\wheel\.\kmast\alpha
+copying build\lib\kmast\alpha\__init__.py -> build\bdist.win-amd64\wheel\.\kmast\alpha
+creating build\bdist.win-amd64\wheel\kmast\brokers
+copying build\lib\kmast\brokers\interfaces.py -> build\bdist.win-amd64\wheel\.\kmast\brokers
+creating build\bdist.win-amd64\wheel\kmast\brokers\kis
+copying build\lib\kmast\brokers\kis\adapter.py -> build\bdist.win-amd64\wheel\.\kmast\brokers\kis
+copying build\lib\kmast\brokers\kis\network.py -> build\bdist.win-amd64\wheel\.\kmast\brokers\kis
+copying build\lib\kmast\brokers\kis\pagination.py -> build\bdist.win-amd64\wheel\.\kmast\brokers\kis
+copying build\lib\kmast\brokers\kis\requests.py -> build\bdist.win-amd64\wheel\.\kmast\brokers\kis
+copying build\lib\kmast\brokers\kis\stream.py -> build\bdist.win-amd64\wheel\.\kmast\brokers\kis
+copying build\lib\kmast\brokers\kis\wire_contract.py -> build\bdist.win-amd64\wheel\.\kmast\brokers\kis
+copying build\lib\kmast\brokers\kis\ws_columns.json -> build\bdist.win-amd64\wheel\.\kmast\brokers\kis
+copying build\lib\kmast\brokers\kis\__init__.py -> build\bdist.win-amd64\wheel\.\kmast\brokers\kis
+copying build\lib\kmast\brokers\__init__.py -> build\bdist.win-amd64\wheel\.\kmast\brokers
+creating build\bdist.win-amd64\wheel\kmast\core
+copying build\lib\kmast\core\base.py -> build\bdist.win-amd64\wheel\.\kmast\core
+copying build\lib\kmast\core\clock.py -> build\bdist.win-amd64\wheel\.\kmast\core
+copying build\lib\kmast\core\config.py -> build\bdist.win-amd64\wheel\.\kmast\core
+copying build\lib\kmast\core\contracts.py -> build\bdist.win-amd64\wheel\.\kmast\core
+copying build\lib\kmast\core\enums.py -> build\bdist.win-amd64\wheel\.\kmast\core
+copying build\lib\kmast\core\events.py -> build\bdist.win-amd64\wheel\.\kmast\core
+copying build\lib\kmast\core\study.py -> build\bdist.win-amd64\wheel\.\kmast\core
+copying build\lib\kmast\core\__init__.py -> build\bdist.win-amd64\wheel\.\kmast\core
+creating build\bdist.win-amd64\wheel\kmast\data
+copying build\lib\kmast\data\bar_orb.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\cli.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\cross_source_identity.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\dart.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\document_acquisition.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\document_qualification.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\document_relations.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\five_event_acquisition.py -> build\bdist.win-amd64\wheel\.\kmast\data
+creating build\bdist.win-amd64\wheel\kmast\data\fixtures
+copying build\lib\kmast\data\fixtures\market.json -> build\bdist.win-amd64\wheel\.\kmast\data\fixtures
+copying build\lib\kmast\data\historical_security.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\historical_security_v2.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\https_bar_collector.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\https_bar_gate.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\https_bar_quality.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\https_bar_store.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\krx_acquisition.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\models.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\normalization.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\orb_observation.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\panel_acquisition.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\paper_collector.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\paper_pilot.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\paper_security.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\parsers.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\pilot_acquisition.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\pipeline.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\readiness.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\replay.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\research_spacing.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\sessions.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\store.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\data\__init__.py -> build\bdist.win-amd64\wheel\.\kmast\data
+copying build\lib\kmast\demo.py -> build\bdist.win-amd64\wheel\.\kmast
+creating build\bdist.win-amd64\wheel\kmast\execution
+copying build\lib\kmast\execution\demo.py -> build\bdist.win-amd64\wheel\.\kmast\execution
+copying build\lib\kmast\execution\engine.py -> build\bdist.win-amd64\wheel\.\kmast\execution
+copying build\lib\kmast\execution\events.py -> build\bdist.win-amd64\wheel\.\kmast\execution
+copying build\lib\kmast\execution\ledger.py -> build\bdist.win-amd64\wheel\.\kmast\execution
+copying build\lib\kmast\execution\models.py -> build\bdist.win-amd64\wheel\.\kmast\execution
+copying build\lib\kmast\execution\portfolio.py -> build\bdist.win-amd64\wheel\.\kmast\execution
+copying build\lib\kmast\execution\readers.py -> build\bdist.win-amd64\wheel\.\kmast\execution
+copying build\lib\kmast\execution\risk.py -> build\bdist.win-amd64\wheel\.\kmast\execution
+copying build\lib\kmast\execution\store.py -> build\bdist.win-amd64\wheel\.\kmast\execution
+copying build\lib\kmast\execution\__init__.py -> build\bdist.win-amd64\wheel\.\kmast\execution
+creating build\bdist.win-amd64\wheel\kmast\portfolio
+copying build\lib\kmast\portfolio\allocation.py -> build\bdist.win-amd64\wheel\.\kmast\portfolio
+copying build\lib\kmast\portfolio\data_gate.py -> build\bdist.win-amd64\wheel\.\kmast\portfolio
+copying build\lib\kmast\portfolio\demo.py -> build\bdist.win-amd64\wheel\.\kmast\portfolio
+copying build\lib\kmast\portfolio\rebalance.py -> build\bdist.win-amd64\wheel\.\kmast\portfolio
+copying build\lib\kmast\portfolio\__init__.py -> build\bdist.win-amd64\wheel\.\kmast\portfolio
+creating build\bdist.win-amd64\wheel\kmast\research
+copying build\lib\kmast\research\attribution.py -> build\bdist.win-amd64\wheel\.\kmast\research
+copying build\lib\kmast\research\cli.py -> build\bdist.win-amd64\wheel\.\kmast\research
+copying build\lib\kmast\research\counterfactual_readiness.py -> build\bdist.win-amd64\wheel\.\kmast\research
+copying build\lib\kmast\research\domestic_panel.py -> build\bdist.win-amd64\wheel\.\kmast\research
+copying build\lib\kmast\research\economics.py -> build\bdist.win-amd64\wheel\.\kmast\research
+copying build\lib\kmast\research\entitlements.py -> build\bdist.win-amd64\wheel\.\kmast\research
+copying build\lib\kmast\research\event_census.py -> build\bdist.win-amd64\wheel\.\kmast\research
+copying build\lib\kmast\research\event_controls.py -> build\bdist.win-amd64\wheel\.\kmast\research
+copying build\lib\kmast\research\event_flow.py -> build\bdist.win-amd64\wheel\.\kmast\research
+copying build\lib\kmast\research\event_replay.py -> build\bdist.win-amd64\wheel\.\kmast\research
+copying build\lib\kmast\research\ewy.py -> build\bdist.win-amd64\wheel\.\kmast\research
+copying build\lib\kmast\research\exploratory.py -> build\bdist.win-amd64\wheel\.\kmast\research
+copying build\lib\kmast\research\holding_analysis.py -> build\bdist.win-amd64\wheel\.\kmast\research
+copying build\lib\kmast\research\hypotheses.py -> build\bdist.win-amd64\wheel\.\kmast\research
+copying build\lib\kmast\research\panel_attribution.py -> build\bdist.win-amd64\wheel\.\kmast\research
+copying build\lib\kmast\research\publication.py -> build\bdist.win-amd64\wheel\.\kmast\research
+copying build\lib\kmast\research\qualification.py -> build\bdist.win-amd64\wheel\.\kmast\research
+copying build\lib\kmast\research\rights.py -> build\bdist.win-amd64\wheel\.\kmast\research
+copying build\lib\kmast\research\validation.py -> build\bdist.win-amd64\wheel\.\kmast\research
+copying build\lib\kmast\research\__init__.py -> build\bdist.win-amd64\wheel\.\kmast\research
+creating build\bdist.win-amd64\wheel\kmast\simulation
+copying build\lib\kmast\simulation\bridge.py -> build\bdist.win-amd64\wheel\.\kmast\simulation
+copying build\lib\kmast\simulation\cli.py -> build\bdist.win-amd64\wheel\.\kmast\simulation
+copying build\lib\kmast\simulation\__init__.py -> build\bdist.win-amd64\wheel\.\kmast\simulation
+creating build\bdist.win-amd64\wheel\kmast\strategies
+copying build\lib\kmast\strategies\interfaces.py -> build\bdist.win-amd64\wheel\.\kmast\strategies
+copying build\lib\kmast\strategies\__init__.py -> build\bdist.win-amd64\wheel\.\kmast\strategies
+copying build\lib\kmast\__init__.py -> build\bdist.win-amd64\wheel\.\kmast
+running install_egg_info
+Copying src\kmast.egg-info to build\bdist.win-amd64\wheel\.\kmast-1.2.0-py3.12.egg-info
+running install_scripts
+creating build\bdist.win-amd64\wheel\kmast-1.2.0.dist-info\WHEEL
+creating 'C:\Users\User\Desktop\k-mast\dist\.tmp-3npfqajb\kmast-1.2.0-py3-none-any.whl' and adding 'build\bdist.win-amd64\wheel' to it
+adding 'kmast/__init__.py'
+adding 'kmast/demo.py'
+adding 'kmast/alpha/__init__.py'
+adding 'kmast/alpha/fixtures.py'
+adding 'kmast/alpha/models.py'
+adding 'kmast/alpha/readiness.py'
+adding 'kmast/alpha/reference.py'
+adding 'kmast/alpha/rules.py'
+adding 'kmast/brokers/__init__.py'
+adding 'kmast/brokers/interfaces.py'
+adding 'kmast/brokers/kis/__init__.py'
+adding 'kmast/brokers/kis/adapter.py'
+adding 'kmast/brokers/kis/network.py'
+adding 'kmast/brokers/kis/pagination.py'
+adding 'kmast/brokers/kis/requests.py'
+adding 'kmast/brokers/kis/stream.py'
+adding 'kmast/brokers/kis/wire_contract.py'
+adding 'kmast/brokers/kis/ws_columns.json'
+adding 'kmast/core/__init__.py'
+adding 'kmast/core/base.py'
+adding 'kmast/core/clock.py'
+adding 'kmast/core/config.py'
+adding 'kmast/core/contracts.py'
+adding 'kmast/core/enums.py'
+adding 'kmast/core/events.py'
+adding 'kmast/core/study.py'
+adding 'kmast/data/__init__.py'
+adding 'kmast/data/bar_orb.py'
+adding 'kmast/data/cli.py'
+adding 'kmast/data/cross_source_identity.py'
+adding 'kmast/data/dart.py'
+adding 'kmast/data/document_acquisition.py'
+adding 'kmast/data/document_qualification.py'
+adding 'kmast/data/document_relations.py'
+adding 'kmast/data/five_event_acquisition.py'
+adding 'kmast/data/historical_security.py'
+adding 'kmast/data/historical_security_v2.py'
+adding 'kmast/data/https_bar_collector.py'
+adding 'kmast/data/https_bar_gate.py'
+adding 'kmast/data/https_bar_quality.py'
+adding 'kmast/data/https_bar_store.py'
+adding 'kmast/data/krx_acquisition.py'
+adding 'kmast/data/models.py'
+adding 'kmast/data/normalization.py'
+adding 'kmast/data/orb_observation.py'
+adding 'kmast/data/panel_acquisition.py'
+adding 'kmast/data/paper_collector.py'
+adding 'kmast/data/paper_pilot.py'
+adding 'kmast/data/paper_security.py'
+adding 'kmast/data/parsers.py'
+adding 'kmast/data/pilot_acquisition.py'
+adding 'kmast/data/pipeline.py'
+adding 'kmast/data/readiness.py'
+adding 'kmast/data/replay.py'
+adding 'kmast/data/research_spacing.py'
+adding 'kmast/data/sessions.py'
+adding 'kmast/data/store.py'
+adding 'kmast/data/fixtures/market.json'
+adding 'kmast/execution/__init__.py'
+adding 'kmast/execution/demo.py'
+adding 'kmast/execution/engine.py'
+adding 'kmast/execution/events.py'
+adding 'kmast/execution/ledger.py'
+adding 'kmast/execution/models.py'
+adding 'kmast/execution/portfolio.py'
+adding 'kmast/execution/readers.py'
+adding 'kmast/execution/risk.py'
+adding 'kmast/execution/store.py'
+adding 'kmast/portfolio/__init__.py'
+adding 'kmast/portfolio/allocation.py'
+adding 'kmast/portfolio/data_gate.py'
+adding 'kmast/portfolio/demo.py'
+adding 'kmast/portfolio/rebalance.py'
+adding 'kmast/research/__init__.py'
+adding 'kmast/research/attribution.py'
+adding 'kmast/research/cli.py'
+adding 'kmast/research/counterfactual_readiness.py'
+adding 'kmast/research/domestic_panel.py'
+adding 'kmast/research/economics.py'
+adding 'kmast/research/entitlements.py'
+adding 'kmast/research/event_census.py'
+adding 'kmast/research/event_controls.py'
+adding 'kmast/research/event_flow.py'
+adding 'kmast/research/event_replay.py'
+adding 'kmast/research/ewy.py'
+adding 'kmast/research/exploratory.py'
+adding 'kmast/research/holding_analysis.py'
+adding 'kmast/research/hypotheses.py'
+adding 'kmast/research/panel_attribution.py'
+adding 'kmast/research/publication.py'
+adding 'kmast/research/qualification.py'
+adding 'kmast/research/rights.py'
+adding 'kmast/research/validation.py'
+adding 'kmast/simulation/__init__.py'
+adding 'kmast/simulation/bridge.py'
+adding 'kmast/simulation/cli.py'
+adding 'kmast/strategies/__init__.py'
+adding 'kmast/strategies/interfaces.py'
+adding 'kmast-1.2.0.dist-info/METADATA'
+adding 'kmast-1.2.0.dist-info/WHEEL'
+adding 'kmast-1.2.0.dist-info/entry_points.txt'
+adding 'kmast-1.2.0.dist-info/top_level.txt'
+adding 'kmast-1.2.0.dist-info/RECORD'
+removing build\bdist.win-amd64\wheel
+Successfully built kmast-1.2.0.tar.gz and kmast-1.2.0-py3-none-any.whl

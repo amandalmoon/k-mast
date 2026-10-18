@@ -1,0 +1,18 @@
+{
+  "sha": "2421129aae6157eaadac13bc0093348a1b3892f2",
+  "remote_ref_verified": true,
+  "run_id": 39113102362,
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 117633204426,
+      "name": "offline-contracts (3.12)",
+      "conclusion": "success"
+    },
+    {
+      "id": 117633204577,
+      "name": "offline-contracts (3.11)",
+      "conclusion": "success"
+    }
+  ]
+}

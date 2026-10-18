@@ -1,0 +1,73 @@
+{
+  "status": "PROPOSED_NOT_AUTHORIZED_NOT_IMPLEMENTED",
+  "date": "2026-10-20",
+  "timezone": "Asia/Seoul",
+  "start": "09:01:20",
+  "end_exclusive": "09:04:00",
+  "environment": "PAPER",
+  "venue": "J",
+  "symbols": [
+    "073240"
+  ],
+  "authentication_max": 1,
+  "total_requests_max": 4,
+  "logical_market_requests": 3,
+  "retries": 0,
+  "response_completion_wait_seconds_min": 3.1,
+  "auth_url": "https://openapivts.koreainvestment.com:29443/oauth2/tokenP",
+  "calls": [
+    {
+      "method": "GET",
+      "ordinal": 1,
+      "parameters": {
+        "FID_COND_MRKT_DIV_CODE": "J",
+        "FID_ETC_CLS_CODE": "",
+        "FID_INPUT_HOUR_1": "090100",
+        "FID_INPUT_ISCD": "073240",
+        "FID_PW_DATA_INCU_YN": "Y"
+      },
+      "symbol": "073240",
+      "timing": "Capability probe after 09:01:20 KST, sequential response+3.10s",
+      "tr_id": "FHKST03010200",
+      "url": "https://openapivts.koreainvestment.com:29443/uapi/domestic-stock/v1/quotations/inquire-time-itemchartprice"
+    },
+    {
+      "method": "GET",
+      "ordinal": 2,
+      "parameters": {
+        "FID_COND_MRKT_DIV_CODE": "J",
+        "FID_INPUT_HOUR_1": "090100",
+        "FID_INPUT_ISCD": "073240"
+      },
+      "symbol": "073240",
+      "timing": "Capability probe after 09:01:20 KST, sequential response+3.10s",
+      "tr_id": "FHPST01060000",
+      "url": "https://openapivts.koreainvestment.com:29443/uapi/domestic-stock/v1/quotations/inquire-time-itemconclusion"
+    },
+    {
+      "method": "GET",
+      "ordinal": 3,
+      "parameters": {
+        "FID_COND_MRKT_DIV_CODE": "J",
+        "FID_INPUT_ISCD": "073240"
+      },
+      "symbol": "073240",
+      "timing": "Capability probe after 09:01:20 KST, sequential response+3.10s",
+      "tr_id": "FHKST01010200",
+      "url": "https://openapivts.koreainvestment.com:29443/uapi/domestic-stock/v1/quotations/inquire-asking-price-exp-ccn"
+    }
+  ],
+  "raw_cap_bytes": 3145728,
+  "total_cap_bytes": 8388608,
+  "per_response_cap_bytes": 1048576,
+  "private_retention_days_max": 30,
+  "execution_approved": false,
+  "scheduled": false,
+  "requires": [
+    "Separate exact human approval for this proposal hash",
+    "Independent review and separately implemented fail-closed probe",
+    "Clock and calendar/security/TLS prerequisites",
+    "Applicable rights evidence including explicit diagnostic permission if full research rights remain pending"
+  ],
+  "does_not_authorize": "Original 22 queries, other dates/symbols, LIVE, orders/accounts, WS; capability success does not prove storage/research rights or ORB qualification"
+}

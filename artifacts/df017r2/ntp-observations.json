@@ -1,0 +1,77 @@
+{
+  "external_measurement_authorization": "User allowed external offset measurements only; settings/time changes not authorized",
+  "total_requested_samples": 12,
+  "total_valid_samples": 6,
+  "total_failed_samples": 6,
+  "resync_attempts": 0,
+  "configuration_changes": 0,
+  "post_measurement_status_exit_code": 0,
+  "post_measurement_status_sha256": "6c4861574b24c16a28015c20ab9fb389fe94b71af79a09e0e1acbfc1bdf55fd7",
+  "post_measurement_synchronization": "UNSYNCHRONIZED_LOCAL_CMOS",
+  "absolute_clock_error_bound_seconds": null,
+  "clock_status": "CLOCK_HOLD",
+  "references": [
+    {
+      "host": "time.windows.com",
+      "exit_code": 0,
+      "requested_samples": 6,
+      "valid_samples": 2,
+      "failed_samples": 4,
+      "error_codes": [
+        "0x800705B4",
+        "0x800705B4",
+        "0x80072733",
+        "0x80072733"
+      ],
+      "samples": [
+        {
+          "roundtrip_seconds": 0.0063549,
+          "ntp_offset_seconds": -0.3212511,
+          "offset_plus_half_rtt_seconds": 0.32442855000000004
+        },
+        {
+          "roundtrip_seconds": 0.0038387,
+          "ntp_offset_seconds": -0.322461,
+          "offset_plus_half_rtt_seconds": 0.32438035
+        }
+      ],
+      "stdout_sha256": "50b34c3b219224bcd73284f88e46478260126ec6b488ddba2b2d289ddf578b7d",
+      "elapsed_seconds": 12.146814900013851
+    },
+    {
+      "host": "time.cloudflare.com",
+      "exit_code": 0,
+      "requested_samples": 6,
+      "valid_samples": 4,
+      "failed_samples": 2,
+      "error_codes": [
+        "0x80072733",
+        "0x80072733"
+      ],
+      "samples": [
+        {
+          "roundtrip_seconds": 0.0038367,
+          "ntp_offset_seconds": -0.3205595,
+          "offset_plus_half_rtt_seconds": 0.32247785
+        },
+        {
+          "roundtrip_seconds": 0.0036525,
+          "ntp_offset_seconds": -0.3199628,
+          "offset_plus_half_rtt_seconds": 0.32178904999999997
+        },
+        {
+          "roundtrip_seconds": 0.0306957,
+          "ntp_offset_seconds": -0.333709,
+          "offset_plus_half_rtt_seconds": 0.34905685
+        },
+        {
+          "roundtrip_seconds": 0.0033096,
+          "ntp_offset_seconds": -0.3204636,
+          "offset_plus_half_rtt_seconds": 0.3221184
+        }
+      ],
+      "stdout_sha256": "06b09bcd816daf3a881bd1fd61e375eb73b464636641468ba3377b38d0b01fda",
+      "elapsed_seconds": 10.131524500000523
+    }
+  ]
+}

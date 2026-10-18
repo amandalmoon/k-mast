@@ -1,0 +1,61 @@
+[
+  {
+    "ordinal": 0,
+    "command": [
+      "w32tm",
+      "/query",
+      "/status",
+      "/verbose"
+    ],
+    "observed_at": "2026-10-18T09:13:35.417144+00:00",
+    "exit_code": 0,
+    "stdout_sha256": "a4faeb8fb987417d4d2d52de4781976bc3934977aa138d853703e6bf356d5e41",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "ordinal": 1,
+    "command": [
+      "w32tm",
+      "/query",
+      "/source"
+    ],
+    "observed_at": "2026-10-18T09:13:35.453185+00:00",
+    "exit_code": 2147942405,
+    "stdout_sha256": "3b2f4208c06b98494c36aa94cd0a0de7660b722eec6ab47f7a7bce9c276fd10d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "ordinal": 2,
+    "command": [
+      "w32tm",
+      "/query",
+      "/peers"
+    ],
+    "observed_at": "2026-10-18T09:13:35.477710+00:00",
+    "exit_code": 0,
+    "stdout_sha256": "5d894ee410abd9007f248660fffc32073c1d2e15680676384dbd76bd905ad681",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "ordinal": 3,
+    "command": [
+      "w32tm",
+      "/query",
+      "/configuration"
+    ],
+    "observed_at": "2026-10-18T09:13:35.497597+00:00",
+    "exit_code": 2147942405,
+    "stdout_sha256": "3b2f4208c06b98494c36aa94cd0a0de7660b722eec6ab47f7a7bce9c276fd10d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "ordinal": 4,
+    "command": [
+      "local-service-and-elevation-query"
+    ],
+    "observed_at": "2026-10-18T09:13:35.521482+00:00",
+    "exit_code": 0,
+    "stdout_sha256": "34569bcb74a23a0182ad4bca8de6b0494f37f4cdd542632c5ac7c1cc13bb615a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]
