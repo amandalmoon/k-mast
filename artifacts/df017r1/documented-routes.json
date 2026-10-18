@@ -1,0 +1,20 @@
+[
+  {
+    "accessUrl": "/uapi/domestic-stock/v1/quotations/inquire-time-itemchartprice",
+    "virtualDomain": "https://openapivts.koreainvestment.com:29443",
+    "virtualTrId": "FHKST03010200",
+    "source_sha256": "9e632b727777692b76cd655e8704811d1ebcfacf7f3dc16bf5ec34d549cb2ca8"
+  },
+  {
+    "accessUrl": "/uapi/domestic-stock/v1/quotations/inquire-time-itemconclusion",
+    "virtualDomain": "https://openapivts.koreainvestment.com:29443",
+    "virtualTrId": "FHPST01060000",
+    "source_sha256": "cf9e63ad6ee8b0cd4ed975a6788c0ace5404f3364176951a29c923bf847b2220"
+  },
+  {
+    "accessUrl": "/uapi/domestic-stock/v1/quotations/inquire-asking-price-exp-ccn",
+    "virtualDomain": "https://openapivts.koreainvestment.com:29443",
+    "virtualTrId": "FHKST01010200",
+    "source_sha256": "18160edc4d92a0bc745a942bc14dc643743dfd7a593f78d75bfea876ec6d8224"
+  }
+]

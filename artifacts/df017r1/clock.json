@@ -1,0 +1,22 @@
+[
+  {
+    "command": [
+      "w32tm",
+      "/query",
+      "/status"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "1ac468ca5579055600fa27a955e176b9c4550010a3d3389277f2e1e82d5fb28b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "w32tm",
+      "/query",
+      "/configuration"
+    ],
+    "exit_code": 2147942405,
+    "stdout_sha256": "3b2f4208c06b98494c36aa94cd0a0de7660b722eec6ab47f7a7bce9c276fd10d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

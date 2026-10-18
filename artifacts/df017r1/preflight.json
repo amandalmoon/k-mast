@@ -1,0 +1,50 @@
+{
+  "baseline_sha": "9bff5ddef584cb1ad85b86b45e133d2b6376aee7",
+  "baseline_tests": 735,
+  "status": "DF017R1_PREFLIGHT_INCOMPLETE",
+  "human_approval": "ABSENT",
+  "registered_reviews": 0,
+  "proposal_sha256": "f1e5a852caebcb383fc947e75136a2ae3f88b87bc91f2d728310e4a301304d0b",
+  "mandatory_evidence": {
+    "account_permission": "UNKNOWN",
+    "applicable_rate": "UNKNOWN",
+    "raw_retention_research": "UNKNOWN",
+    "hash_retention": "UNKNOWN",
+    "dated_calendar": "UNKNOWN",
+    "dated_security_status": "UNKNOWN",
+    "clock_error": "UNKNOWN",
+    "runtime_tls": "UNKNOWN"
+  },
+  "clock_error_bound_seconds": null,
+  "actual_supply": null,
+  "execution_counts": {
+    "authentication": 0,
+    "market": 0,
+    "accounts": 0,
+    "orders": 0,
+    "cancels": 0,
+    "live": 0,
+    "websocket": 0,
+    "broker_tls_probes": 0
+  },
+  "scheduled": false,
+  "retained_statuses": [
+    "RVOL_NOT_READY",
+    "ECONOMIC_EDGE_UNVERIFIED",
+    "LIVE_NOT_APPROVED",
+    "B_ORB_STREAM_TRANSPORT_BLOCKED"
+  ],
+  "protected_files": {
+    "src/kmast/data/https_bar_gate.py": "0976829749c5f8fde836b5bd36c47873c8318d7e0cc684c877d1297dfc1e1a0b",
+    "src/kmast/data/https_bar_collector.py": "c12c14c4215cfc6d7e20e74b47762c2b53cf54f87c46d20d000ce062b70b73eb",
+    "src/kmast/data/https_bar_store.py": "8957d73cf906995b3ab2e5f1818a941beba2e94f7dafb67d00595ed3014de647",
+    "src/kmast/data/https_bar_quality.py": "183741af00fd48f3d5834ebec0ab618c275b305868fa1c3afd8d36b48be3508e",
+    "scripts/collect_df017.py": "671ebe0e0ccb7fa2a4265f4ac35c3a88a2745a2040a93945b30612737c0e0a4f",
+    "artifacts/df016/PILOT_PROPOSAL.json": "f1e5a852caebcb383fc947e75136a2ae3f88b87bc91f2d728310e4a301304d0b"
+  },
+  "clock_synchronization_observed": "UNSYNCHRONIZED_LOCAL_CMOS",
+  "clock_status_exit_code": 0,
+  "clock_configuration_exit_code": 2147942405,
+  "documented_paper_domain_matches_frozen_host": true,
+  "documented_domain_is_runtime_tls_verification": false
+}

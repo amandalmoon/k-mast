@@ -1,0 +1,51 @@
+[
+  {
+    "url": "https://apiportal.koreainvestment.com/about-howto",
+    "retrieved_at": "2026-10-18T08:45:04.305842+00:00",
+    "http_status": 200,
+    "sha256": "a6e4d263e19e81e6cde81e6e65c16e8cf4e305a8602402ffdfe671fd148cc289",
+    "bytes": 76494
+  },
+  {
+    "url": "https://apiportal.koreainvestment.com/community/10000000-0000-0011-0000-000000000001/post/",
+    "retrieved_at": "2026-10-18T08:45:04.917707+00:00",
+    "http_status": 200,
+    "sha256": "1c35ed4b5f5e928a955bee8db49701809b01da0d8be7bf74e0cc5db6a402d94e",
+    "bytes": 162476
+  },
+  {
+    "url": "https://global.krx.co.kr/contents/GLB/06/0602/0602010201/GLB0602010201T1.jsp",
+    "retrieved_at": "2026-10-18T08:45:05.581579+00:00",
+    "http_status": 200,
+    "sha256": "beccdf071e36ca2d8cd2313fd0de3363760480f0e312c0f3dca80b3ea5153266",
+    "bytes": 4654
+  },
+  {
+    "url": "https://kind.krx.co.kr/",
+    "retrieved_at": "2026-10-18T08:45:05.751253+00:00",
+    "http_status": 200,
+    "sha256": "641366462c2c2fcd018737713ad1dc693530e180151693cbe4df059c1c864f0a",
+    "bytes": 2056
+  },
+  {
+    "url": "https://apiportal.koreainvestment.com/api/apis/public/detail?accessUrl=%2Fuapi%2Fdomestic-stock%2Fv1%2Fquotations%2Finquire-time-itemchartprice",
+    "retrieved_at": "2026-10-18T08:45:05.887780+00:00",
+    "http_status": 200,
+    "sha256": "9e632b727777692b76cd655e8704811d1ebcfacf7f3dc16bf5ec34d549cb2ca8",
+    "bytes": 29378
+  },
+  {
+    "url": "https://apiportal.koreainvestment.com/api/apis/public/detail?accessUrl=%2Fuapi%2Fdomestic-stock%2Fv1%2Fquotations%2Finquire-time-itemconclusion",
+    "retrieved_at": "2026-10-18T08:45:06.025439+00:00",
+    "http_status": 200,
+    "sha256": "cf9e63ad6ee8b0cd4ed975a6788c0ace5404f3364176951a29c923bf847b2220",
+    "bytes": 27891
+  },
+  {
+    "url": "https://apiportal.koreainvestment.com/api/apis/public/detail?accessUrl=%2Fuapi%2Fdomestic-stock%2Fv1%2Fquotations%2Finquire-asking-price-exp-ccn",
+    "retrieved_at": "2026-10-18T08:45:06.199486+00:00",
+    "http_status": 200,
+    "sha256": "18160edc4d92a0bc745a942bc14dc643743dfd7a593f78d75bfea876ec6d8224",
+    "bytes": 54245
+  }
+]
